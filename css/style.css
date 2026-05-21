@@ -111,6 +111,7 @@ nav {
 .navigation-links a.isActive {
   color: transparent;
   -webkit-text-stroke: 1px black;
+  transition: 200ms;
   scale: 1.2;
 }
 
