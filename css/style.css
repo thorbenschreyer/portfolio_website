@@ -152,9 +152,17 @@ nav {
 }
 
 .developer-name {
+  font-size: 80px;
+  font-family: "Quantico-Bold";
+  white-space: nowrap;
+  color: var(--main-green);
 }
 
 .developer-function {
+  font-size: 48px;
+  font-family: "Quantico-Bold";
+  color: var(--black);
+  -webkit-text-stroke: 1px var(--main-green);
 }
 
 .arrow-right {
@@ -169,8 +177,6 @@ nav {
     filter 300ms ease;
   z-index: 2;
 }
-
-/* Glow Layer */
 
 .arrow-right::before {
   content: "";
@@ -189,11 +195,9 @@ nav {
 
 .arrow-right:hover {
   transform: rotate(180deg) translateX(-10px);
-  filter:
-    drop-shadow(0 0 4px #b8ff2c)
+  filter: drop-shadow(0 0 4px #b8ff2c)
     drop-shadow(0 0 12px rgba(184, 255, 44, 0.4));
 }
-
 
 .arrow-right:hover::before {
   opacity: 0.7;
