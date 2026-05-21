@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Quantico-Regular";
+}
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --main-green: #b5e93b;
+  --light-greey: #4a4a4a;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*------------------------------------
+    Navigation Container 
+    ------------------------------------*/
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 172px;
+  height: 100%;
+  z-index: 9999;
+  background-color: var(--main-green);
+}
+
+.black-to-transparent {
+  width: 42px;
+  height: 100%;
+  background-color: var(--black);
+  filter: blur(42px);
+}
+
+.navigation-img {
+  width: 130px;
+  height: auto;
+  margin-top: 32px;
+}
+
+.navigation-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 40px 0px;
+  height: 100%;
+}
+
+.navigation-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 132px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: var(--light-greey);
+  font-size: 32px;
+}
+
+/*------------------------------------
+     Hero Section 
+    ------------------------------------*/
+
+/*------------------------------------
+    Why me Section
+    ------------------------------------*/
+
+/*------------------------------------
+    Portfolio Section
+    ------------------------------------*/
+
+/*------------------------------------
+    Reference Section
+    ------------------------------------*/
+
+/*------------------------------------
+    Contact Section
+    ------------------------------------*/
+
+/*------------------------------------
+    Footer Section
+    ------------------------------------*/
