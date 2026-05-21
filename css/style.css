@@ -45,6 +45,7 @@ body {
 
 section {
   display: flex;
+  flex-direction: column;
   min-width: calc(100vw - 172px);
   height: 100vh;
   flex-shrink: 0;
@@ -120,6 +121,83 @@ nav {
     ------------------------------------*/
 
 .hero-section {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.developper-image {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex: 1;
+}
+
+.my-img {
+  position: absolute;
+  bottom: 0px;
+  height: 826px;
+}
+
+.hero-name {
+  position: absolute;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  position: absolute;
+  width: 550px;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.developer-name {
+}
+
+.developer-function {
+}
+
+.arrow-right {
+  position: absolute;
+  width: 107px;
+  height: 32px;
+  top: 320px;
+  right: 32px;
+  transform: rotate(180deg);
+  transition:
+    transform 300ms ease,
+    filter 300ms ease;
+  z-index: 2;
+}
+
+/* Glow Layer */
+
+.arrow-right::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  background: #ccff00;
+  border-radius: 100px;
+  filter: blur(20px);
+  opacity: 0;
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease;
+  transform: scale(0.8);
+  z-index: -1;
+}
+
+.arrow-right:hover {
+  transform: rotate(180deg) translateX(-10px);
+  filter:
+    drop-shadow(0 0 4px #b8ff2c)
+    drop-shadow(0 0 12px rgba(184, 255, 44, 0.4));
+}
+
+
+.arrow-right:hover::before {
+  opacity: 0.7;
+  transform: scale(1.2);
 }
 
 /*------------------------------------
@@ -151,6 +229,8 @@ nav {
     Contact Section
     ------------------------------------*/
 .contact-section {
+  display: flex;
+  flex-direction: row;
 }
 
 .contact-content {
