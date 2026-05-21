@@ -10,7 +10,7 @@ body {
   --white: #ffffff;
   --black: #000000;
   --main-green: #b5e93b;
-  --light-greey: #4a4a4a;
+  --light-grey: #4a4a4a;
 }
 
 .sections {
@@ -99,7 +99,7 @@ nav {
   height: 132px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  color: var(--light-greey);
+  color: var(--light-grey);
   font-size: 32px;
 }
 
