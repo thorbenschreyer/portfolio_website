@@ -13,13 +13,28 @@ body {
 }
 
 .sections {
-  display: flex;
   margin-left: 172px;
   height: 100vh;
+
   overflow-x: auto;
   overflow-y: hidden;
+
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+}
+
+.sections-track {
+  display: flex;
+  width: max-content;
+
+  background: linear-gradient(
+    to right,
+    #000000 0%,
+    #2c2b2b 25%,
+    #0b0a0a 50%,
+    #323232 75%,
+    #0b0a0a 100%
+  );
 }
 
 .sections::-webkit-scrollbar {
@@ -58,11 +73,7 @@ nav {
   width: 42px;
   height: 100%;
   z-index: 1000;
-  background: linear-gradient(
-    to right,
-    rgba(0,0,0,0.42),
-    transparent
-  );
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.42), transparent);
 }
 
 .navigation-img {
@@ -100,7 +111,6 @@ nav {
     ------------------------------------*/
 
 .hero-section {
-  background: red;
 }
 
 /*------------------------------------
@@ -108,35 +118,34 @@ nav {
     ------------------------------------*/
 
 .why-me-section {
-  background: orange;
 }
 
 /*------------------------------------
     Skill Section
     ------------------------------------*/
 .skill-section {
-  background: blue;
 }
 
 /*------------------------------------
     Portfolio Section
     ------------------------------------*/
 .portfolio-section {
-  background-color: lightblue;
 }
 
 /*------------------------------------
     Reference Section
     ------------------------------------*/
 .portfolio-section {
-  background-color: aqua;
 }
 
 /*------------------------------------
     Contact Section
     ------------------------------------*/
 .contact-section {
-  background-color: rosybrown;
+}
+
+.contact-content {
+  flex: 1;
 }
 
 /*------------------------------------
@@ -144,8 +153,8 @@ nav {
 ------------------------------------*/
 
 footer {
-  margin-left: calc(100vw - 100px);
-  width: 100px;
-  height: 100%;
-  background: linear-gradient(to bottom, var(--main-green) 75%, #547800) 25%;
+  min-width: 100px;
+  height: 100vh;
+  flex-shrink: 0;
+  background: linear-gradient(to bottom, var(--main-green) 60%, #547800 100%);
 }
