@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Thorben Schreyer</title>
   </head>
-  <body>
+  <body onload="init()">
     <!-----------------------------
      Content Container 
      ------------------------------>
@@ -56,8 +56,7 @@
               src="./assets/img/linkedIn_default.png"
               alt="linkedIn"
           /></a>
-          <a href="https://github.com/thorbenschreyer"
-          target="_blank"
+          <a href="https://github.com/thorbenschreyer" target="_blank"
             ><img
               class="git-img"
               src="./assets/img/github_default.png"
@@ -86,7 +85,7 @@
           </div>
           <a href="#why-me-section">
             <img
-              class="arrow-right"
+              class="arrow-right arrow-position-hero"
               src="./assets/img/arrow_default.png"
               alt="Arrow Right"
           /></a>
@@ -96,7 +95,49 @@
     Why me Section
     ------------------------------>
         <section id="why-me-section" class="why-me-section">
-          <p>Why me</p>
+          <div class="why-me-content">
+            <div class="why-me-textarea">
+              <div class="why-me-header">Why me</div>
+
+              <div class="why-me-description">
+                <p>
+                  Ich bin motiviert, Ideen in wachsende Projekte zu verwandeln,
+                  Teams durch Innovation und und neue Technologie voranzubringen
+                  und dabei sinnvolle Lösungen zu schaffen, die sich stetig
+                  weiterentwickeln.
+                </p>
+                <span>I am</span>
+                <div class="why-me-icons">
+                  <div class="why-me-icon">
+                    <img src="./assets/img/location-default.png" alt="Location Icon" />
+                    <p>located in Mannheim</p>
+                  </div>
+
+                  <div class="why-me-icon">
+                    <img src="./assets/img/remote_default.png" alt="Remote Icon" />
+                    <p>open to work remote</p>
+                  </div>
+
+                  <div class="why-me-icon">
+                    <img src="" alt="" />
+                    <p>open to relocate</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-me-button-area">
+              <a href="#contact-section" class="btn contact-me-btn"
+                ><span>Contact me</span></a
+              >
+            </div>
+            <a href="#skill-section">
+              <img
+                class="arrow-right arrow-why-me"
+                src="./assets/img/arrow_default.png"
+                alt="Arrow Right"
+            /></a>
+          </div>
         </section>
 
         <!-----------------------------

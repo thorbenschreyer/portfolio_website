@@ -46,3 +46,16 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach((section) => {
     observer.observe(section);
 });
+
+
+window.addEventListener("load", () => {
+    const container = document.querySelector(".sections");
+    const target = document.querySelector("#why-me-section");
+
+    if (container && target) {
+        container.scrollTo({
+            left: target.offsetLeft,
+            behavior: "smooth"
+        });
+    }
+});
