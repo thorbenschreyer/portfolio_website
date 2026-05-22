@@ -117,6 +117,63 @@ nav {
 }
 
 /*------------------------------------
+     Social Media an Language
+    ------------------------------------*/
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 24px;
+  right: 148px;
+  gap: 24px;
+  z-index: 5000;
+}
+
+.social-icons a {
+  cursor: pointer;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.language-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+
+.language-buttons span {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.language-buttons span:hover {
+  color: var(--main-green);
+}
+
+.language-buttons hr {
+  border: 1px solid var(--white);
+  height: 12px;
+  margin: 0px 8px 2px 8px;
+}
+
+.mail-img:hover {
+  content: url(../assets/img/mail_hover.png);
+}
+
+.linkedIn-img:hover {
+  content: url(../assets/img/linkedIn_hover.png);
+}
+
+.git-img:hover {
+  content: url(../assets/img/github_hover.png);
+}
+
+/*------------------------------------
      Hero Section 
     ------------------------------------*/
 
