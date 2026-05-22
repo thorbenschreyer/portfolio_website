@@ -45,6 +45,7 @@
 
 .skill-section-text p {
   color: var(--white);
+  text-align: justify;
 }
 
 .arrow-skill-section {
