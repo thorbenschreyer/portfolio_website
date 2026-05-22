@@ -1,0 +1,105 @@
+/*------------------------------------
+    Why me Section
+    ------------------------------------*/
+
+.why-me-section {
+  position: relative;
+}
+
+.why-me-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 264px;
+  margin-left: 80px;
+  width: 835px;
+  height: 332px;
+}
+
+.why-me-textarea {
+  display: flex;
+  flex-direction: row;
+  height: 252px;
+  width: 100%;
+}
+
+.contact-me-button-area {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-me-button-area a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-me-btn {
+  margin-top: 32px;
+  width: 146px;
+  height: 45px;
+}
+
+.why-me-header {
+  display: flex;
+  justify-content: end;
+  font-size: 56px;
+  color: var(--black);
+  -webkit-text-stroke: 3px var(--main-green);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+
+  height: 100%;
+  width: 80px;
+}
+
+.why-me-description {
+  height: 80px;
+  width: 100%;
+  margin-left: 32px;
+  color: var(--white);
+  font-size: 16px;
+}
+
+.why-me-description p {
+  margin: 0px 0px 48px 0px;
+}
+
+.why-me-description span {
+  font-size: 48px;
+  color: var(--main-green);
+}
+
+.why-me-icons {
+  width: 77%;
+  height: 96px;
+  margin-top: -30px;
+  margin-left: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.why-me-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.why-me-icon img {
+  height: 40px;
+  width: auto;
+}
+
+
+.why-me-icon p {
+  margin: 16px 0px 0px 0px;
+}
+
+.arrow-why-me {
+  position: absolute;
+  right: 32px;
+  bottom: 60px;
+}

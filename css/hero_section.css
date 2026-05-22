@@ -1,0 +1,115 @@
+/*------------------------------------
+    Navigation Container 
+    ------------------------------------*/
+nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 172px;
+  height: 100%;
+  z-index: 2000;
+  background-color: var(--main-green);
+}
+
+.black-to-transparent {
+  position: fixed;
+  left: 172px;
+  width: 42px;
+  height: 100%;
+  z-index: 1000;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.42), transparent);
+}
+
+.navigation-img {
+  width: 130px;
+  height: auto;
+  margin-top: 32px;
+}
+
+.navigation-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 40px 0px;
+  height: 100%;
+}
+
+.navigation-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 132px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: var(--light-grey);
+  font-size: 32px;
+}
+
+.navigation-links a:hover {
+  color: var(--white);
+  transition: 150ms;
+}
+
+.navigation-links a.isActive {
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+  transition: 200ms;
+  scale: 1.2;
+}
+
+
+/*------------------------------------
+     Hero Section 
+    ------------------------------------*/
+
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.developper-image {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex: 1;
+}
+
+.my-img {
+  position: absolute;
+  bottom: 0px;
+  height: 826px;
+}
+
+.hero-name {
+  position: absolute;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  position: absolute;
+  width: 550px;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.developer-name {
+  font-size: 80px;
+  font-family: "Quantico-Bold";
+  white-space: nowrap;
+  color: var(--main-green);
+}
+
+.developer-function {
+  font-size: 48px;
+  font-family: "Quantico-Bold";
+  color: var(--black);
+  -webkit-text-stroke: 1px var(--main-green);
+}
+
+.arrow-position-hero {
+  position: absolute;
+  top: 430px;
+  right: 32px;
+}
