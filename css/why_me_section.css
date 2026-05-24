@@ -116,6 +116,28 @@
   opacity: 1;
 }
 
+.bag-corpus {
+  position: absolute;
+  top: -30px;
+  z-index: 500;
+}
+
+.bag-roll {
+  position: absolute;
+  top: 3px;
+  z-index: 400;
+}
+
+.bag-griff {
+  position: absolute;
+  bottom: 55px;
+  transition: 400ms;
+}
+
+.why-me-icon:hover .bag-griff {
+  bottom: 62px
+}
+
 .why-me-icon p {
   margin: 16px 0px 0px 0px;
 }
