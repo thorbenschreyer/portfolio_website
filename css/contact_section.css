@@ -1,0 +1,18 @@
+/*------------------------------------
+    Contact Section
+    ------------------------------------*/
+.contact-section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-content {
+  flex: 1;
+}
+
+.arrow-contact {
+  position: absolute;
+  bottom: 30%;
+  right: 132px;
+}
