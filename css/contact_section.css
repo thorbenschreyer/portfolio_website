@@ -16,3 +16,61 @@
   bottom: 30%;
   right: 132px;
 }
+
+.contact-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-head {
+  display: flex;
+  justify-content: end;
+  font-size: 56px;
+  margin-right:64px;
+  color: var(--black);
+  -webkit-text-stroke: 3px var(--main-green);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.contact-form {
+  margin-top: 150px;
+  margin-left: 128px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  height: 530px;
+  width: 585px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-area {
+  display: flex;
+  align-items: start;
+  color: var(--main-green);
+}
+
+.checkbox-area span {
+  color: var(--white);
+}
+
+.checkbox-input {
+  margin-right: 8px;
+  margin-top: 6px;
+}
+
+.form-btn-area {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+.form-send-btn {
+  
+  width: 95px;
+  height: 45px;
+}
