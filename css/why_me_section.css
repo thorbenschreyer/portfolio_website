@@ -87,13 +87,21 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: 300ms;
 }
 
-.why-me-icon img {
-  height: 40px;
-  width: auto;
+.why-me-icon:hover {
+  color: var(--main-green);
 }
 
+.why-me-icon-city-hover {
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.why-me-icon:hover .why-me-icon-city-hover {
+  opacity: 1;
+}
 
 .why-me-icon p {
   margin: 16px 0px 0px 0px;
