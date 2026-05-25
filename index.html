@@ -293,15 +293,44 @@
                   placeholder="Your massage"
                 ></textarea>
                 <div class="checkbox-area">
-                  <input class="checkbox-input" type="checkbox" />
+                  <label class="custom-checkbox" for="checkbox">
+                    <input
+                      id="checkbox"
+                      class="checkbox-input"
+                      type="checkbox"
+                    />
+
+                    <img
+                      class="checked"
+                      src="./assets/img/checed-succes.png"
+                      alt=""
+                    />
+                    <img
+                      class="unchecked"
+                      src="./assets/img/not-checed.png"
+                      alt=""
+                    />
+                    <img
+                      class="checkbox-hover"
+                      src="./assets/img/cheched-hover.png"
+                      alt=""
+                    />
+                    <img
+                      class="not-checked"
+                      src="./assets/img/checed-error.png"
+                      alt=""
+                    />
+                  </label>
                   <p>
                     I've read the
-                    <span class="checkbox-pp">privacy policy</span> and agree to
+                    <a href="leagal_notice.html" class="checkbox-pp">privacy policy</a> and agree to
                     the processing of my data as outlined
                   </p>
                 </div>
                 <div class="form-btn-area">
-                  <button class="form-send-btn btn" disabled>Send</button>
+                  <button class="form-send-btn btn" disabled>
+                    <span>Send</span>
+                  </button>
                 </div>
               </form>
             </div>
