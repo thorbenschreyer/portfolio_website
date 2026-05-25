@@ -211,3 +211,87 @@ zu .custom-checkbox hinzu
 .checkbox-pp:hover {
   text-decoration: underline;
 }
+
+.impressum-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 150px 32px 0px 64px;
+  border: 1px solid red;
+  height: 665px;
+  max-width: 420px;
+}
+
+.impressum-text {
+  color: var(--white);
+  text-align: end;
+}
+
+.impressum-text-highlight {
+  color: var(--main-green);
+}
+
+.impressum-contact-details {
+  margin-top: 24px;
+  text-align: end;
+}
+
+.impressum-contact-details p {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.impressum-contact-details p a:hover {
+  color: var(--main-green);
+}
+
+.impressum-contact-details p:last-child {
+  margin-top: 8px;
+}
+
+.impressum-contact-details p a {
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-wrapper img {
+  position: absolute;
+  top: -2px;
+  left: -8px;
+  transition: opacity 0.4s ease;
+}
+
+.icon-default {
+  opacity: 1;
+}
+
+.icon-hover {
+  opacity: 0;
+}
+
+.impressum-contact-details p:hover .icon-default {
+  opacity: 0;
+}
+
+.impressum-contact-details p:hover .icon-hover {
+  opacity: 1;
+}
+
+.impressum-contact-details a {
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.impressum-contact-details p:hover a {
+  color: var(--main-green);
+}
