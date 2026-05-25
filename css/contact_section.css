@@ -217,7 +217,6 @@ zu .custom-checkbox hinzu
   flex-direction: column;
   justify-content: space-between;
   margin: 150px 32px 0px 64px;
-  border: 1px solid red;
   height: 665px;
   max-width: 420px;
 }
@@ -294,4 +293,21 @@ zu .custom-checkbox hinzu
 
 .impressum-contact-details p:hover a {
   color: var(--main-green);
+}
+
+.impressum-lower-section {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  height: 150px;
+  color: white;
+}
+
+.impressum-lower-section a:hover {
+  color: var(--main-green);
+}
+
+.impressum-lower-section a {
+  color: var(--white);
+  margin-bottom: 8px;
 }

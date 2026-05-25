@@ -84,9 +84,16 @@ a {
 }
 
 .arrow-right:hover {
-  transform: translateX(10px);
   filter: drop-shadow(0 0 4px #b8ff2c)
     drop-shadow(0 0 12px rgba(184, 255, 44, 0.4));
+}
+
+.arrow-right-transform:hover {
+  transform: translateX(10px);
+}
+
+.arrow-left-transform:hover {
+  transform: translateX(-10px);
 }
 
 .arrow-right:hover::before {
