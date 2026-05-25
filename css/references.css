@@ -1,7 +1,22 @@
 .reference-section-container {
-    width: 580px;
-    height: 580px;
-    margin-left: 128px;
-    margin-top: 280px;
-    border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  width: 580px;
+  height: 580px;
+  margin-left: 128px;
+  margin-top: 280px;
+  border: 1px solid red;
+}
+
+.all-references {
+  width: 480px;
+  height: 100%;
+  border: 1px solid blue;
+}
+
+.reference-head {
+  -webkit-text-stroke: 3px var(--main-green);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 58px;
 }
