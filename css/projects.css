@@ -20,6 +20,7 @@
 }
 
 .project {
+  position: relative;
   width: 920px;
   height: 520px;
   border-radius: 30px;
@@ -79,4 +80,24 @@
   position: absolute;
   right: 32px;
   bottom: 64px;
+}
+
+.project-presentation {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+    width: 337px;
+}
+
+.project-btn {
+  display: flex;
+  gap: 16px
+}
+
+.project-img {
+  width: 337px;
+  height: 203px;
+  border-radius: 30px;
 }
