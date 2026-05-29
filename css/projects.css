@@ -1,3 +1,7 @@
+.portfolio-section{
+  position: relative;
+}
+
 .all-projects {
   display: flex;
   flex-direction: row;
@@ -21,4 +25,10 @@
   border-radius: 30px;
   background-color: rgba(181, 233, 59, 0.2);
   margin-right: 32px;
+}
+
+.arrow-position-skill-section {
+  position: absolute;
+  right: 32px;
+  bottom: 64px;
 }
