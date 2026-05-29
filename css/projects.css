@@ -45,7 +45,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 .prject-description-head-img {
@@ -60,20 +60,18 @@
 
 .project-h2 {
   font-size: 24px;
-  color: #FFFDFD;
+  color: #fffdfd;
 }
 
 .project-text {
-  color: #FFFDFD;
-  margin-bottom: 24px;
+  color: #fffdfd;
+  margin-bottom: 32px;
 }
 
 .about-the-project {
-
 }
 
 .technologys-project {
-
 }
 
 .arrow-position-skill-section {
@@ -88,16 +86,42 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-    width: 337px;
-}
-
-.project-btn {
-  display: flex;
-  gap: 16px
+  width: 337px;
+  right: 50px;
+  top: 130px
 }
 
 .project-img {
   width: 337px;
   height: 203px;
   border-radius: 30px;
+}
+
+.project-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 30px;
+}
+
+.project-btn-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  gap: 16px;
+}
+
+.github-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  padding: 13px 30px;
+  border: 1px solid #B5E93B;
+  color: #B5E93B;
+}
+
+.project-text-section {
+  margin-left: 40px;
 }
