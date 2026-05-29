@@ -65,13 +65,17 @@
 
 .project-text {
   color: #fffdfd;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .about-the-project {
+  width: 480px;
+  padding-left: 30px;
 }
 
 .technologys-project {
+  width: 830px;
+  padding-left: 30px;
 }
 
 .arrow-position-skill-section {
