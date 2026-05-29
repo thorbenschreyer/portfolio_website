@@ -1,4 +1,4 @@
-.portfolio-section{
+.portfolio-section {
   position: relative;
 }
 
@@ -23,8 +23,52 @@
   width: 920px;
   height: 520px;
   border-radius: 30px;
+  padding: 0px 32px;
   background-color: rgba(181, 233, 59, 0.2);
   margin-right: 32px;
+}
+
+.project-head-number {
+  font-size: 100px;
+  margin-right: 16px;
+  -webkit-text-stroke: 1px var(--main-green);
+  color: transparent;
+}
+
+.project-head {
+  display: flex;
+  align-items: center;
+}
+
+.prject-description-head {
+  display: flex;
+}
+
+.prject-description-head-img {
+  width: 13px;
+  height: 13px;
+}
+
+.project-head-project-name {
+  font-size: 56px;
+  color: #b5e93b;
+}
+
+.project-h2 {
+  font-size: 24px;
+  color: #FFFDFD;
+}
+
+.project-text {
+  color: #FFFDFD;
+}
+
+.about-the-project {
+
+}
+
+.technologys-project {
+
 }
 
 .arrow-position-skill-section {
