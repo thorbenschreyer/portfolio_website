@@ -50,7 +50,7 @@ sections.forEach((section) => {
 
 window.addEventListener("load", () => {
     const container = document.querySelector(".sections");
-    const target = document.querySelector("#contact-section");
+    const target = document.querySelector("#portfolio-section");
 
     if (container && target) {
         container.scrollTo({
