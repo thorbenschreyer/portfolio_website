@@ -42,6 +42,9 @@
 
 .prject-description-head {
   display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 10px
 }
 
 .prject-description-head-img {
@@ -61,6 +64,7 @@
 
 .project-text {
   color: #FFFDFD;
+  margin-bottom: 24px;
 }
 
 .about-the-project {
