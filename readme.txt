@@ -3,7 +3,6 @@ Project Section
 - Texte What ihave Learned und Prject Experience beim Hovern Text ändern
 - GitHub verlinken 
 - Livetest Verlinken 
-- Implementieren Ongoing project
 
 Contact Section
 - Impressum 

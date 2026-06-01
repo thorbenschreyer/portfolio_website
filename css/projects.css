@@ -151,10 +151,13 @@
 }
 
 .ongoing-project-text {
+  color: #FFFDFD;
+  width: 345px;
 }
 
 .ongoing-project-button {
   display: flex;
+  margin-top: 16px;
   width: 130px;
   height: 45px;
 }
