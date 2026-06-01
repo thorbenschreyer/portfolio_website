@@ -142,6 +142,17 @@
   gap: 32px;
 }
 
+.ongoing-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 345px;
+}
+
+.ongoing-project-head {
+  width: 100%;
+}
+
 .ongoing-number {
   font-size: 48px;
 }
@@ -152,11 +163,11 @@
 
 .ongoing-project-text {
   color: #FFFDFD;
-  width: 345px;
 }
 
 .ongoing-project-button {
   display: flex;
+  justify-content: center;
   margin-top: 16px;
   width: 130px;
   height: 45px;
@@ -167,6 +178,6 @@
   align-items: center;
   justify-content: center;
   align-content: center;
-  width: 130px;
+  max-width: 130px;
   height: 45px;
 }
