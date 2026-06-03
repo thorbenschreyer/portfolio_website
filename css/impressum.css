@@ -68,5 +68,17 @@
 }
 
 .impressum-content-section {
-    display: flex;
+  display: flex;
+  width: 100vw
+}
+
+.impressum-background {
+  width: max-content;
+  background: linear-gradient(
+    to right,
+    #000000 0%,
+    #2c2b2b 35%,
+    #0b0a0a 70%,
+    #323232 100%
+  );
 }
