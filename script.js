@@ -59,3 +59,14 @@ window.addEventListener("load", () => {
         });
     }
 });
+
+
+
+const article = document.querySelector('.horizontal-text');
+/**
+ * Allows to scroll vertical
+ */
+article.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    article.scrollLeft -= e.deltaY;
+}, { passive: false });
