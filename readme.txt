@@ -4,7 +4,7 @@ Project Section
 - Livetest Verlinken 
 
 Contact Section
-- Impressum 
+- Impressum // Footer liegt nun rechts auserhalb beim Datenschutz
 - PP
 - Form Validierung 
 - Implementieren PHP Script 

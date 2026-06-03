@@ -1,8 +1,19 @@
 .horizontal-text {
     margin-left: 230px;
+
     height: 100vh;
-    column-width: 100vw;   /* jede Spalte = Bildschirmbreite */
+
+    column-width: calc(100vw - 230px);
     column-gap: 0;
+
     overflow-x: auto;
     overflow-y: hidden;
+
+    width: max-content;
+}
+
+.privacy-container {
+    display: flex;
+    width: max-content;
+    height: 100vh;
 }
