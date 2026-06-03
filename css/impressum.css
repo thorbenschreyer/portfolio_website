@@ -1,13 +1,13 @@
 .impressum-header {
   display: flex;
   justify-content: end;
+  height: 740px;
   -webkit-text-stroke: 3px var(--main-green);
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   font-size: 58px;
   margin-left: 64px;
 }
-
 
 .impressumsite-text {
   margin-left: 32px;
@@ -32,7 +32,6 @@
   flex-direction: column;
   justify-content: space-between;
   margin-right: 16px;
-  margin-top: 64px;
   height: 740px;
 }
 
@@ -55,6 +54,7 @@ html {
 }
 
 .impressum-container {
+  display: flex;
   margin-left: 172px;
 
   width: calc(100vw - 172px);
@@ -71,10 +71,9 @@ html {
 
 .impressum-content {
   display: flex;
-
   width: 100%;
   height: 100vh;
-
+  align-items: center;
   overflow-x: auto;
   overflow-y: hidden;
 
@@ -117,5 +116,5 @@ html {
 }
 
 .footer-space {
-    flex: 1;
+  flex: 1;
 }
