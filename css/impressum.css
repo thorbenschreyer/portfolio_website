@@ -1,20 +1,32 @@
-.horizontal-text {
-    width: calc(100vw - 230px);
-    padding: 120px 64px 64px;
-    box-sizing: border-box;
+.impressum-container {
+  display: flex;
 
-    column-width: auto;
-    columns: 1;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    #000000 0%,
+    #2c2b2b 35%,
+    #0b0a0a 70%,
+    #323232 100%
+  );
 }
 
-.privacy-container {
-    display: flex;
-    width: max-content;
-    height: 100vh;
+.impressum-content {
+  display: flex;
+  width: calc(100% - 132px);
+  margin: 64px 64px 64px 232px;
 }
 
-.horizontal-text p,
-.horizontal-text li {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+.impressum-header {
+  display: flex;
+  justify-content: end;
+  -webkit-text-stroke: 3px var(--main-green);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 58px;
+}
+
+.impressum-text {
+  border: 5px solid greenyellow;
 }
