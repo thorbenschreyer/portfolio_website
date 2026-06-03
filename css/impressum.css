@@ -66,3 +66,7 @@
   bottom: 50%;
   right: 132px;
 }
+
+.impressum-content-section {
+    display: flex;
+}
