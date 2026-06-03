@@ -43,3 +43,26 @@
 .impressumsite-text p {
   padding-bottom: 16px;
 }
+
+.impressum-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 16px;
+  margin-top: 64px;
+  height: 740px;
+}
+
+.copy-right {
+  text-align: end;
+}
+
+.margin-imprssum-unset {
+  margin: unset;
+}
+
+.arrow-impressum {
+  position: absolute;
+  bottom: 50%;
+  right: 132px;
+}

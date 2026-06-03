@@ -299,6 +299,7 @@ zu .custom-checkbox hinzu
   display: flex;
   flex-direction: column;
   align-items: end;
+  justify-content: end;
   height: 150px;
   color: white;
 }
