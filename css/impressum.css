@@ -115,3 +115,7 @@ html {
 
   transform: translateY(-50%);
 }
+
+.footer-space {
+    flex: 1;
+}
