@@ -1,23 +1,3 @@
-.impressum-container {
-  display: flex;
-
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(
-    to right,
-    #000000 0%,
-    #2c2b2b 35%,
-    #0b0a0a 70%,
-    #323232 100%
-  );
-}
-
-.impressum-content {
-  display: flex;
-  width: calc(100% - 132px);
-  margin: 64px 64px 64px 232px;
-}
-
 .impressum-header {
   display: flex;
   justify-content: end;
@@ -25,7 +5,9 @@
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   font-size: 58px;
+  margin-left: 64px;
 }
+
 
 .impressumsite-text {
   margin-left: 32px;
@@ -45,6 +27,7 @@
 }
 
 .impressum-detail {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -67,13 +50,16 @@
   right: 132px;
 }
 
-.impressum-content-section {
-  display: flex;
-  width: 100vw
+html {
+  scroll-behavior: smooth;
 }
 
-.impressum-background {
-  width: max-content;
+.impressum-container {
+  margin-left: 172px;
+
+  width: calc(100vw - 172px);
+  height: 100vh;
+
   background: linear-gradient(
     to right,
     #000000 0%,
@@ -81,4 +67,51 @@
     #0b0a0a 70%,
     #323232 100%
   );
+}
+
+.impressum-content {
+  display: flex;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+}
+
+.impressum-content::-webkit-scrollbar {
+  display: none;
+}
+
+.impressum-content-section {
+  position: relative;
+
+  flex: 0 0 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  scroll-snap-align: start;
+}
+
+.arrow-impressum-next {
+  position: absolute;
+  right: 220px;
+  top: 50%;
+}
+
+.arrow-impressum-prev {
+  position: absolute;
+
+  left: 50px;
+  top: 50%;
+
+  transform: translateY(-50%);
 }
