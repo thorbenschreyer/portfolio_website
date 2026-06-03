@@ -27,6 +27,19 @@
   font-size: 58px;
 }
 
-.impressum-text {
-  border: 5px solid greenyellow;
+.impressumsite-text {
+  margin-left: 32px;
+  height: 740px;
+  width: 650px;
+  color: white;
+}
+
+.impressumsite-text h2 {
+  font-size: 18px;
+  padding-bottom: 8px;
+  color: var(--main-green);
+}
+
+.impressumsite-text p {
+  padding-bottom: 16px;
 }
