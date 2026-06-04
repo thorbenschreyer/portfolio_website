@@ -3,133 +3,19 @@ const sections = document.querySelectorAll("section");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const massageInput = document.getElementById("userMessage");
+const errorEditText = document.getElementById("error-text");
 
 let isManualScrolling = false;
 
-checkIsFieldEmpty(nameInput, "Your name is required")
-checkIsFieldEmpty(emailInput, "Your email is required")
-checkIsFieldEmpty(massageInput, "Your message is required")
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    isManualScrolling = true;
-    navLinks.forEach((nav) => {
-      nav.classList.remove("isActive");
-    });
-
-    link.classList.add("isActive");
-    setTimeout(() => {
-      isManualScrolling = false;
-    }, 1000);
-  });
-});
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting && !isManualScrolling) {
-        // Aktive Klasse entfernen
-        navLinks.forEach((link) => {
-          link.classList.remove("isActive");
-        });
-
-        // Passenden Link finden
-        const activeLink = document.querySelector(
-          `.navigation-item[href="#${entry.target.id}"]`,
-        );
-
-        // Neue Klasse setzen
-        if (activeLink) {
-          activeLink.classList.add("isActive");
-        }
-      }
-    });
-  },
-  {
-    threshold: 0.9,
-  },
-);
-
-sections.forEach((section) => {
-  observer.observe(section);
-});
-
-document.getElementById("kontaktForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  startValidating();
-  fetch("./assets/php/formular.php", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      message: document.getElementById("userMessage").value,
-    }),
-  })
-    .then(async (response) => {
-      console.log("Status:", response.status);
-      console.log("Content-Type:", response.headers.get("content-type"));
-
-      const text = await response.text();
-      console.log("Antwort:", text);
-    })
-    .catch((err) => console.error(err));
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("userMessage").value = "";
-});
-
-// Remove bevore Launch
-window.addEventListener("load", () => {
-  const container = document.querySelector(".sections");
-  const target = document.querySelector("#contact-section");
-
-  if (container && target) {
-    container.scrollTo({
-      left: target.offsetLeft,
-      behavior: "smooth",
-    });
-  }
-});
+checkIsFieldEmpty(nameInput, "Your name is required");
+checkIsFieldEmpty(emailInput, "Your email is required");
+checkIsFieldEmpty(massageInput, "Your message is required");
 
 /**
- * This function checks whether
- * @param {document.getElementById of handleSubmit or handleEditSubmit} name
- * @param {document.getElementById of handleSubmit or handleEditSubmit} email
- * @param {document.getElementById of handleSubmit or handleEditSubmit} phone
- * have been entered correctly. If not
- * @returns the error message
+ * This function check if a inputfild is notfilled with text
+ * @param {const} input
+ * @param {string} errorMessage
  */
-function validate(name, email, userMassage) {
-  const nameRegex = /^[A-Za-zÄÖÜäöüß\s'\-]+$/;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.(de|com|org|net)$/;
-  const massageRegex = /^(?!\s*$).+/;
-
-  if (!nameRegex.test(name))
-    return "Invalid name. Only letters and hyphens allowed.";
-  if (!emailRegex.test(email))
-    return "Invalid email. “@” and valid domain required.";
-  if (!massageRegex.test(userMassage)) return "Emptymassage is not allowed";
-
-  return null;
-}
-
-function startValidating() {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const userMassage = document.getElementById("userMessage").value.trim();
-  const errorEditText = document.getElementById("error-text");
-  const editError = validateContact(name, email, phone);
-  if (editError) {
-    errorEditText.innerText = editError;
-    return;
-  }
-}
-
-
-
 function checkIsFieldEmpty(input, errorMessage) {
   input.addEventListener("blur", function () {
     if (this.value.trim() === "") {
@@ -147,3 +33,124 @@ function checkIsFieldEmpty(input, errorMessage) {
     }
   });
 }
+
+/**
+ * Allows to scroll to the clicked site,
+ * without get interferences in the nav bar
+ */
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    isManualScrolling = true;
+    navLinks.forEach((nav) => {
+      nav.classList.remove("isActive");
+    });
+
+    link.classList.add("isActive");
+    setTimeout(() => {
+      isManualScrolling = false;
+    }, 1000);
+  });
+});
+
+/**
+ * Set and remove isAvtivestate
+ */
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !isManualScrolling) {
+        navLinks.forEach((link) => {
+          link.classList.remove("isActive");
+        });
+        const activeLink = document.querySelector(
+          `.navigation-item[href="#${entry.target.id}"]`,
+        );
+        if (activeLink) {
+          activeLink.classList.add("isActive");
+        }
+      }
+    });
+  },
+  {
+    threshold: 0.9,
+  },
+);
+
+sections.forEach((section) => {
+  observer.observe(section);
+});
+
+/**
+ * This function checks whether
+ * @param {document.getElementById of handleSubmit or handleEditSubmit} name
+ * @param {document.getElementById of handleSubmit or handleEditSubmit} email
+ * @param {document.getElementById of handleSubmit or handleEditSubmit} userMassage
+ * have been entered correctly. If not
+ * @returns the error message
+ */
+function validateInput() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const userMassage = document.getElementById("userMessage").value.trim();
+
+  const nameRegex = /^[A-Za-zÄÖÜäöüß\s'\-]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.(de|com|org|net)$/;
+  const massageRegex = /^(?!\s*$).+/;
+
+  if (!nameRegex.test(name)) {
+    errorEditText.innerText = "Invalid name. Only letters and hyphens allowed.";
+    return false;
+  }
+  if (!emailRegex.test(email)) {
+    errorEditText.innerText = "Invalid email. “@” and valid domain required.";
+    return false;
+  }
+  if (!massageRegex.test(userMassage)) {
+    errorEditText.innerText = "Empty massage is not allowed";
+    return false;
+  }
+  errorEditText.innerText = "";
+  return true;
+}
+
+document.getElementById("kontaktForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  validateInput();
+  if (!validateInput()) {
+    return;
+  }
+
+  fetch("./assets/php/formular.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("userMessage").value,
+    }),
+  })
+    .then(async (response) => {
+      const text = await response.text();
+      console.log(text);
+
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("userMessage").value = "";
+    })
+    .catch((err) => console.error(err));
+});
+
+// Remove bevore Launch
+window.addEventListener("load", () => {
+  const container = document.querySelector(".sections");
+  const target = document.querySelector("#contact-section");
+
+  if (container && target) {
+    container.scrollTo({
+      left: target.offsetLeft,
+      behavior: "smooth",
+    });
+  }
+});
