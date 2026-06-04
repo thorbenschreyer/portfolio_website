@@ -2,19 +2,20 @@ const navLinks = document.querySelectorAll(".navigation-item");
 const sections = document.querySelectorAll("section");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
-const massageInput = document.getElementById("userMessage");
-const errorEditText = document.getElementById("error-text");
+const messageInput = document.getElementById("userMessage");
+const errorMessageElement = document.getElementById("error-text");
+const checkbox = document.getElementById("checkbox");
+const checkboxLabel = document.querySelector(".custom-checkbox");
 
 let isManualScrolling = false;
 
-checkIsFieldEmpty(nameInput, "Your name is required");
-checkIsFieldEmpty(emailInput, "Your email is required");
-checkIsFieldEmpty(massageInput, "Your message is required");
-
 /**
- * This function check if a inputfild is notfilled with text
- * @param {const} input
- * @param {string} errorMessage
+ * Adds validation behavior to an input field.
+ * Displays an error message when the field loses focus and is empty,
+ * and restores the default state when the field gains focus again.
+ *
+ * @param {HTMLInputElement|HTMLTextAreaElement} input - The input element to validate.
+ * @param {string} errorMessage - The error message displayed when the field is empty.
  */
 function checkIsFieldEmpty(input, errorMessage) {
   input.addEventListener("blur", function () {
@@ -35,25 +36,60 @@ function checkIsFieldEmpty(input, errorMessage) {
 }
 
 /**
- * Allows to scroll to the clicked site,
- * without get interferences in the nav bar
+ * Validates all form fields before submission.
+ *
+ * Validation rules:
+ * - Name must contain only letters, spaces, apostrophes, and hyphens.
+ * - Email must contain a valid format and supported domain.
+ * - Message field must not be empty.
+ * - Privacy policy checkbox must be checked.
+ *
+ * @returns {boolean} Returns true if all fields are valid; otherwise false.
  */
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    isManualScrolling = true;
-    navLinks.forEach((nav) => {
-      nav.classList.remove("isActive");
-    });
+function validateInput() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const userMessage = document.getElementById("userMessage").value.trim();
 
-    link.classList.add("isActive");
-    setTimeout(() => {
-      isManualScrolling = false;
-    }, 1000);
-  });
-});
+  const nameRegex = /^[A-Za-zÄÖÜäöüß\s'-]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.(de|com|org|net)$/;
+
+  if (!nameRegex.test(name) || name === "Your name is required") {
+    errorMessageElement.innerText =
+      "Invalid name. Only letters and hyphens allowed.";
+    return false;
+  }
+
+  if (
+    email === "" ||
+    email === "Your email is required" ||
+    !emailRegex.test(email)
+  ) {
+    errorMessageElement.innerText =
+      "Invalid email. '@' and a valid domain are required.";
+    return false;
+  }
+
+  if (userMessage === "" || userMessage === "Your message is required") {
+    errorMessageElement.innerText = "An empty message is not allowed.";
+    return false;
+  }
+
+  if (!checkbox.checked) {
+    errorMessageElement.innerText = "Please accept the privacy policy.";
+    checkboxLabel.classList.add("error");
+    return false;
+  }
+
+  checkboxLabel.classList.remove("error");
+  errorMessageElement.innerText = "";
+  return true;
+}
 
 /**
- * Set and remove isAvtivestate
+ * Observes section visibility and updates the active navigation item
+ * based on the currently visible section.
+ * Automatic updates are disabled during manual scrolling.
  */
 const observer = new IntersectionObserver(
   (entries) => {
@@ -62,9 +98,11 @@ const observer = new IntersectionObserver(
         navLinks.forEach((link) => {
           link.classList.remove("isActive");
         });
+
         const activeLink = document.querySelector(
           `.navigation-item[href="#${entry.target.id}"]`,
         );
+
         if (activeLink) {
           activeLink.classList.add("isActive");
         }
@@ -76,46 +114,62 @@ const observer = new IntersectionObserver(
   },
 );
 
+/* -------------------------------------------------------------------------- */
+/*                              Initialization                                */
+/* -------------------------------------------------------------------------- */
+
+checkIsFieldEmpty(nameInput, "Your name is required");
+checkIsFieldEmpty(emailInput, "Your email is required");
+checkIsFieldEmpty(messageInput, "Your message is required");
+
 sections.forEach((section) => {
   observer.observe(section);
 });
 
+/* -------------------------------------------------------------------------- */
+/*                              Event Listeners                               */
+/* -------------------------------------------------------------------------- */
+
 /**
- * This function checks whether
- * @param {document.getElementById of handleSubmit or handleEditSubmit} name
- * @param {document.getElementById of handleSubmit or handleEditSubmit} email
- * @param {document.getElementById of handleSubmit or handleEditSubmit} userMassage
- * have been entered correctly. If not
- * @returns the error message
+ * Removes the checkbox error state when the user accepts
+ * the privacy policy.
  */
-function validateInput() {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const userMassage = document.getElementById("userMessage").value.trim();
-
-  const nameRegex = /^[A-Za-zÄÖÜäöüß\s'\-]+$/;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.(de|com|org|net)$/;
-  const massageRegex = /^(?!\s*$).+/;
-
-  if (!nameRegex.test(name)) {
-    errorEditText.innerText = "Invalid name. Only letters and hyphens allowed.";
-    return false;
+checkbox.addEventListener("change", () => {
+  if (checkbox.checked) {
+    checkboxLabel.classList.remove("error");
+    errorMessageElement.innerText = "";
   }
-  if (!emailRegex.test(email)) {
-    errorEditText.innerText = "Invalid email. “@” and valid domain required.";
-    return false;
-  }
-  if (!massageRegex.test(userMassage)) {
-    errorEditText.innerText = "Empty massage is not allowed";
-    return false;
-  }
-  errorEditText.innerText = "";
-  return true;
-}
+});
 
+/**
+ * Updates the active navigation item when a navigation link is clicked.
+ * Temporarily disables automatic section-based navigation highlighting
+ * while the user is manually scrolling.
+ */
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    isManualScrolling = true;
+
+    navLinks.forEach((nav) => {
+      nav.classList.remove("isActive");
+    });
+
+    link.classList.add("isActive");
+
+    setTimeout(() => {
+      isManualScrolling = false;
+    }, 1000);
+  });
+});
+
+/**
+ * Handles form submission.
+ * Prevents the default browser behavior, validates user input,
+ * and sends the form data to the server via a POST request.
+ */
 document.getElementById("kontaktForm").addEventListener("submit", function (e) {
   e.preventDefault();
-  validateInput();
+
   if (!validateInput()) {
     return;
   }
@@ -138,11 +192,20 @@ document.getElementById("kontaktForm").addEventListener("submit", function (e) {
       document.getElementById("name").value = "";
       document.getElementById("email").value = "";
       document.getElementById("userMessage").value = "";
+
+      checkbox.checked = false;
+      checkboxLabel.classList.remove("checked");
     })
     .catch((err) => console.error(err));
 });
 
-// Remove bevore Launch
+/**
+ * Automatically scrolls to the contact section after page load.
+ *
+ * NOTE:
+ * This code is intended for development and testing purposes
+ * and should be removed before production deployment.
+ */
 window.addEventListener("load", () => {
   const container = document.querySelector(".sections");
   const target = document.querySelector("#contact-section");
