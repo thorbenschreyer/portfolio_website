@@ -181,3 +181,23 @@
   max-width: 130px;
   height: 45px;
 }
+
+.prject-description-hover {
+  opacity: 0;
+  position: absolute;
+  bottom: 32px;
+  transition: ease-in-out 250ms;
+}
+
+.project:hover .prject-description-hover {
+  opacity: 1;
+}
+
+.prject-description-normal {
+  opacity: 1;
+  transition: ease-in-out 350ms;
+}
+
+.project:hover .prject-description-normal {
+  opacity: 0;
+}
