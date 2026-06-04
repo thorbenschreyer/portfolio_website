@@ -47,11 +47,8 @@ sections.forEach((section) => {
 });
 
 document.getElementById("kontaktForm").addEventListener("submit", function (e) {
-  console.log(document.getElementById("name").value);
-  console.log(document.getElementById("email").value);
-  console.log(document.getElementById("userMessage").value);
   e.preventDefault();
-
+  startValidating();
   fetch("./assets/php/formular.php", {
     method: "POST",
     headers: {
@@ -88,3 +85,38 @@ window.addEventListener("load", () => {
     });
   }
 });
+
+/**
+ * This function checks whether
+ * @param {document.getElementById of handleSubmit or handleEditSubmit} name
+ * @param {document.getElementById of handleSubmit or handleEditSubmit} email
+ * @param {document.getElementById of handleSubmit or handleEditSubmit} phone
+ * have been entered correctly. If not
+ * @returns the error message
+ */
+function validate(name, email, userMassage) {
+  const nameRegex = /^[A-Za-zÄÖÜäöüß\s'\-]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.(de|com|org|net)$/;
+  const massageRegex = /^(?!\s*$).+/;
+
+  if (!nameRegex.test(name))
+    return "Invalid name. Only letters and hyphens allowed.";
+  if (!emailRegex.test(email))
+    return "Invalid email. “@” and valid domain required.";
+  if (!massageRegex.test(userMassage))
+    return "Invalid phone number. Digits only.";
+
+  return null;
+}
+
+function startValidating() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const userMassage = document.getElementById("userMessage").value.trim();
+  const errorEditText = document.getElementById("edit-error-text");
+  const editError = validateContact(name, email, phone);
+  if (editError) {
+    errorEditText.innerText = editError;
+    return;
+  }
+}
