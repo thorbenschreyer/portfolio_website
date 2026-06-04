@@ -1,6 +1,14 @@
 const navLinks = document.querySelectorAll(".navigation-item");
 const sections = document.querySelectorAll("section");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const massageInput = document.getElementById("userMessage");
+
 let isManualScrolling = false;
+
+checkIsFieldEmpty(nameInput, "Your name is required")
+checkIsFieldEmpty(emailInput, "Your email is required")
+checkIsFieldEmpty(massageInput, "Your message is required")
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
@@ -103,8 +111,7 @@ function validate(name, email, userMassage) {
     return "Invalid name. Only letters and hyphens allowed.";
   if (!emailRegex.test(email))
     return "Invalid email. “@” and valid domain required.";
-  if (!massageRegex.test(userMassage))
-    return "Emptymassage is not allowed";
+  if (!massageRegex.test(userMassage)) return "Emptymassage is not allowed";
 
   return null;
 }
@@ -119,4 +126,24 @@ function startValidating() {
     errorEditText.innerText = editError;
     return;
   }
+}
+
+
+
+function checkIsFieldEmpty(input, errorMessage) {
+  input.addEventListener("blur", function () {
+    if (this.value.trim() === "") {
+      this.value = errorMessage;
+      this.style.color = "#FD2E12";
+      this.style.borderColor = "#FD2E12";
+    }
+  });
+
+  input.addEventListener("focus", function () {
+    if (this.value === errorMessage) {
+      this.value = "";
+      this.style.color = "";
+      this.style.borderColor = "";
+    }
+  });
 }
