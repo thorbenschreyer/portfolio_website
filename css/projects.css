@@ -68,13 +68,23 @@
   margin-bottom: 32px;
 }
 
+.project-text-margin {
+  color: #fffdfd;
+  margin-bottom: 48px;
+}
+
 .about-the-project {
   width: 480px;
   padding-left: 30px;
 }
 
 .technologys-project {
-  width: 830px;
+  width: 460px;
+  padding-left: 30px;
+}
+
+.learned-project {
+  width: 860px;
   padding-left: 30px;
 }
 
@@ -133,7 +143,6 @@
   color: #fffdfd;
 }
 
-
 .project-text-section {
   margin-left: 40px;
 }
@@ -162,7 +171,7 @@
 }
 
 .ongoing-project-text {
-  color: #FFFDFD;
+  color: #fffdfd;
 }
 
 .ongoing-project-button {
@@ -173,7 +182,7 @@
   height: 45px;
 }
 
-.ongoing-project-button span{
+.ongoing-project-button span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,7 +194,7 @@
 .prject-description-hover {
   opacity: 0;
   position: absolute;
-  bottom: 32px;
+  bottom: 8px;
   transition: ease-in-out 250ms;
 }
 
@@ -199,5 +208,20 @@
 }
 
 .project:hover .prject-description-normal {
+  opacity: 0;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 75px;
+  opacity: 1;
+  width: 337px;
+  height: 203px;
+  border-radius: 30px;
+  transition: ease-in-out 350ms;
+  background-color: rgba(211, 237, 151, 0.2);
+}
+
+.project:hover .overlay {
   opacity: 0;
 }
