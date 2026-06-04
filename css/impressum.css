@@ -118,3 +118,11 @@ html {
 .footer-space {
   flex: 1;
 }
+
+.impressumsite-text ul {
+    padding: revert;
+}
+
+.margin-impressumsite-text {
+    margin-left: 200px
+}

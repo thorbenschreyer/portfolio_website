@@ -4,7 +4,6 @@ Project Section
 - Livetest Verlinken 
 
 Contact Section
-- PP hübsch machen 
 - Form Validierung 
 - Implementieren PHP Script 
 
