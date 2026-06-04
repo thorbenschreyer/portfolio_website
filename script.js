@@ -8,6 +8,7 @@ const checkbox = document.getElementById("checkbox");
 const checkboxLabel = document.querySelector(".custom-checkbox");
 
 let isManualScrolling = false;
+let translations = {};
 
 /**
  * Adds validation behavior to an input field.
@@ -217,3 +218,49 @@ window.addEventListener("load", () => {
     });
   }
 });
+
+
+
+
+
+
+// Translations
+async function loadLanguage(language) {
+  try {
+    const response = await fetch(`./assets/i18n/${language}.json`);
+
+    translations = await response.json();
+
+    applyTranslations();
+
+    localStorage.setItem("language", language);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function getTranslation(key) {
+  return translations[key] || key;
+}
+
+function applyTranslations() {
+  const elements = document.querySelectorAll("[data-i18n]");
+
+  elements.forEach((element) => {
+    const key = element.dataset.i18n;
+
+    element.textContent = getTranslation(key);
+  });
+}
+
+document
+    .getElementById('de-btn')
+    .addEventListener('click', () => {
+        loadLanguage('de');
+    });
+
+document
+    .getElementById('en-btn')
+    .addEventListener('click', () => {
+        loadLanguage('en');
+    });

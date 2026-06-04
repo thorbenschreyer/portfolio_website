@@ -2,7 +2,6 @@ Project Section
 - Livetest Verlinken 
 
 Contact Section
-- Form Validierung bei leerer massage.... geht noch nicht richtig! 
 - Implementieren PHP Script // Ist implementiert, test ausstehend da server kein PHP kann! 
 
 Allgemein
