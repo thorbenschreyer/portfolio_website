@@ -3,7 +3,7 @@ Project Section
 
 Contact Section
 - Form Validierung 
-- Implementieren PHP Script 
+- Implementieren PHP Script // Ist implementiert, test ausstehend da server kein PHP kann! 
 
 Allgemein
 - Wrapper auf 1440px

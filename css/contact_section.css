@@ -103,7 +103,6 @@ form {
 
 .checkbox-area {
   display: flex;
-  align-items: center;
   gap: 12px;
 }
 
@@ -198,7 +197,6 @@ zu .custom-checkbox hinzu
 ------------------------------ */
 
 .checkbox-area p {
-  color: var(--main-green);
   font-size: 14px;
   line-height: 1.4;
 }
@@ -311,4 +309,13 @@ zu .custom-checkbox hinzu
 .impressum-lower-section a {
   color: var(--white);
   margin-bottom: 8px;
+}
+
+.error-text {
+  height: 20px;
+  color: #fd2e12;
+}
+
+.checkbox-text {
+  color: var(--main-green);
 }

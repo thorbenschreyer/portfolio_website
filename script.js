@@ -104,7 +104,7 @@ function validate(name, email, userMassage) {
   if (!emailRegex.test(email))
     return "Invalid email. “@” and valid domain required.";
   if (!massageRegex.test(userMassage))
-    return "Invalid phone number. Digits only.";
+    return "Emptymassage is not allowed";
 
   return null;
 }
@@ -113,7 +113,7 @@ function startValidating() {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const userMassage = document.getElementById("userMessage").value.trim();
-  const errorEditText = document.getElementById("edit-error-text");
+  const errorEditText = document.getElementById("error-text");
   const editError = validateContact(name, email, phone);
   if (editError) {
     errorEditText.innerText = editError;
