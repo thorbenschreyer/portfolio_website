@@ -1,6 +1,4 @@
 Project Section 
-- Hover effekt bilder Dunkel/Hell 
-- Texte What ihave Learned und Prject Experience beim Hovern Text ändern
 - Livetest Verlinken 
 
 Contact Section

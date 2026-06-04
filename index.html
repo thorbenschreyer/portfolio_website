@@ -630,17 +630,14 @@
           <div class="contact-content">
             <div class="contact-form">
               <div class="contact-head">Contact me</div>
-              <form action="">
-                <input class="input-form" type="text" placeholder="Your Name" />
-                <input
-                  class="input-form"
-                  type="email"
-                  placeholder="Your e-mail"
-                />
+              <form id="kontaktForm" action="">
+                <input class="input-form" type="text" placeholder="Your Name" id="name"/>
+                <input class="input-form" type="email" placeholder="Your e-mail" id="email"/>
                 <textarea
                   class="input-message input-form"
                   type="text"
                   placeholder="Your massage"
+                  id="userMessage"
                 ></textarea>
                 <div class="checkbox-area">
                   <label class="custom-checkbox" for="checkbox">
@@ -680,7 +677,7 @@
                   </p>
                 </div>
                 <div class="form-btn-area">
-                  <button class="form-send-btn btn" disabled>
+                  <button type="submit" class="form-send-btn btn">
                     <span>Send</span>
                   </button>
                 </div>
