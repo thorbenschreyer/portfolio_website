@@ -1,7 +1,7 @@
 {
     "name": "Thorben Schreyer",
     "Frontend-Developer": "Frontend Developer",
-    "why-me-motivation": "Ich bin motiviert, Ideen in wachsende Projekte zu verwandeln, Teams durch Innovation und und neue Technologie voranzubringen und dabei sinnvolle Lösungen zu schaffen, die sich stetig weiterentwickeln.",
+    "why-me-motivation": "Ich bin motiviert, Ideen in wachsende Projekte zu verwandeln, Teams durch Innovation und neue Technologie voranzubringen und dabei sinnvolle Lösungen zu schaffen, die sich stetig weiterentwickeln.",
     "why-me-located": "Sitz in Mannheim",
     "why-me-remote": "Remote arbeiten",
     "why-me-relocate": "bereit, umzuziehen",
@@ -35,5 +35,6 @@
     "project-join-group": "Die Zusammenarbeit im Team hat meine Kommunikationsfähigkeiten gestärkt und mir gezeigt, wie wichtig saubere Abstimmung und Versionskontrolle sind.",
     "next-project": "Aktuelles Projekt",
     "ongoing-projekt": "Memory-Spiel <br /> Entwicklung eines reaktionsschnellen Memory-Spiels mit TypeScript und SCSS. Das Projekt konzentriert sich auf die Vertiefung grundlegender Programmierkonzepte, Anwendungslogik und moderner Styling-Techniken bei gleichzeitiger Schaffung einer ansprechenden Benutzererfahrung.",
-    "ongoing-lets-talk": "Lass uns reden"
+    "ongoing-lets-talk": "Lass uns reden",
+    "why-me-i-am" : "Ich bin"
 }

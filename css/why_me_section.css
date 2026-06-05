@@ -76,7 +76,7 @@
   width: 77%;
   height: 96px;
   margin-top: -30px;
-  margin-left: 60px;
+  margin-left: 88px;
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -88,6 +88,7 @@
   align-items: center;
   flex-direction: column;
   position: relative;
+  width: 175px;
   transition: 400ms;
 }
 
@@ -109,7 +110,7 @@
   transition: opacity 400ms ease;
   position: absolute;
   bottom: 63px;
-  left: 50px;
+  left: 60px;
 }
 
 .why-me-icon:hover .why-me-icon-remote-hover {
@@ -146,4 +147,8 @@
   position: absolute;
   right: 32px;
   bottom: 60px;
+}
+
+.motivation {
+  height: 60px
 }

@@ -35,5 +35,6 @@
   "project-join-group": "Collaborating in a team strengthened my communication skills and showed me the importance of clear coordination and version control.",
   "next-project": "Current Project",
   "ongoing-projekt": "Memory Game <br /> Development of a responsive memory game using TypeScript and SCSS. The project focuses on strengthening core programming concepts, application logic, and modern styling techniques while creating an engaging user experience.",
-  "ongoing-lets-talk": "Let's Talk"
+  "ongoing-lets-talk": "Let's Talk",
+  "why-me-i-am" : "I am"
 }
