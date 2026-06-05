@@ -60,13 +60,6 @@ html {
   width: calc(100vw - 172px);
   height: 100vh;
 
-  background: linear-gradient(
-    to right,
-    #000000 0%,
-    #2c2b2b 35%,
-    #0b0a0a 70%,
-    #323232 100%
-  );
 }
 
 .impressum-content {
@@ -81,6 +74,18 @@ html {
   scroll-behavior: smooth;
 
   scrollbar-width: none;
+
+
+}
+
+.impressum-background {
+    background: linear-gradient(
+    to right,
+    #000000 0%,
+    #2c2b2b 35%,
+    #0b0a0a 70%,
+    #000000 100%
+  );
 }
 
 .impressum-content::-webkit-scrollbar {
