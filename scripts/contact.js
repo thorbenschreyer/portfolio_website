@@ -5,50 +5,22 @@ const errorMessageElement = document.getElementById("error-text");
 const checkbox = document.getElementById("checkbox");
 const checkboxLabel = document.querySelector(".custom-checkbox");
 
-/**
- * Handles form submission.
- * Prevents the default browser behavior, validates user input,
- * and sends the form data to the server via a POST request.
- */
-document.getElementById("kontaktForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  if (!validateInput()) {
-    return;
-  }
-
-  fetch("./assets/php/formular.php", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      message: document.getElementById("userMessage").value,
-    }),
-  })
-    .then(async (response) => {
-      const text = await response.text();
-      console.log(text);
-
-      document.getElementById("name").value = "";
-      document.getElementById("email").value = "";
-      document.getElementById("userMessage").value = "";
-
-      checkbox.checked = false;
-      checkboxLabel.classList.remove("checked");
-    })
-    .catch((err) => console.error(err));
-});
+/* -------------------------------------------------------------------------- */
+/*                              Validation                                    */
+/* -------------------------------------------------------------------------- */
 
 /**
  * Adds validation behavior to an input field.
- * Displays an error message when the field loses focus and is empty,
- * and restores the default state when the field gains focus again.
  *
- * @param {HTMLInputElement|HTMLTextAreaElement} input - The input element to validate.
- * @param {string} errorMessage - The error message displayed when the field is empty.
+ * If the field is left empty when losing focus, a translated
+ * error message is displayed directly inside the field and
+ * the input receives an error style.
+ *
+ * When the field gains focus again, the error state is removed
+ * and the original styling is restored.
+ *
+ * @param {HTMLInputElement | HTMLTextAreaElement} input - Field to validate.
+ * @param {string} errorKey - Translation key for the error message.
  */
 function checkIsFieldEmpty(input, errorKey) {
   input.addEventListener("blur", function () {
@@ -72,15 +44,17 @@ function checkIsFieldEmpty(input, errorKey) {
 }
 
 /**
- * Validates all form fields before submission.
+ * Validates all form fields before the form is submitted.
  *
  * Validation rules:
- * - Name must contain only letters, spaces, apostrophes, and hyphens.
- * - Email must contain a valid format and supported domain.
+ * - Name must contain only valid characters.
+ * - Email must match a supported email format.
  * - Message field must not be empty.
- * - Privacy policy checkbox must be checked.
+ * - Privacy policy checkbox must be accepted.
  *
- * @returns {boolean} Returns true if all fields are valid; otherwise false.
+ * Displays a translated error message when validation fails.
+ *
+ * @returns {boolean} True if all inputs are valid, otherwise false.
  */
 function validateInput() {
   const name = document.getElementById("name").value.trim();
@@ -120,7 +94,81 @@ function validateInput() {
 
   checkboxLabel.classList.remove("error");
   errorMessageElement.innerText = "";
+
   return true;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Initialization                                */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Registers validation handlers for all form fields.
+ *
+ * @returns {void}
+ */
+function initValidation() {
+  checkIsFieldEmpty(nameInput, "error-name-required");
+  checkIsFieldEmpty(emailInput, "error-email-required");
+  checkIsFieldEmpty(messageInput, "error-message-required");
+}
+
+/**
+ * Initializes the application.
+ *
+ * Loads the currently selected language and activates
+ * form validation.
+ *
+ * @returns {void}
+ */
+function init() {
+  initValidation();
+  loadLanguage(getCurrentLanguage());
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Form Handling                                 */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Handles the contact form submission.
+ *
+ * Prevents the default form behavior, validates all inputs,
+ * sends the form data to the server and resets the form after
+ * a successful request.
+ *
+ * @param {SubmitEvent} e - Form submit event.
+ */
+function handleFormSubmit(e) {
+  e.preventDefault();
+
+  if (!validateInput()) {
+    return;
+  }
+
+  fetch("./assets/php/formular.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: nameInput.value,
+      email: emailInput.value,
+      message: messageInput.value,
+    }),
+  })
+    .then(async (response) => {
+      const text = await response.text();
+      console.log(text);
+
+      nameInput.value = "";
+      emailInput.value = "";
+      messageInput.value = "";
+
+      checkbox.checked = false;
+      checkboxLabel.classList.remove("checked");
+    })
+    .catch((err) => console.error(err));
 }
 
 /* -------------------------------------------------------------------------- */
@@ -128,8 +176,8 @@ function validateInput() {
 /* -------------------------------------------------------------------------- */
 
 /**
- * Removes the checkbox error state when the user accepts
- * the privacy policy.
+ * Removes the checkbox error state as soon as the user
+ * accepts the privacy policy.
  */
 if (checkbox) {
   checkbox.addEventListener("change", () => {
@@ -140,24 +188,11 @@ if (checkbox) {
   });
 }
 
-function initValidation() {
-  checkIsFieldEmpty(nameInput, "error-name-required");
-  checkIsFieldEmpty(emailInput, "error-email-required");
-  checkIsFieldEmpty(messageInput, "error-message-required");
-}
+document
+  .getElementById("kontaktForm")
+  .addEventListener("submit", handleFormSubmit);
 
 /**
- * Starts the application and loads the current language.
- *
- * @returns {void}
- */
-function init() {
-  initValidation();
-  loadLanguage(getCurrentLanguage());
-}
-
-/**
- * Initializes the translation system after the DOM has been fully loaded.
- * Loads the currently selected language or the default language.
+ * Starts the application once the DOM is fully loaded.
  */
 document.addEventListener("DOMContentLoaded", init);

@@ -4,10 +4,16 @@ const sections = document.querySelectorAll("section");
 let isManualScrolling = false;
 let translations = {};
 
+/* -------------------------------------------------------------------------- */
+/*                              Navigation                                    */
+/* -------------------------------------------------------------------------- */
+
 /**
- * Observes section visibility and updates the active navigation item
- * based on the currently visible section.
- * Automatic updates are disabled during manual scrolling.
+ * Observes all sections and automatically updates the active
+ * navigation item based on the currently visible section.
+ *
+ * Automatic updates are temporarily disabled while the user
+ * is manually navigating through the page.
  */
 const observer = new IntersectionObserver(
   (entries) => {
@@ -32,71 +38,63 @@ const observer = new IntersectionObserver(
   },
 );
 
-/* -------------------------------------------------------------------------- */
-/*                              Initialization                                */
-/* -------------------------------------------------------------------------- */
-
-sections.forEach((section) => {
-  observer.observe(section);
-});
-
 /**
- * Updates the active navigation item when a navigation link is clicked.
- * Temporarily disables automatic section-based navigation highlighting
- * while the user is manually scrolling.
+ * Registers all sections with the Intersection Observer
+ * so navigation highlighting can be updated automatically.
+ *
+ * @returns {void}
  */
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    isManualScrolling = true;
-
-    navLinks.forEach((nav) => {
-      nav.classList.remove("isActive");
-    });
-
-    link.classList.add("isActive");
-
-    setTimeout(() => {
-      isManualScrolling = false;
-    }, 1000);
+function initSectionObserver() {
+  sections.forEach((section) => {
+    observer.observe(section);
   });
-});
+}
 
 /**
- * Automatically scrolls to the contact section after page load.
+ * Updates the active navigation state when a navigation
+ * item is clicked.
  *
- * NOTE:
- * This code is intended for development and testing purposes
- * and should be removed before production deployment.
+ * Automatic navigation highlighting is temporarily disabled
+ * to prevent conflicts during manual scrolling.
+ *
+ * @param {MouseEvent} event - Navigation click event.
  */
-window.addEventListener("load", () => {
-  const container = document.querySelector(".sections");
-  const target = document.querySelector("#contact-section");
+function handleNavigationClick(event) {
+  isManualScrolling = true;
 
-  if (container && target) {
-    container.scrollTo({
-      left: target.offsetLeft,
-      behavior: "smooth",
-    });
-  }
-});
+  navLinks.forEach((nav) => {
+    nav.classList.remove("isActive");
+  });
+
+  event.currentTarget.classList.add("isActive");
+
+  setTimeout(() => {
+    isManualScrolling = false;
+  }, 1000);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Language                                      */
+/* -------------------------------------------------------------------------- */
 
 /**
- * Retrieves the currently selected language from local storage.
- * Returns German ("de") if no language has been stored yet.
+ * Returns the currently selected language.
  *
- * @returns {string} The language code (e.g. "de" or "en")
+ * If no language has been stored yet, German ("de")
+ * is used as the default language.
+ *
+ * @returns {string} Current language code.
  */
 function getCurrentLanguage() {
   return localStorage.getItem("language") || "de";
 }
 
 /**
- * Loads the translation file for the specified language,
- * stores the translations, updates the UI, and saves the
- * selected language in local storage.
+ * Loads a translation file, updates all translated content
+ * on the page and stores the selected language.
  *
  * @async
- * @param {string} language - The language code to load.
+ * @param {string} language - Language code to load.
  * @returns {Promise<void>}
  */
 async function loadLanguage(language) {
@@ -111,19 +109,25 @@ async function loadLanguage(language) {
 }
 
 /**
- * Returns the translated text for the given key.
- * If no translation is found, the key itself is returned.
+ * Returns the translation for a given key.
  *
- * @param {string} key - The translation key.
- * @returns {string} The translated text.
+ * If the key does not exist in the translation object,
+ * the key itself is returned as a fallback.
+ *
+ * @param {string} key - Translation key.
+ * @returns {string} Translated text.
  */
 function getTranslation(key) {
   return translations[key] || key;
 }
 
 /**
- * Updates all elements containing the `data-i18n` attribute
- * with their corresponding translated text.
+ * Updates all translatable elements on the page.
+ *
+ * Supports:
+ * - Text content via data-i18n
+ * - HTML content via data-i18n-html
+ * - Input placeholders via data-i18n-placeholder
  *
  * @returns {void}
  */
@@ -152,6 +156,15 @@ function applyTranslations() {
   });
 }
 
+/**
+ * Updates validation error messages that are currently
+ * displayed inside input and textarea fields.
+ *
+ * This ensures that visible validation messages are also
+ * translated when the language changes.
+ *
+ * @returns {void}
+ */
 function updateErrorMessages() {
   const elements = document.querySelectorAll(
     "input[data-error-key], textarea[data-error-key]",
@@ -163,15 +176,69 @@ function updateErrorMessages() {
 }
 
 /**
- * Loads the German translation file when the German language button is clicked.
+ * Switches the application language.
+ *
+ * @param {string} language - Language code.
+ * @returns {void}
  */
-document.getElementById("de-btn").addEventListener("click", () => {
-  loadLanguage("de");
-});
+function handleLanguageChange(language) {
+  loadLanguage(language);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Development                                   */
+/* -------------------------------------------------------------------------- */
 
 /**
- * Loads the English translation file when the English language button is clicked.
+ * Scrolls automatically to the contact section after page load.
+ *
+ * This helper is intended for development and testing only
+ * and should be removed before deployment.
+ *
+ * @returns {void}
  */
-document.getElementById("en-btn").addEventListener("click", () => {
-  loadLanguage("en");
+function scrollToContactSection() {
+  const container = document.querySelector(".sections");
+  const target = document.querySelector("#contact-section");
+
+  if (container && target) {
+    container.scrollTo({
+      left: target.offsetLeft,
+      behavior: "smooth",
+    });
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Initialization                                */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Initializes navigation and loads the current language.
+ *
+ * @returns {void}
+ */
+function init() {
+  initSectionObserver();
+  loadLanguage(getCurrentLanguage());
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Event Listeners                               */
+/* -------------------------------------------------------------------------- */
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", handleNavigationClick);
 });
+
+document
+  .getElementById("de-btn")
+  .addEventListener("click", () => handleLanguageChange("de"));
+
+document
+  .getElementById("en-btn")
+  .addEventListener("click", () => handleLanguageChange("en"));
+
+window.addEventListener("load", scrollToContactSection);
+
+document.addEventListener("DOMContentLoaded", init);
