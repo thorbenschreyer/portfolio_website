@@ -6,7 +6,7 @@ Contact Section
 
 Allgemein
 - Wrapper auf 1440px
-- Deutsch und Englisch umschlaten 
+- Übersetzung PP und Impressum noch erstellen
 
 Responsive Design
 - Alle Webseiten

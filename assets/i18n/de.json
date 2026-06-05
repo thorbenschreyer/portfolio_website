@@ -51,6 +51,20 @@
     "skills": "Skills",
     "my-work": "My Work",
     "contact": "Contact",
-    "impressum" : "",
-    "legal" : ""
+    "impressumTitle": "Impressum",
+    "impressumSection1Title": "Angaben gemäß § 5 DDG",
+    "impressumSection1Content": "Thorben Schreyer<br>Ersheimer Strasse 9<br>69434 Hirschhorn<br>Deutschland",
+    "impressumSection2Title": "Kontakt",
+    "impressumSection2Content": "E-Mail: thorben.schreyer@web.de",
+    "impressumSection3Title": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
+    "impressumSection3Content": "Thorben Schreyer<br>Ersheimer Strasse 9<br>69434 Hirschhorn",
+    "impressumSection4Title": "Haftung für Inhalte",
+    "impressumSection4Content": "Als Diensteanbieter bin ich gemäß den allgemeinen Gesetzen für eigene Inhalte auf diesen Seiten verantwortlich. Ich bin jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.",
+    "impressumSection5Title": "Haftung für Links",
+    "impressumSection5Content": "Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
+    "impressumSection6Title": "Urheberrecht",
+    "impressumSection6Content": "Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.",
+    "footerLegalNotice": "Rechtliche Hinweise",
+    "footerImpressum": "Impressum",
+    "footerCopyright": "&copy; Thorben Ansgar <br>Schreyer 2026"
 }
