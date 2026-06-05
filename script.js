@@ -281,12 +281,18 @@ function getTranslation(key) {
  * @returns {void}
  */
 function applyTranslations() {
-  const elements = document.querySelectorAll("[data-i18n]");
+  const textElements = document.querySelectorAll("[data-i18n]");
 
-  elements.forEach((element) => {
+  textElements.forEach((element) => {
     const key = element.dataset.i18n;
-
     element.textContent = getTranslation(key);
+  });
+
+  const htmlElements = document.querySelectorAll("[data-i18n-html]");
+
+  htmlElements.forEach((element) => {
+    const key = element.dataset.i18nHtml;
+    element.innerHTML = getTranslation(key);
   });
 }
 

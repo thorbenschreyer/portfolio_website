@@ -87,7 +87,7 @@
             />
             <div class="hero-name">
               <span class="developer-name" data-i18n="name"></span>
-              <span class="developer-function">Frontend Developer</span>
+              <span class="developer-function" data-i18n="Frontend-Developer"></span>
             </div>
           </div>
           <a href="#why-me-section">
@@ -106,13 +106,9 @@
             <div class="why-me-textarea">
               <div class="why-me-header">Why me</div>
 
-              <div class="why-me-description">
-                <p>
-                  Ich bin motiviert, Ideen in wachsende Projekte zu verwandeln,
-                  Teams durch Innovation und und neue Technologie voranzubringen
-                  und dabei sinnvolle Lösungen zu schaffen, die sich stetig
-                  weiterentwickeln.
-                </p>
+              <div  data-i18n="why-me-motivation" class="why-me-description">
+                <p></p>
+
                 <span>I am</span>
                 <div class="why-me-icons">
                   <div class="why-me-icon">
@@ -125,7 +121,7 @@
                       src="./assets/img/located_city_hover.png"
                       alt=""
                     />
-                    <p>located in Mannheim</p>
+                    <p data-i18n="why-me-located"></p>
                   </div>
 
                   <div class="why-me-icon">
@@ -138,7 +134,7 @@
                       src="./assets/img/work_remote_hover.png"
                       alt=""
                     />
-                    <p>open to work remote</p>
+                    <p data-i18n="why-me-remote"></p>
                   </div>
 
                   <div class="why-me-icon">
@@ -157,7 +153,7 @@
                       src="./assets/img/bag-roll.png"
                       alt=""
                     />
-                    <p>open to relocate</p>
+                    <p data-i18n="why-me-relocate"></p>
                   </div>
                 </div>
               </div>
@@ -165,7 +161,7 @@
 
             <div class="contact-me-button-area">
               <a href="#contact-section" class="btn contact-me-btn"
-                ><span>Contact me</span></a
+                ><span data-i18n="contact-me"></span></a
               >
             </div>
             <a href="#skill-section">
@@ -187,15 +183,7 @@
             </div>
             <div class="skill-section-content-right">
               <div class="skill-section-text">
-                <p>
-                  Als Frontend Developer entwickle ich moderne und responsive
-                  Webanwendungen mit Fokus auf sauberen Code und
-                  benutzerfreundliches Design. Durch verschiedene Projekte
-                  konnte ich Erfahrungen mit unterschiedlichen
-                  Frontend-Technologien sammeln und meine Fähigkeiten stetig
-                  erweitern. Ich lerne gerne neue Technologien und passe mich
-                  schnell an neue Herausforderungen an.
-                </p>
+                <p data-i18n="skill-skills"></p>
               </div>
               <div class="skill-section-img-up">
                 <div class="skill">
@@ -246,7 +234,7 @@
                 </div>
                 <div>
                   <a href="#contact-section" class="btn contact-me-btn-skill"
-                    ><span>Ask for more</span></a
+                    ><spa data-i18n="skill-ask" ></spa></a
                   >
                 </div>
               </div>
@@ -577,10 +565,8 @@
             <div class="reference-head">References</div>
             <div class="all-references">
               <div class="reference">
-                <p class="reference-content">
-                  „JOIN überzeugt durch die übersichtliche Benutzerverwaltung
-                  und das durchdachte Ticketsystem. Die Anwendung wirkt
-                  professionell und praxisnah.“
+                <p data-i18n="reference-1" class="reference-content">
+
                 </p>
                 <hr />
                 <div class="name-and-project">
@@ -590,10 +576,8 @@
               </div>
 
               <div class="reference">
-                <p class="reference-content">
-                  „Einer der besten Endboss-Kämpfe, die ich bisher gespielt
-                  habe. Der finale Kampf gegen das Huhn war herausfordernd und
-                  hervorragend umgesetzt.“
+                <p data-i18n="reference-2" class="reference-content">
+
                 </p>
                 <hr />
                 <div class="name-and-project">
@@ -603,10 +587,8 @@
               </div>
 
               <div class="reference">
-                <p class="reference-content">
-                  „Die Bestell-App bietet eine intuitive Benutzerführung und
-                  vermittelt ein realistisches Bestellerlebnis, das bekannten
-                  Lieferdiensten sehr nahekommt.“
+                <p data-i18n="reference-3" class="reference-content">
+
                 </p>
                 <hr />
                 <div class="name-and-project">
@@ -630,7 +612,7 @@
         <section id="contact-section" class="contact-section">
           <div class="contact-content">
             <div class="contact-form">
-              <div class="contact-head">Contact me</div>
+              <div data-i18n="contact-me" class="contact-head"></div>
               <form id="kontaktForm" action="" novalidate>
                 <input
                   class="input-form"
@@ -680,19 +662,14 @@
                     />
                   </label>
                   <div>
-                    <p class="checkbox-text">
-                      I've read the
-                      <a href="leagal_notice.html" class="checkbox-pp"
-                        >privacy policy</a
-                      >
-                      and agree to the processing of my data as outlined
+                    <p data-i18n-html="contact-read-pp" class="checkbox-text">
                     </p>
                     <p id="error-text" class="error-text"></p>
                   </div>
                 </div>
                 <div class="form-btn-area">
                   <button type="submit" class="form-send-btn btn">
-                    <span>Send</span>
+                    <span data-i18n="send">Send</span>
                   </button>
                 </div>
               </form>
@@ -700,14 +677,7 @@
 
             <div class="impressum-section">
               <div class="impressum-upper-section">
-                <p class="impressum-text">
-                  <span class="impressum-text-highlight"
-                    >Let us work together.</span
-                  ><br /><br />
-                  Encourage people to contact you and describe what role you are
-                  interested in. Express confidence in your ability to make a
-                  meaningful contribution to a team through your expertise and
-                  enthusiasm for improving your skills.
+                <p data-i18n-html="work-together" class="impressum-text">
                 </p>
 
                 <div class="impressum-contact-details">
