@@ -5,7 +5,7 @@
     "why-me-located": "Sitz in Mannheim",
     "why-me-remote": "Remote arbeiten",
     "why-me-relocate": "bereit, umzuziehen",
-    "contact-me": "Kontakt",
+    "contact-me": "Contact",
     "skill-skills": "Als Frontend Developer entwickle ich moderne und responsive Webanwendungen mit Fokus auf sauberen Code und benutzerfreundliches Design. Durch verschiedene Projekte konnte ich Erfahrungen mit unterschiedlichen Frontend-Technologien sammeln und meine Fähigkeiten stetig erweitern. Ich lerne gerne neue Technologien und passe mich schnell an neue Herausforderungen an.",
     "skill-ask": "Andere Sprachen",
     "reference-1": "„JOIN überzeugt durch die übersichtliche Benutzerverwaltung und das durchdachte Ticketsystem. Die Anwendung wirkt professionell und praxisnah.“",
@@ -46,5 +46,9 @@
     "error-invalid-name": "Bitte gib einen gültigen Namen ein.",
     "error-invalid-email": "Bitte gib eine gültige E-Mail-Adresse ein.",
     "error-empty-message": "Bitte gib eine Nachricht ein.",
-    "error-privacy-policy": "Bitte akzeptiere die Datenschutzerklärung."
+    "error-privacy-policy": "Bitte akzeptiere die Datenschutzerklärung.",
+    "why-me": "Why me",
+    "skills": "Skills",
+    "my-work": "My Work",
+    "contact": "Contact"
 }

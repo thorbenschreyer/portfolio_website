@@ -46,5 +46,9 @@
   "error-invalid-name": "Invalid name. Only letters and hyphens allowed.",
   "error-invalid-email": "Invalid email. '@' and a valid domain are required.",
   "error-empty-message": "An empty message is not allowed.",
-  "error-privacy-policy": "Please accept the privacy policy."
+  "error-privacy-policy": "Please accept the privacy policy.",
+  "why-me": "Why me",
+  "skills": "Skills",
+  "my-work": "My Work",
+  "contact": "Contact"
 }
