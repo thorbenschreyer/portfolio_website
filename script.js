@@ -55,29 +55,27 @@ function validateInput() {
   const nameRegex = /^[A-Za-zÄÖÜäöüß\s'-]+$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.(de|com|org|net)$/;
 
-  if (!nameRegex.test(name) || name === "Your name is required") {
-    errorMessageElement.innerText =
-      "Invalid name. Only letters and hyphens allowed.";
+  if (!nameRegex.test(name) || name === getTranslation("error-invalid-name")) {
+    errorMessageElement.innerText = getTranslation("error-invalid-name");
     return false;
   }
 
   if (
     email === "" ||
-    email === "Your email is required" ||
+    email === getTranslation("error-invalid-email") ||
     !emailRegex.test(email)
   ) {
-    errorMessageElement.innerText =
-      "Invalid email. '@' and a valid domain are required.";
+    errorMessageElement.innerText = getTranslation("error-invalid-email");
     return false;
   }
 
-  if (userMessage === "" || userMessage === "Your message is required") {
-    errorMessageElement.innerText = "An empty message is not allowed.";
+  if (userMessage === "" || userMessage === getTranslation("error-empty-message")) {
+    errorMessageElement.innerText = getTranslation("error-empty-message");
     return false;
   }
 
   if (!checkbox.checked) {
-    errorMessageElement.innerText = "Please accept the privacy policy.";
+    errorMessageElement.innerText = getTranslation("error-privacy-policy");
     checkboxLabel.classList.add("error");
     return false;
   }
@@ -119,9 +117,11 @@ const observer = new IntersectionObserver(
 /*                              Initialization                                */
 /* -------------------------------------------------------------------------- */
 
-checkIsFieldEmpty(nameInput, "Your name is required");
-checkIsFieldEmpty(emailInput, "Your email is required");
-checkIsFieldEmpty(messageInput, "Your message is required");
+function initValidation() {
+  checkIsFieldEmpty(nameInput, getTranslation("error-name-required"));
+  checkIsFieldEmpty(emailInput, getTranslation("error-email-required"));
+  checkIsFieldEmpty(messageInput, getTranslation("error-message-required"));
+}
 
 sections.forEach((section) => {
   observer.observe(section);
@@ -259,7 +259,7 @@ async function loadLanguage(language) {
   translations = await response.json();
 
   applyTranslations();
-
+  initValidation();
   localStorage.setItem("language", language);
 }
 
@@ -293,6 +293,15 @@ function applyTranslations() {
   htmlElements.forEach((element) => {
     const key = element.dataset.i18nHtml;
     element.innerHTML = getTranslation(key);
+  });
+
+  const placeholderElements = document.querySelectorAll(
+    "[data-i18n-placeholder]",
+  );
+
+  placeholderElements.forEach((element) => {
+    const key = element.dataset.i18nPlaceholder;
+    element.placeholder = getTranslation(key);
   });
 }
 

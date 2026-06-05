@@ -36,5 +36,15 @@
   "next-project": "Current Project",
   "ongoing-projekt": "Memory Game <br /> Development of a responsive memory game using TypeScript and SCSS. The project focuses on strengthening core programming concepts, application logic, and modern styling techniques while creating an engaging user experience.",
   "ongoing-lets-talk": "Let's Talk",
-  "why-me-i-am" : "I am"
+  "why-me-i-am": "I am",
+  "your-name": "Your name",
+  "your-e-mail": "Your e-mail",
+  "your-massage": "Your massage",
+  "error-name-required": "Your name is required",
+  "error-email-required": "Your email is required",
+  "error-message-required": "Your message is required",
+  "error-invalid-name": "Invalid name. Only letters and hyphens allowed.",
+  "error-invalid-email": "Invalid email. '@' and a valid domain are required.",
+  "error-empty-message": "An empty message is not allowed.",
+  "error-privacy-policy": "Please accept the privacy policy."
 }

@@ -36,5 +36,15 @@
     "next-project": "Aktuelles Projekt",
     "ongoing-projekt": "Memory-Spiel <br /> Entwicklung eines reaktionsschnellen Memory-Spiels mit TypeScript und SCSS. Das Projekt konzentriert sich auf die Vertiefung grundlegender Programmierkonzepte, Anwendungslogik und moderner Styling-Techniken bei gleichzeitiger Schaffung einer ansprechenden Benutzererfahrung.",
     "ongoing-lets-talk": "Lass uns reden",
-    "why-me-i-am" : "Ich bin"
+    "why-me-i-am": "Ich bin",
+    "your-name": "Dein Name",
+    "your-e-mail": "Deine E-Mail",
+    "your-massage": "Deine Nachricht",
+    "error-name-required": "Bitte gib deinen Namen ein.",
+    "error-email-required": "Bitte gib deine E-Mail-Adresse ein.",
+    "error-message-required": "Bitte gib eine Nachricht ein.",
+    "error-invalid-name": "Bitte gib einen gültigen Namen ein.",
+    "error-invalid-email": "Bitte gib eine gültige E-Mail-Adresse ein.",
+    "error-empty-message": "Bitte gib eine Nachricht ein.",
+    "error-privacy-policy": "Bitte akzeptiere die Datenschutzerklärung."
 }
