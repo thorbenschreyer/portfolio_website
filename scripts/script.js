@@ -18,18 +18,21 @@ let translations = {};
  * @param {HTMLInputElement|HTMLTextAreaElement} input - The input element to validate.
  * @param {string} errorMessage - The error message displayed when the field is empty.
  */
-function checkIsFieldEmpty(input, errorMessage) {
+function checkIsFieldEmpty(input, errorKey) {
   input.addEventListener("blur", function () {
     if (this.value.trim() === "") {
-      this.value = errorMessage;
+      this.dataset.errorKey = errorKey;
+      this.value = getTranslation(errorKey);
       this.style.color = "#FD2E12";
       this.style.borderColor = "#FD2E12";
     }
   });
 
   input.addEventListener("focus", function () {
-    if (this.value === errorMessage) {
+    if (this.dataset.errorKey) {
       this.value = "";
+      delete this.dataset.errorKey;
+
       this.style.color = "";
       this.style.borderColor = "";
     }
@@ -118,9 +121,9 @@ const observer = new IntersectionObserver(
 /* -------------------------------------------------------------------------- */
 
 function initValidation() {
-  checkIsFieldEmpty(nameInput, getTranslation("error-name-required"));
-  checkIsFieldEmpty(emailInput, getTranslation("error-email-required"));
-  checkIsFieldEmpty(messageInput, getTranslation("error-message-required"));
+  checkIsFieldEmpty(nameInput, "error-name-required");
+  checkIsFieldEmpty(emailInput, "error-email-required");
+  checkIsFieldEmpty(messageInput, "error-message-required");
 }
 
 sections.forEach((section) => {
@@ -235,6 +238,7 @@ document.addEventListener("DOMContentLoaded", init);
  * @returns {void}
  */
 function init() {
+  initValidation();
   loadLanguage(getCurrentLanguage());
 }
 
@@ -263,7 +267,8 @@ async function loadLanguage(language) {
   translations = await response.json();
 
   applyTranslations();
-  initValidation();
+  updateErrorMessages();
+
   localStorage.setItem("language", language);
 }
 
@@ -306,6 +311,16 @@ function applyTranslations() {
   placeholderElements.forEach((element) => {
     const key = element.dataset.i18nPlaceholder;
     element.placeholder = getTranslation(key);
+  });
+}
+
+function updateErrorMessages() {
+  const elements = document.querySelectorAll(
+    "input[data-error-key], textarea[data-error-key]",
+  );
+
+  elements.forEach((element) => {
+    element.value = getTranslation(element.dataset.errorKey);
   });
 }
 
