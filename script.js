@@ -219,30 +219,67 @@ window.addEventListener("load", () => {
   }
 });
 
+/**
+ * Initializes the translation system after the DOM has been fully loaded.
+ * Loads the currently selected language or the default language.
+ */
+document.addEventListener("DOMContentLoaded", init);
 
-
-
-
-
-// Translations
-async function loadLanguage(language) {
-  try {
-    const response = await fetch(`./assets/i18n/${language}.json`);
-
-    translations = await response.json();
-
-    applyTranslations();
-
-    localStorage.setItem("language", language);
-  } catch (error) {
-    console.error(error);
-  }
+/**
+ * Starts the application and loads the current language.
+ *
+ * @returns {void}
+ */
+function init() {
+  loadLanguage(getCurrentLanguage());
 }
 
+/**
+ * Retrieves the currently selected language from local storage.
+ * Returns German ("de") if no language has been stored yet.
+ *
+ * @returns {string} The language code (e.g. "de" or "en")
+ */
+function getCurrentLanguage() {
+  return localStorage.getItem("language") || "de";
+}
+
+/**
+ * Loads the translation file for the specified language,
+ * stores the translations, updates the UI, and saves the
+ * selected language in local storage.
+ *
+ * @async
+ * @param {string} language - The language code to load.
+ * @returns {Promise<void>}
+ */
+async function loadLanguage(language) {
+  const response = await fetch(`./assets/i18n/${language}.json`);
+
+  translations = await response.json();
+
+  applyTranslations();
+
+  localStorage.setItem("language", language);
+}
+
+/**
+ * Returns the translated text for the given key.
+ * If no translation is found, the key itself is returned.
+ *
+ * @param {string} key - The translation key.
+ * @returns {string} The translated text.
+ */
 function getTranslation(key) {
   return translations[key] || key;
 }
 
+/**
+ * Updates all elements containing the `data-i18n` attribute
+ * with their corresponding translated text.
+ *
+ * @returns {void}
+ */
 function applyTranslations() {
   const elements = document.querySelectorAll("[data-i18n]");
 
@@ -253,14 +290,16 @@ function applyTranslations() {
   });
 }
 
-document
-    .getElementById('de-btn')
-    .addEventListener('click', () => {
-        loadLanguage('de');
-    });
+/**
+ * Loads the German translation file when the German language button is clicked.
+ */
+document.getElementById("de-btn").addEventListener("click", () => {
+  loadLanguage("de");
+});
 
-document
-    .getElementById('en-btn')
-    .addEventListener('click', () => {
-        loadLanguage('en');
-    });
+/**
+ * Loads the English translation file when the English language button is clicked.
+ */
+document.getElementById("en-btn").addEventListener("click", () => {
+  loadLanguage("en");
+});
