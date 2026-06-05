@@ -135,12 +135,14 @@ sections.forEach((section) => {
  * Removes the checkbox error state when the user accepts
  * the privacy policy.
  */
+if(checkbox) {
 checkbox.addEventListener("change", () => {
   if (checkbox.checked) {
     checkboxLabel.classList.remove("error");
     errorMessageElement.innerText = "";
   }
 });
+}
 
 /**
  * Updates the active navigation item when a navigation link is clicked.
@@ -168,6 +170,7 @@ navLinks.forEach((link) => {
  * Prevents the default browser behavior, validates user input,
  * and sends the form data to the server via a POST request.
  */
+if(kontaktForm) {
 document.getElementById("kontaktForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -199,6 +202,7 @@ document.getElementById("kontaktForm").addEventListener("submit", function (e) {
     })
     .catch((err) => console.error(err));
 });
+}
 
 /**
  * Automatically scrolls to the contact section after page load.

@@ -16,14 +16,14 @@
     <link rel="stylesheet" href="css/font.css" />
     <link rel="stylesheet" href="css/impressum.css" />
     <!-- JS Script -->
-    <script src="script.js" defer></script>
+    <script src="./scripts/script.js" defer></script>
     <!-- FAVICON -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Legal Notice</title>
   </head>
   <body>
     <nav>
-      <a href="index.html#hero-section">
+      <a href="#hero-section">
         <img
           src="./assets/img/tas_logo.png"
           class="navigation-img"
@@ -31,12 +31,18 @@
       /></a>
 
       <div class="navigation-links">
-        <a class="navigation-item" href="index.html#why-me-section">Why me</a>
-        <a class="navigation-item" href="index.html#skill-section">Skills</a>
-        <a class="navigation-item" href="index.html#portfolio-section"
+        <a data-i18n="why-me" class="navigation-item" href="#why-me-section"
+          >Why me</a
+        >
+        <a data-i18n="skills" class="navigation-item" href="#skill-section"
+          >Skills</a
+        >
+        <a data-i18n="my-work" class="navigation-item" href="#portfolio-section"
           >My Work</a
         >
-        <a class="navigation-item" href="index.html#contact-section">Contact</a>
+        <a data-i18n="contact" class="navigation-item" href="#contact-section"
+          >Contact</a
+        >
       </div>
     </nav>
     <div class="black-to-transparent"></div>
@@ -56,9 +62,9 @@
         ><img class="git-img" src="./assets/img/github_default.png" alt="ithub"
       /></a>
       <div class="language-buttons">
-        <span>DE</span>
+        <span id="de-btn">DE</span>
         <hr />
-        <span>EN</span>
+        <span id="en-btn">EN</span>
       </div>
     </div>
     <div class="impressum-container impressum-background">
