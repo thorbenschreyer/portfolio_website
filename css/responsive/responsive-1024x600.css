@@ -1,0 +1,18 @@
+nav {
+    width: 110px;
+}
+
+.navigation-img {
+    width: 80px;
+ 
+    margin-top: 16px;
+}
+
+.navigation-links {
+    margin: 8px 0px;
+}
+
+.navigation-links a {
+    height: 124px;
+    font-size: 24px;
+}

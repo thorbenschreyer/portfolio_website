@@ -199,7 +199,7 @@ function handleLanguageChange(language) {
  */
 function scrollToContactSection() {
   const container = document.querySelector(".sections");
-  const target = document.querySelector("#contact-section");
+  const target = document.querySelector("#hero-section");
 
   if (container && target) {
     container.scrollTo({
