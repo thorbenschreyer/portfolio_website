@@ -1,4 +1,4 @@
-@media (max-width: 1024px), (max-height: 768px) {
+@media (max-width: 1200px), (max-height: 768px) {
   nav {
     width: 110px;
   }
@@ -200,5 +200,24 @@
 
   .impressumsite-text {
     margin-left: 8px;
+  }
+
+  .arrow-contact {
+    top: 415px;
+  }
 }
+
+@media (max-height: 600px) {
+  .impressum-header {
+    height: 520px;
+  }
+
+  .impressumsite-text {
+    overflow-y: scroll;
+  }
+
+  .impressumsite-text {
+    height: 470px;
+    margin-left: 32px;
+  }
 }
