@@ -58,7 +58,7 @@ html {
   margin-left: 172px;
 
   width: calc(100vw - 172px);
-  height: 100vh;
+  overflow-y: hidden;
 
 }
 
