@@ -82,7 +82,6 @@
   z-index: 0;
 }
 
-
 .skill:hover::before {
   opacity: 1;
 }
@@ -99,9 +98,9 @@
 }
 
 .skill p {
-  display: flex;
-  justify-content: center;
   margin-top: 8px;
+  text-align: center;
+  width: 100%;
 }
 
 .contact-me-btn-skill {
@@ -111,6 +110,7 @@
   margin-top: 32px;
   width: 120px;
   height: 30px;
+  padding: 8px;
 }
 
 .contact-me-btn-skil span {

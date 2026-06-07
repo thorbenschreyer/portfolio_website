@@ -1,18 +1,156 @@
-nav {
+@media (max-width: 1026px), (max-height: 768px) {
+  nav {
     width: 110px;
-}
+  }
 
-.navigation-img {
+  .navigation-img {
     width: 80px;
- 
     margin-top: 16px;
-}
+  }
 
-.navigation-links {
+  .navigation-links {
     margin: 8px 0px;
-}
+  }
 
-.navigation-links a {
+  .navigation-links a {
     height: 124px;
     font-size: 24px;
+  }
+
+  section {
+    min-width: calc(100vw - 110px);
+  }
+
+  .sections {
+    margin-left: 110px;
+  }
+
+  .black-to-transparent {
+    left: 110px;
+  }
+
+  .my-img {
+    height: 560px;
+  }
+
+  .developer-name {
+    font-size: 64px;
+  }
+
+  .developer-function {
+    font-size: 40px;
+  }
+
+  .arrow-right {
+    width: 80px;
+    height: 24px;
+  }
+
+  .social-icons {
+    right: 40px;
+  }
+
+  .why-me-content {
+    margin-top: 130px;
+    margin-left: 32px;
+  }
+
+  .why-me-content {
+    width: 780px;
+  }
+
+  .why-me-header {
+    font-size: 40px;
+  }
+
+  .why-me-description span {
+    font-size: 40px;
+  }
+
+  .skill-section-content {
+    width: 760px;
+    margin-left: 32px;
+    margin-top: 100px;
+  }
+
+  .skill-section-content-left {
+    margin: unset;
+  }
+
+  .skill {
+    width: 80px;
+    height: 80px;
+  }
+
+  .skill-section-content-left p {
+    font-size: 48px;
+    margin-right: 16px;
+  }
+
+  .all-projects {
+    margin-left: 32px;
+    margin-top: 80px;
+  }
+
+  .about-the-project {
+    width: 350px;
+  }
+
+  .project-text-section {
+    margin: unset;
+  }
+
+  .project-text {
+    margin-bottom: 8px;
+  }
+
+  .prject-description-hover {
+    bottom: 18px;
+  }
+
+  .project {
+    height: 480px;
+    width: 800px;
+    padding: 0px 32px;
+  }
+
+  .project-presentation {
+    right: 30px;
+    top: 112px;
+  }
+
+  .technologys-project {
+    width: 425px;
+  }
+
+  .learned-project {
+    width: 780px;
+  }
+
+  .reference-section-container {
+    margin-left: 32px;
+    margin-top: 80px;
+  }
+
+  .reference {
+    height: 140px;
+    margin-bottom: 8px;
+  }
+
+  .reference-section-container {
+    height: 446px;
+  }
+
+  .reference-head {
+    font-size: 48px;
+  }
+
+  .contact-head {
+    font-size: 48px;
+  }
+
+  .contact-form {
+    margin-top: 80px;
+    margin-left: 32px;
+  }
 }

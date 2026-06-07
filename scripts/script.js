@@ -5,6 +5,30 @@ let isManualScrolling = false;
 let translations = {};
 
 /* -------------------------------------------------------------------------- */
+/*                              Development                                   */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Scrolls automatically to the contact section after page load.
+ *
+ * This helper is intended for development and testing only
+ * and should be removed before deployment.
+ *
+ * @returns {void}
+ */
+function scrollToContactSection() {
+  const container = document.querySelector(".sections");
+  const target = document.querySelector("#contact-section");
+
+  if (container && target) {
+    container.scrollTo({
+      left: target.offsetLeft,
+      behavior: "smooth",
+    });
+  }
+}
+
+/* -------------------------------------------------------------------------- */
 /*                              Navigation                                    */
 /* -------------------------------------------------------------------------- */
 
@@ -183,30 +207,6 @@ function updateErrorMessages() {
  */
 function handleLanguageChange(language) {
   loadLanguage(language);
-}
-
-/* -------------------------------------------------------------------------- */
-/*                              Development                                   */
-/* -------------------------------------------------------------------------- */
-
-/**
- * Scrolls automatically to the contact section after page load.
- *
- * This helper is intended for development and testing only
- * and should be removed before deployment.
- *
- * @returns {void}
- */
-function scrollToContactSection() {
-  const container = document.querySelector(".sections");
-  const target = document.querySelector("#hero-section");
-
-  if (container && target) {
-    container.scrollTo({
-      left: target.offsetLeft,
-      behavior: "smooth",
-    });
-  }
 }
 
 /* -------------------------------------------------------------------------- */

@@ -111,6 +111,14 @@ a {
   height: 100%;
   cursor: pointer;
   background: var(--main-green);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ask-btn {
+  text-align: center;
 }
 
 .btn span {
