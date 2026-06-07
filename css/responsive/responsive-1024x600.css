@@ -1,4 +1,4 @@
-@media (max-width: 1026px), (max-height: 768px) {
+@media (max-width: 1024px), (max-height: 768px) {
   nav {
     width: 110px;
   }
@@ -167,4 +167,38 @@
     max-width: 270px;
     height: 480px;
   }
+
+  .impressumsite-text h2 {
+    padding: unset;
+    font-size: 16px;
+  }
+
+  .arrow-impressum-next {
+    right: 32px;
+  }
+
+  .margin-impressumsite-text {
+    margin-left: 32px;
+  }
+  .impressum-header {
+    font-size: 48px;
+    margin-left: 32px;
+  }
+
+  .impressumsite-text p {
+    padding-bottom: 4px;
+  }
+
+  .impressum-container {
+    margin-left: 110px;
+    width: calc(100vw - 110px);
+  }
+
+  .impressum-detail {
+    height: 620px;
+  }
+
+  .impressumsite-text {
+    margin-left: 8px;
+}
 }
