@@ -47,7 +47,7 @@
   }
 
   .social-icons {
-    right: 40px;
+    right: 110px;
   }
 
   .why-me-content {
@@ -152,5 +152,19 @@
   .contact-form {
     margin-top: 80px;
     margin-left: 32px;
+  }
+
+  form {
+    width: 350px;
+  }
+
+  .input-message {
+    height: 140px;
+  }
+
+  .impressum-section {
+    margin: 80px 8px 0px 16px;
+    max-width: 270px;
+    height: 480px;
   }
 }
