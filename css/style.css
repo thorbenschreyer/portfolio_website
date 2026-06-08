@@ -12,7 +12,7 @@ body {
   --white: #ffffff;
   --black: #000000;
   --main-green: #b5e93b;
-  --light-green: #D3ED97;
+  --light-green: #d3ed97;
   --light-grey: #4a4a4a;
 }
 
@@ -231,4 +231,21 @@ footer {
   height: 100vh;
   flex-shrink: 0;
   background: linear-gradient(to bottom, var(--main-green) 60%, #547800 100%);
+}
+
+/*------------------------------------
+    Dialog
+------------------------------------*/
+.mobile-menu {
+  width: 100%;
+  height: 245px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background: linear-gradient(to bottom, #b5e93b 50%, #547800 100%);
+  border: unset;
+}
+
+.dialog-content {
+  width: 100%;
+  height: 100%;
 }

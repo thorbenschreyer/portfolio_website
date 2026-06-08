@@ -1,5 +1,6 @@
 const navLinks = document.querySelectorAll(".navigation-item");
 const sections = document.querySelectorAll("section");
+const mobileMenu = registerDialog("mobile-menu")
 
 let isManualScrolling = false;
 let translations = {};
@@ -96,6 +97,15 @@ function handleNavigationClick(event) {
     isManualScrolling = false;
   }, 1000);
 }
+
+/* -------------------------------------------------------------------------- */
+/*                          Dialog Management                                 */
+/* -------------------------------------------------------------------------- */
+
+function openMenuDialog() {
+  mobileMenu.showModal();
+}
+
 
 /* -------------------------------------------------------------------------- */
 /*                              Language                                      */
@@ -221,6 +231,24 @@ function handleLanguageChange(language) {
 function init() {
   initSectionObserver();
   loadLanguage(getCurrentLanguage());
+}
+
+
+/**
+ * Registers a dialog element
+ * and allows closing it by clicking outside.
+ *
+ * @param {string} dialogID - Dialog element ID.
+ * @returns {HTMLDialogElement} Registered dialog element.
+ */
+function registerDialog(dialogID) {
+  const dialog = document.getElementById(dialogID);
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      dialog.close();
+    }
+  });
+  return dialog;
 }
 
 /* -------------------------------------------------------------------------- */

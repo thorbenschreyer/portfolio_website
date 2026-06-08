@@ -1,12 +1,36 @@
 @media (max-width: 980px) {
-    nav {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 72px;
-    z-index: 2000;
-    background-color: var(--main-green);
-}
+  }
+
+  .navigation-links {
+    display: none;
+  }
+
+  .mobile-burger-menu {
+    height: 32px;
+    width: 32px;
+    margin-right: 16px;
+  }
+
+  .navigation-img {
+    width: 80px;
+    margin-left: 16px;
+  }
+
+  .sections {
+    margin: unset;
+  }
+
+  .black-to-transparent {
+    left: 0px;
+    top: 73px;
+    width: 100%;
+    height: 29px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.42), transparent);
+  }
 }
