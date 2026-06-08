@@ -251,6 +251,14 @@ function registerDialog(dialogID) {
       dialog.close();
     }
   });
+  document
+  .getElementById("de-btn-mobile")
+  .addEventListener("click", () => handleLanguageChange("de"));
+
+document
+  .getElementById("en-btn-mobile")
+  .addEventListener("click", () => handleLanguageChange("en"));
+  
   return dialog;
 }
 
