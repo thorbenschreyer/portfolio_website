@@ -81,4 +81,73 @@
   .arrow-right {
     display: none;
   }
+
+  .my-img {
+    top: 80px;
+  }
+
+  .hero-name {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 550px;
+    left: 50%;
+    top: 720px;
+  }
+
+  .developer-name {
+    font-size: 48px;
+    font-family: "Quantico-Regular";
+  }
+
+  .developer-location {
+    display: block;
+    color: white;
+    font-size: 18px;
+  }
+
+  .hero-name-mobile {
+    flex-direction: column-reverse;
+  }
+
+  .developer-function {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: "Quantico-Regular";
+    color: var(--main-green);
+}
+}
+
+
+@media (max-width: 430px ) {
+    .my-img {
+    height: 420px;
+    top: 60px;
+  }
+
+  .hero-name {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 550px;
+    left: 50%;
+    top: 540px;
+  }
+
+  .developer-name {
+    font-size: 32px;
+    font-family: "Quantico-Regular";
+  }
+
+  .developer-location {
+    font-size: 16px;
+  }
+
+  .developer-function {
+    font-size: 18px;
+}
 }

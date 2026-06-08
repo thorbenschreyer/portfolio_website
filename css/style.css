@@ -271,3 +271,13 @@ footer {
 .mobile-burger-menu {
   display: none;
 }
+
+.developer-location {
+  display: none;
+}
+
+.hero-name-mobile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
