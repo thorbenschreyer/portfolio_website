@@ -116,3 +116,10 @@
 .contact-me-btn-skil span {
   z-index: 1000;
 }
+
+.detail-skill-section-img-up {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}

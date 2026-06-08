@@ -126,7 +126,7 @@
   }
 
   .why-me-content {
-    margin: 32px 16px 0px 16px;
+    margin: 8px 16px;
     width: unset;
   }
 
@@ -220,6 +220,44 @@
     font-size: 32px;
     display: block;
     margin-bottom: 16px;
+  }
+
+  .skill-section-content {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 16px;
+    width: unset;
+  }
+
+  .skill-section-content-left p {
+    display: flex;
+    justify-content: start;
+    font-size: 32px;
+    -webkit-text-stroke: 1px var(--main-green);
+    writing-mode: unset;
+    transform: unset;
+  }
+
+  .skill p {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .skill-section-img-up {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .skill-section-img-down {
+    margin-bottom: 16px;
+    flex-direction: column;
+    height: unset;
+    margin-top: unset;
+  }
+
+  .detail-skill-section-img-up {
+    margin: 8px 0px;
   }
 }
 
