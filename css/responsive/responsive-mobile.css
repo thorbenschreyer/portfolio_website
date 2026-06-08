@@ -1,0 +1,12 @@
+@media (max-width: 980px) {
+    nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 72px;
+    z-index: 2000;
+    background-color: var(--main-green);
+}
+}
