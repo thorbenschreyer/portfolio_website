@@ -273,26 +273,6 @@
     width: 66%;
   }
 
-  .skill-motivation {
-    display: block;
-    color: #fffdfd;
-    margin-top: 24px;
-  }
-
-  .contact-me-btn-skill {
-    margin-top: unset;
-}
-
-  .desktop-skill-btn {
-    display: none;
-  }
-
-  .mobile-skill-btn {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-
 }
 
 @media (max-width: 430px) {

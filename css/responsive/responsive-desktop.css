@@ -205,6 +205,12 @@
   .arrow-contact {
     top: 415px;
   }
+
+  .skill-motivation {
+    left: 0px;
+    top: 110px;
+    width: 450px;
+}
 }
 
 @media (max-height: 600px) {

@@ -22,8 +22,9 @@
 .skill-section-img-down {
   display: flex;
   flex-direction: row;
+  position: relative;
   justify-content: space-around;
-  width: 100%;
+  width: 84%;
   height: 100px;
   margin-top: 24px;
 }
@@ -124,6 +125,10 @@
   width: 100%;
 }
 
-  .mobile-skill-btn {
-    display: none;
+  .skill-motivation {
+    position: absolute;
+    display: block;
+    color: #fffdfd;
+    left: 625px;
+    width: 250px;
   }
