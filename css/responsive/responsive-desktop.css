@@ -208,7 +208,7 @@
 
   .skill-motivation {
     left: 0px;
-    top: 110px;
+    top: 235px;
     width: 450px;
 }
 }
@@ -234,4 +234,10 @@
   .impressum-section {
     height: 480px;
   }
+}
+
+@media (max-width: 450px ) {
+      .skill-motivation {
+        width: 320px;
+    }
 }

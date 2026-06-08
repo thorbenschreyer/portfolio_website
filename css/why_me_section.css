@@ -110,7 +110,7 @@
   transition: opacity 400ms ease;
   position: absolute;
   bottom: 63px;
-  left: 53px;
+  left: 59px;
 }
 
 .why-me-icon:hover .why-me-icon-remote-hover {
@@ -119,24 +119,24 @@
 
 .bag-corpus {
   position: absolute;
-  top: -30px;
+  top: 52px;
   z-index: 500;
 }
 
 .bag-roll {
   position: absolute;
-  top: 3px;
+  top: 84px;
   z-index: 400;
 }
 
 .bag-griff {
   position: absolute;
-  bottom: 55px;
+  bottom: 21px;
   transition: 400ms;
 }
 
 .why-me-icon:hover .bag-griff {
-  bottom: 62px
+  bottom: 31px
 }
 
 .why-me-icon p {
@@ -152,3 +152,12 @@
 .motivation {
   height: 60px
 }
+
+.bag-img {
+    position: relative;
+    width: 175px;
+    height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

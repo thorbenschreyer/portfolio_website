@@ -6,6 +6,7 @@ Fragen:
 DE / EN Aktive State? 
 Im Mobilen Menü aktiv und nicht aktiv anzeigen
 maximale Seitenbreite begrenzen oder offen lassen? Wrapper auf 1440px??
+Hover effekt in der mobilen version?
 
 Responsive Design
 - Mobiles Design erstellen 

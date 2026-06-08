@@ -19,11 +19,11 @@ let translations = {};
  */
 function scrollToContactSection() {
   const container = document.querySelector(".sections");
-  const target = document.querySelector("#why-me-section");
+  const target = document.querySelector("#portfolio-section");
 
   if (container && target) {
     container.scrollTo({
-      left: target.offsetLeft,
+      top: target.offsetTop,
       behavior: "smooth",
     });
   }
