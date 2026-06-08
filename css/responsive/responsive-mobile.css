@@ -30,7 +30,7 @@
   section {
     width: 100%;
     min-width: unset;
-    min-height: 100vh;
+    min-height: unset;
   }
 
   nav {
@@ -132,6 +132,7 @@
   .why-me-content {
     margin: 8px 16px;
     width: unset;
+    height: unset;
   }
 
   .why-me-textarea {
@@ -230,8 +231,9 @@
   .skill-section-content {
     display: flex;
     flex-direction: column;
-    margin: 8px 16px;
+    margin: 80px 16px;
     width: unset;
+    height: unset;
   }
 
   .skill-section-content-left p {
@@ -246,6 +248,11 @@
   .skill p {
     display: none;
   }
+
+      .skill-section-content-left {
+        margin: unset;
+        margin-bottom: 16px;
+    }
 }
 
 @media (max-width: 600px) {
