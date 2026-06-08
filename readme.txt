@@ -1,16 +1,13 @@
-Project Section 
+Todos
 - Livetest Verlinken 
-
-Contact Section
 - Implementieren PHP Script // Ist implementiert, test ausstehend da server kein PHP kann! 
 
-Allgemein
-- Wrapper auf 1440px
-- Navigation anpassen auf Datenschutz und Impressum 
+Fragen: 
+DE / EN Aktive State? 
+Im Mobilen Menü aktiv und nicht aktiv anzeigen
+maximale Seitenbreite begrenzen oder offen lassen? Wrapper auf 1440px??
 
 Responsive Design
-- Alle Webseiten
-- Ab 800px auf mobildes Design umstellen 
 - Mobiles Design erstellen 
 
 Testen

@@ -1,4 +1,17 @@
 @media (max-width: 980px) {
+
+.sections-track {
+
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #2c2b2b 25%,
+    #0b0a0a 50%,
+    #323232 75%,
+    #0b0a0a 100%
+  );
+}
+
   .sections {
     overflow-x: hidden;
     overflow-y: auto;
