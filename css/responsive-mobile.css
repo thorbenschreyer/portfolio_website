@@ -1,0 +1,311 @@
+@media (max-width: 980px) {
+  .unset-height-mobile {
+    height: unset;
+  }
+
+  .sections-track {
+    background: linear-gradient(
+      to bottom,
+      #000000 0%,
+      #2c2b2b 25%,
+      #0b0a0a 50%,
+      #323232 75%,
+      #0b0a0a 100%
+    );
+  }
+
+  .sections {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    scroll-snap-type: none;
+    height: 100vh;
+  }
+
+  .sections-track {
+    display: block;
+    width: 100%;
+  }
+
+  section {
+    width: 100%;
+    min-width: unset;
+    min-height: unset;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 72px;
+  }
+
+  .navigation-links {
+    display: none;
+  }
+
+  .mobile-burger-menu {
+    display: block;
+    height: 32px;
+    width: 32px;
+    margin-right: 16px;
+  }
+
+  .navigation-img {
+    width: 80px;
+    margin-left: 16px;
+  }
+
+  .sections {
+    margin: unset;
+  }
+
+  .black-to-transparent {
+    left: 0px;
+    top: 72px;
+    width: 100%;
+    height: 29px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.42), transparent);
+  }
+
+  .navigation-links-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 230px;
+  }
+
+  .language-buttons {
+    margin: unset;
+  }
+
+  .language-buttons span {
+    color: #4a4a4a;
+  }
+
+  .language-buttons hr {
+    border-color: #4a4a4a;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .arrow-right {
+    display: none;
+  }
+
+  .my-img {
+    position: unset;
+  }
+
+  .hero-name {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .developer-name {
+    font-size: 48px;
+    font-family: "Quantico-Regular";
+  }
+
+  .developer-location {
+    display: block;
+    color: white;
+    font-size: 18px;
+  }
+
+  .hero-name-mobile {
+    flex-direction: column-reverse;
+  }
+
+  .developer-function {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: "Quantico-Regular";
+    color: var(--main-green);
+  }
+
+  .why-me-content {
+    margin: 8px 16px;
+    width: unset;
+    height: unset;
+  }
+
+  .why-me-textarea {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .why-me-header {
+    writing-mode: unset;
+    transform: unset;
+    justify-content: start;
+    font-size: 32px;
+    color: var(--black);
+    -webkit-text-stroke: 1px var(--main-green);
+    width: 100%;
+    height: 100%;
+    margin-bottom: 16px;
+  }
+
+  .hero-section {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .why-me-description {
+    height: unset;
+    margin-left: unset;
+  }
+
+  .why-me-description p {
+    margin: unset;
+    margin-bottom: 16px;
+  }
+
+  .motivation {
+    height: unset;
+  }
+
+  .why-me-icons {
+    flex-direction: column;
+    margin: unset;
+    align-items: center;
+    height: 200px;
+    width: unset;
+    justify-content: space-between;
+  }
+
+  .mobile-not-displayed {
+    display: none;
+  }
+
+  .contact-me-button-area {
+    justify-content: center;
+  }
+
+  .bag-img {
+    position: relative;
+    width: 175px;
+    height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bag-corpus {
+    top: 32px;
+  }
+
+  .bag-roll {
+    top: 64px;
+  }
+
+  .bag-griff {
+    bottom: 42px;
+  }
+
+  .why-me-icon:hover .bag-griff {
+    bottom: 52px;
+  }
+
+  .remote-mobile {
+    margin-left: -16px;
+  }
+
+  .why-me-icon-remote-hover {
+    left: 53px;
+  }
+
+  .why-me-description span {
+    text-align: center;
+    font-size: 32px;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .skill-section-content {
+    display: flex;
+    flex-direction: column;
+    margin: 80px 16px;
+    width: unset;
+    height: unset;
+  }
+
+  .skill-section-content-left p {
+    display: flex;
+    justify-content: start;
+    font-size: 32px;
+    -webkit-text-stroke: 1px var(--main-green);
+    writing-mode: unset;
+    transform: unset;
+  }
+
+  .skill p {
+    display: none;
+  }
+
+  .skill-section-content-left {
+    margin: unset;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skill-section-img-up {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .skill-section-img-down {
+    margin-bottom: 16px;
+    flex-direction: column;
+    height: unset;
+    margin-top: unset;
+    width: 100%;
+  }
+
+  .detail-skill-section-img-up {
+    position: relative;
+    margin: 8px 0px;
+  }
+
+  .show-in-mobile p {
+    display: block;
+  }
+
+  .show-in-mobile {
+    margin-top: 26px;
+  }
+
+  .last-skill-section {
+    width: 66%;
+  }
+
+  .skill-motivation {
+    top: 242px;
+  }
+}
+
+@media (max-width: 430px) {
+  .my-img {
+    height: 420px;
+    top: 60px;
+  }
+  .developer-name {
+    font-size: 32px;
+    font-family: "Quantico-Regular";
+  }
+
+  .developer-location {
+    font-size: 16px;
+  }
+
+  .developer-function {
+    font-size: 18px;
+  }
+}

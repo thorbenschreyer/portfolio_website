@@ -155,7 +155,35 @@
     border-radius: 20px;
     background: var(--main-green);
   }
+
+.contact-section {
+        flex-direction: column;
 }
+
+
+    .contact-content {
+    display: flex;
+    flex-direction: column;
+}
+
+    .contact-form {
+        flex-direction: column;
+    }
+
+  footer {
+    min-width: 100vw;
+    height: 372px;
+    flex-shrink: 0;
+    background: linear-gradient(to bottom, var(--main-green) 60%, #547800 100%);
+}
+}
+
+
+
+
+
+
+
 
 @media (max-width: 500px) {
   .project-presentation {
