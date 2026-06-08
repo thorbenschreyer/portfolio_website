@@ -3,7 +3,7 @@
     overflow-x: hidden;
     overflow-y: auto;
 
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: none;
     height: 100vh;
   }
 
@@ -31,6 +31,7 @@
   }
 
   .mobile-burger-menu {
+    display: block;
     height: 32px;
     width: 32px;
     margin-right: 16px;
@@ -71,5 +72,13 @@
 
   .language-buttons hr {
     border-color: #4a4a4a;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .arrow-right {
+    display: none;
   }
 }
