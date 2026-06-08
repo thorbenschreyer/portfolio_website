@@ -1,3 +1,44 @@
-@media (max-width: 980px) { 
-    
+@media (max-width: 980px) {
+  .all-projects {
+    width: calc(100% - 32px);
+    display: flex;
+    flex-direction: column;
+    margin: 0px 16px;
+    gap: 40px;
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: start;
+    -webkit-text-stroke: 1px var(--main-green);
+    writing-mode: unset;
+    transform: unset;
+    font-size: 32px;
+  }
+
+  .project {
+    width: unset;
+    margin: unset;
+  }
+
+  .project-head-number {
+    font-size: 40px;
+    margin-right: 16px;
+    -webkit-text-stroke: 1px var(--main-green);
+  }
+
+  .project-head-project-name {
+    font-size: 24px;
+  }
+
+  .project-h2 {
+    font-size: 22px;
+  }
+
+  .about-the-project,
+  .technologys-project,
+  .learned-project,
+  .prject-description-hover {
+    width: 100%;
+  }
 }
