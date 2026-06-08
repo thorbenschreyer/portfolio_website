@@ -94,6 +94,12 @@
     padding: 0px 8px;
     gap: 16px;
     height: 95%;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+
+  .all-references::-webkit-scrollbar {
+    display: none;
   }
 
   .desktop-display-none {
@@ -104,6 +110,7 @@
     flex: 0 0 100%;
     width: 100%;
     scroll-snap-align: start;
+    flex-shrink: 0;
     margin: unset;
     height: 176px;
   }
@@ -120,6 +127,31 @@
 
   .customer-name {
     font-size: 22px;
+  }
+
+  .desktop-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 32px;
+  }
+
+  .dot {
+    border: 1px solid var(--main-green);
+    background: transparent;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 250ms ease;
+  }
+
+  .dot.active {
+    width: 18px;
+    height: 4px;
+    border-radius: 20px;
+    background: var(--main-green);
   }
 }
 

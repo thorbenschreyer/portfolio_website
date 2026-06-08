@@ -1,6 +1,8 @@
 const navLinks = document.querySelectorAll(".navigation-item");
 const sections = document.querySelectorAll("section");
 const mobileMenu = registerDialog("mobile-menu")
+const slider = document.querySelector(".all-references");
+const dots = document.querySelectorAll(".dot");
 
 let isManualScrolling = false;
 let translations = {};
@@ -283,4 +285,36 @@ window.addEventListener("load", scrollToContactSection);
 document.addEventListener("DOMContentLoaded", init);
 
 
+function goToSlide(index) {
+  const references = document.querySelectorAll(".reference");
+
+  slider.scrollTo({
+    left: references[index].offsetLeft,
+    behavior: "smooth",
+  });
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    goToSlide(index);
+  });
+});
+
+slider.addEventListener("scroll", () => {
+  const references = document.querySelectorAll(".reference");
+
+  let activeIndex = 0;
+
+  references.forEach((reference, index) => {
+    const offset =
+      Math.abs(reference.offsetLeft - slider.scrollLeft);
+
+    if (offset < reference.offsetWidth / 2) {
+      activeIndex = index;
+    }
+  });
+
+  dots.forEach((dot) => dot.classList.remove("active"));
+  dots[activeIndex].classList.add("active");
+});
 
