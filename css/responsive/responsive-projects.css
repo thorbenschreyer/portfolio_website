@@ -20,6 +20,7 @@
     width: unset;
     margin: unset;
     height: unset;
+    padding: 0px 20px;
   }
 
   .project-head-number {
@@ -40,8 +41,8 @@
   .technologys-project,
   .learned-project,
   .prject-description-hover {
-    width: 100%;
-    height: 50px;
+    width: calc(100% - 30px);
+    height: 64px;
   }
 
   .project-presentation {
@@ -51,17 +52,58 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    padding: 24px 0px;
+    padding: 32px 0px;
   }
 
   .prject-description-hover {
     opacity: 0;
     position: absolute;
-    top: 259px;
+    top: 284px;
     transition: ease-in-out 250ms;
   }
 
   .overlay {
     display: none;
+  }
+
+  .ongoing-project-button {
+    display: none;
+  }
+
+  .reference-section-container {
+    display: flex;
+    flex-direction: column;
+    width: unset;
+    height: unset;
+    margin: 32px 16px 0px 16px;
+  }
+
+  .reference-head {
+    -webkit-text-stroke: 1px var(--main-green);
+    writing-mode: unset;
+    transform: unset;
+    font-size: 32px;
+    margin-right: unset;
+  }
+
+.all-references {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+
+  .desktop-display-none {
+    display: block;
+  }
+
+.reference {
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+  .name-and-project {
+    align-items: start;
   }
 }

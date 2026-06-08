@@ -286,3 +286,6 @@ footer {
   align-items: center;
 }
 
+.desktop-display-none {
+  display: none;
+}
