@@ -126,15 +126,17 @@
   }
 
   .why-me-content {
-    margin: 80px 16px 0px 16px;
+    margin: 32px 16px 0px 16px;
+    width: unset;
   }
 
   .why-me-textarea {
     flex-direction: column;
+    height: unset;
   }
 
   .why-me-header {
-     writing-mode: unset;
+    writing-mode: unset;
     transform: unset;
     justify-content: start;
     font-size: 32px;
@@ -142,12 +144,77 @@
     -webkit-text-stroke: 1px var(--main-green);
     width: 100%;
     height: 100%;
-}
+    margin-bottom: 16px;
+  }
 
-.hero-section {
+  .hero-section {
     justify-content: center;
     align-items: center;
+  }
+
+  .why-me-description {
+    height: unset;
+    margin-left: unset;
+  }
+
+  .why-me-description p {
+    margin: unset;
+    margin-bottom: 16px;
+  }
+
+  .motivation {
+    height: unset;
+  }
+
+  .why-me-icons {
+    flex-direction: column;
+    margin: unset;
+    align-items: center;
+    height: 200px;
+    width: unset;
+    justify-content: space-between;
+  }
+
+  .mobile-not-displayed {
+    display: none;
+  }
+
+  .contact-me-button-area {
+    justify-content: center;
+  }
+
+  .bag-img {
+    position: relative;
+    width: 175px;
+    height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bag-corpus {
+    top: 32px;
+  }
+
+  .bag-roll {
+    top: 64px;
+  }
+
+  .bag-griff {
+    bottom: 42px;
 }
+
+.why-me-icon:hover .bag-griff {
+  bottom: 52px
+}
+
+.remote-mobile {
+    margin-left: -16px;
+}
+
+.why-me-icon-remote-hover {
+  left: 53px;
+}
+
 }
 
 @media (max-width: 430px) {
