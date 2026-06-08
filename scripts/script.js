@@ -1,6 +1,6 @@
 const navLinks = document.querySelectorAll(".navigation-item");
 const sections = document.querySelectorAll("section");
-const mobileMenu = registerDialog("mobile-menu")
+const mobileMenu = registerDialog("mobile-menu");
 const slider = document.querySelector(".all-references");
 const dots = document.querySelectorAll(".dot");
 
@@ -21,8 +21,7 @@ let translations = {};
  */
 function scrollToContactSection() {
   const container = document.querySelector(".sections");
-  const target = document.querySelector("#portfolio-section");
-
+  const target = document.querySelector("#contact-section");
   if (container && target) {
     container.scrollTo({
       top: target.offsetTop,
@@ -49,11 +48,9 @@ const observer = new IntersectionObserver(
         navLinks.forEach((link) => {
           link.classList.remove("isActive");
         });
-
         const activeLink = document.querySelector(
           `.navigation-item[href="#${entry.target.id}"]`,
         );
-
         if (activeLink) {
           activeLink.classList.add("isActive");
         }
@@ -88,13 +85,10 @@ function initSectionObserver() {
  */
 function handleNavigationClick(event) {
   isManualScrolling = true;
-
   navLinks.forEach((nav) => {
     nav.classList.remove("isActive");
   });
-
   event.currentTarget.classList.add("isActive");
-
   setTimeout(() => {
     isManualScrolling = false;
   }, 1000);
@@ -138,12 +132,9 @@ function getCurrentLanguage() {
  */
 async function loadLanguage(language) {
   const response = await fetch(`./assets/i18n/${language}.json`);
-
   translations = await response.json();
-
   applyTranslations();
   updateErrorMessages();
-
   localStorage.setItem("language", language);
 }
 
@@ -172,23 +163,16 @@ function getTranslation(key) {
  */
 function applyTranslations() {
   const textElements = document.querySelectorAll("[data-i18n]");
-
   textElements.forEach((element) => {
     const key = element.dataset.i18n;
     element.textContent = getTranslation(key);
   });
-
   const htmlElements = document.querySelectorAll("[data-i18n-html]");
-
   htmlElements.forEach((element) => {
     const key = element.dataset.i18nHtml;
     element.innerHTML = getTranslation(key);
   });
-
-  const placeholderElements = document.querySelectorAll(
-    "[data-i18n-placeholder]",
-  );
-
+  const placeholderElements = document.querySelectorAll("[data-i18n-placeholder]",);
   placeholderElements.forEach((element) => {
     const key = element.dataset.i18nPlaceholder;
     element.placeholder = getTranslation(key);
@@ -208,7 +192,6 @@ function updateErrorMessages() {
   const elements = document.querySelectorAll(
     "input[data-error-key], textarea[data-error-key]",
   );
-
   elements.forEach((element) => {
     element.value = getTranslation(element.dataset.errorKey);
   });
@@ -238,7 +221,6 @@ function init() {
   loadLanguage(getCurrentLanguage());
 }
 
-
 /**
  * Registers a dialog element
  * and allows closing it by clicking outside.
@@ -254,13 +236,13 @@ function registerDialog(dialogID) {
     }
   });
   document
-  .getElementById("de-btn-mobile")
-  .addEventListener("click", () => handleLanguageChange("de"));
+    .getElementById("de-btn-mobile")
+    .addEventListener("click", () => handleLanguageChange("de"));
 
-document
-  .getElementById("en-btn-mobile")
-  .addEventListener("click", () => handleLanguageChange("en"));
-  
+  document
+    .getElementById("en-btn-mobile")
+    .addEventListener("click", () => handleLanguageChange("en"));
+
   return dialog;
 }
 
@@ -283,38 +265,58 @@ document
 window.addEventListener("load", scrollToContactSection);
 
 document.addEventListener("DOMContentLoaded", init);
+/* -------------------------------------------------------------------------- */
+/*                           Reference Slider                                 */
+/* -------------------------------------------------------------------------- */
 
-
+/**
+ * Scrolls smoothly to the selected reference slide.
+ *
+ * The target slide is determined by its index within the
+ * collection of reference elements.
+ *
+ * @param {number} index - Index of the reference slide.
+ * @returns {void}
+ */
 function goToSlide(index) {
   const references = document.querySelectorAll(".reference");
-
   slider.scrollTo({
     left: references[index].offsetLeft,
     behavior: "smooth",
   });
 }
 
+/**
+ * Registers click listeners for all slider indicators.
+ *
+ * When a dot is clicked, the corresponding reference slide
+ * is brought into view with a smooth scrolling animation.
+ */
 dots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
     goToSlide(index);
   });
 });
 
+/**
+ * Tracks the current scroll position of the reference slider
+ * and updates the active indicator accordingly.
+ *
+ * The slide whose position is closest to the current scroll
+ * offset is considered active. All indicators are reset
+ * before the active state is applied to the matching dot.
+ */
 slider.addEventListener("scroll", () => {
   const references = document.querySelectorAll(".reference");
-
   let activeIndex = 0;
-
   references.forEach((reference, index) => {
-    const offset =
-      Math.abs(reference.offsetLeft - slider.scrollLeft);
-
+    const offset = Math.abs(reference.offsetLeft - slider.scrollLeft);
     if (offset < reference.offsetWidth / 2) {
       activeIndex = index;
     }
   });
-
-  dots.forEach((dot) => dot.classList.remove("active"));
+  dots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
   dots[activeIndex].classList.add("active");
 });
-
