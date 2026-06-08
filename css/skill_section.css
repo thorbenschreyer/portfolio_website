@@ -123,3 +123,7 @@
   justify-content: space-around;
   width: 100%;
 }
+
+  .mobile-skill-btn {
+    display: none;
+  }

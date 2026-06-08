@@ -276,6 +276,10 @@ footer {
   display: none;
 }
 
+.skill-motivation {
+  display: none;
+}
+
 .hero-name-mobile{
   display: flex;
   flex-direction: column;
