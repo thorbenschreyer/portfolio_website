@@ -237,8 +237,12 @@ footer {
     Dialog
 ------------------------------------*/
 .mobile-menu {
-  width: 100%;
-  height: 245px;
+  inset: 0 auto auto 0;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  
+  height: 317px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   background: linear-gradient(to bottom, #b5e93b 50%, #547800 100%);
@@ -248,4 +252,14 @@ footer {
 .dialog-content {
   width: 100%;
   height: 100%;
+}
+
+.close-dialog-area {
+  width: 100%;
+  text-align: end;
+  margin-top: 16px;
+}
+
+.close-dialog-area img{
+  margin-right: 16px;
 }

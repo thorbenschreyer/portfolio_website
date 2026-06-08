@@ -106,6 +106,9 @@ function openMenuDialog() {
   mobileMenu.showModal();
 }
 
+function closeMenuDialog() {
+  mobileMenu.close();
+}
 
 /* -------------------------------------------------------------------------- */
 /*                              Language                                      */
