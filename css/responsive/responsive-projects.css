@@ -76,7 +76,7 @@
     flex-direction: column;
     width: unset;
     height: unset;
-    margin: 32px 16px 0px 16px;
+    margin: 80px 16px 0px 16px;
   }
 
   .reference-head {
@@ -85,6 +85,7 @@
     transform: unset;
     font-size: 32px;
     margin-right: unset;
+    margin-bottom: 32px;
   }
 
   .all-references {
