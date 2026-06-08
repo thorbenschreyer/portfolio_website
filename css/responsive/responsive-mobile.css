@@ -34,5 +34,23 @@
     background: linear-gradient(to right, rgba(0, 0, 0, 0.42), transparent);
   }
 
-  
+  .navigation-links-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 230px;
+  }
+
+  .language-buttons {
+    margin: unset;
+  }
+
+  .language-buttons span {
+    color: #4a4a4a;
+  }
+
+    .language-buttons  hr{
+    border-color: #4A4A4A;
+  }
 }
