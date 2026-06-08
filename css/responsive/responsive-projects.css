@@ -86,22 +86,25 @@
     margin-right: unset;
   }
 
-.all-references {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-}
-
+  .all-references {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: unset;
+    padding: 0px 8px;
+    gap: 16px;
+    height: 95%;
+  }
 
   .desktop-display-none {
     display: block;
   }
 
-.reference {
-  flex: 0 0 100%;
-  width: 100%;
-  scroll-snap-align: start;
-}
+  .reference {
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: start;
+  }
 
   .name-and-project {
     align-items: start;

@@ -281,3 +281,6 @@ document
 window.addEventListener("load", scrollToContactSection);
 
 document.addEventListener("DOMContentLoaded", init);
+
+
+
