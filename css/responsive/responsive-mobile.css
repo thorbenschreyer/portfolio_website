@@ -1,4 +1,8 @@
 @media (max-width: 980px) {
+  .unset-height-mobile {
+    height: unset;
+  }
+
   .sections-track {
     background: linear-gradient(
       to bottom,
@@ -274,7 +278,6 @@
   .last-skill-section {
     width: 66%;
   }
-
 }
 
 @media (max-width: 430px) {

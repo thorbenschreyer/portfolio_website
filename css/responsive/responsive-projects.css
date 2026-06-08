@@ -19,6 +19,7 @@
   .project {
     width: unset;
     margin: unset;
+    height: unset;
   }
 
   .project-head-number {
@@ -40,5 +41,26 @@
   .learned-project,
   .prject-description-hover {
     width: 100%;
+  }
+
+  .project-presentation {
+    position: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px 0px;
+  }
+  
+  .prject-description-hover {
+    opacity: 0;
+    position: absolute;
+    bottom: 326px;
+    transition: ease-in-out 250ms;
+}
+
+  .overlay {
+    display: none;
   }
 }
