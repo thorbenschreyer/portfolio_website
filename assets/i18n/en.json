@@ -34,7 +34,7 @@
   "project-join-learned": "I learned how to structure complex applications, work with databases, and design user-friendly interfaces.",
   "project-join-group": "Collaborating in a team strengthened my communication skills and showed me the importance of clear coordination and version control.",
   "next-project": "Current Project",
-  "ongoing-projekt": "Memory Game <br /> Development of a responsive memory game using TypeScript and SCSS. The project focuses on strengthening core programming concepts, application logic, and modern styling techniques while creating an engaging user experience.",
+  "ongoing-projekt": "<span class='impressum-text-highlight'>Memory-Game</span> <br /> Development of a responsive memory game using TypeScript and SCSS. The project focuses on strengthening core programming concepts, application logic, and modern styling techniques while creating an engaging user experience.",
   "ongoing-lets-talk": "Let's Talk",
   "why-me-i-am": "I am",
   "your-name": "Your name",

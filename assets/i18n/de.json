@@ -34,7 +34,7 @@
     "project-join-learned": "Ich habe gelernt, komplexe Anwendungen zu strukturieren, mit Datenbanken zu arbeiten und Benutzeroberflächen benutzerfreundlich zu gestalten.",
     "project-join-group": "Die Zusammenarbeit im Team hat meine Kommunikationsfähigkeiten gestärkt und mir gezeigt, wie wichtig saubere Abstimmung und Versionskontrolle sind.",
     "next-project": "Aktuelles Projekt",
-    "ongoing-projekt": "Memory-Spiel <br /> Entwicklung eines reaktionsschnellen Memory-Spiels mit TypeScript und SCSS. Das Projekt konzentriert sich auf die Vertiefung grundlegender Programmierkonzepte, Anwendungslogik und moderner Styling-Techniken bei gleichzeitiger Schaffung einer ansprechenden Benutzererfahrung.",
+    "ongoing-projekt": "<span class='impressum-text-highlight'>Memory-Spiel</span> <br /> Entwicklung eines reaktionsschnellen Memory-Spiels mit TypeScript und SCSS. Das Projekt konzentriert sich auf die Vertiefung grundlegender Programmierkonzepte, Anwendungslogik und moderner Styling-Techniken bei gleichzeitiger Schaffung einer ansprechenden Benutzererfahrung.",
     "ongoing-lets-talk": "Lass uns reden",
     "why-me-i-am": "Ich bin",
     "your-name": "Dein Name",

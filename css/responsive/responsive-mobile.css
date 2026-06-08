@@ -249,10 +249,10 @@
     display: none;
   }
 
-      .skill-section-content-left {
-        margin: unset;
-        margin-bottom: 16px;
-    }
+  .skill-section-content-left {
+    margin: unset;
+    margin-bottom: 16px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -284,6 +284,10 @@
 
   .last-skill-section {
     width: 66%;
+  }
+
+  .skill-motivation {
+    top: 242px;
   }
 }
 
