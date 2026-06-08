@@ -90,7 +90,7 @@
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    width: unset;
+    width: 100%;
     padding: 0px 8px;
     gap: 16px;
     height: 95%;
@@ -104,9 +104,16 @@
     flex: 0 0 100%;
     width: 100%;
     scroll-snap-align: start;
+    margin: unset;
+    height: 176px;
   }
 
   .name-and-project {
     align-items: start;
+  }
+
+  .reference-content {
+    padding: 0px;
+    width: 100%;
   }
 }
