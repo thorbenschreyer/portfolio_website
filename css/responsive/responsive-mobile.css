@@ -201,20 +201,26 @@
 
   .bag-griff {
     bottom: 42px;
-}
+  }
 
-.why-me-icon:hover .bag-griff {
-  bottom: 52px
-}
+  .why-me-icon:hover .bag-griff {
+    bottom: 52px;
+  }
 
-.remote-mobile {
+  .remote-mobile {
     margin-left: -16px;
-}
+  }
 
-.why-me-icon-remote-hover {
-  left: 53px;
-}
+  .why-me-icon-remote-hover {
+    left: 53px;
+  }
 
+  .why-me-description span {
+    text-align: center;
+    font-size: 32px;
+    display: block;
+    margin-bottom: 16px;
+  }
 }
 
 @media (max-width: 430px) {
