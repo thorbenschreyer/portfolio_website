@@ -241,7 +241,7 @@ footer {
   width: 100vw;
   max-width: 100vw;
   margin: 0;
-  
+
   height: 317px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -260,10 +260,14 @@ footer {
   padding-top: 16px;
 }
 
-.close-dialog-area img{
+.close-dialog-area img {
   margin-right: 16px;
 }
 
 .navigation-links-mobile {
   display: none;
-  }
+}
+
+.mobile-burger-menu {
+  display: none;
+}

@@ -1,4 +1,23 @@
 @media (max-width: 980px) {
+  .sections {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+  }
+
+  .sections-track {
+    display: block;
+    width: 100%;
+  }
+
+  section {
+    width: 100%;
+    min-width: unset;
+    min-height: 100vh;
+  }
+
   nav {
     flex-direction: row;
     justify-content: space-between;
@@ -50,7 +69,7 @@
     color: #4a4a4a;
   }
 
-    .language-buttons  hr{
-    border-color: #4A4A4A;
+  .language-buttons hr {
+    border-color: #4a4a4a;
   }
 }
