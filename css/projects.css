@@ -194,7 +194,7 @@
 .prject-description-hover {
   opacity: 0;
   position: absolute;
-  bottom: 8px;
+  top: 0px;
   transition: ease-in-out 250ms;
 }
 
@@ -224,4 +224,8 @@
 
 .project:hover .overlay {
   opacity: 0;
+}
+
+.project-hover{
+  position: relative;
 }

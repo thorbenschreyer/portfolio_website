@@ -2,7 +2,6 @@ Todos
 - Livetest Verlinken 
 - Implementieren PHP Script // Ist implementiert, test ausstehend da server kein PHP kann! 
 - projekt section beschreibungen <400px anpassen
-- Impressum und PP stylen für mobile
 
 Fragen: 
 DE / EN Aktive State? 

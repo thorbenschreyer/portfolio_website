@@ -43,7 +43,7 @@
   .learned-project,
   .prject-description-hover {
     width: calc(100% - 30px);
-    height: 64px;
+    height: unset;
   }
 
   .project-presentation {
@@ -59,7 +59,7 @@
   .prject-description-hover {
     opacity: 0;
     position: absolute;
-    top: 284px;
+    top: 0px;
     transition: ease-in-out 250ms;
   }
 
@@ -286,7 +286,7 @@
   .prject-description-hover {
     opacity: 0;
     position: absolute;
-    top: 359px;
+    top: -16px;
     transition: ease-in-out 250ms;
   }
 }
