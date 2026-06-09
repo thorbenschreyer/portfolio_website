@@ -1,0 +1,42 @@
+@media (max-width: 980px) {
+  .impressum-content {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: unset;
+    align-items: center;
+    overflow-x: unset;
+    overflow-y: unset;
+    scroll-snap-type: unset;
+    scroll-behavior: unset;
+    scrollbar-width: none;
+  }
+
+  .impressum-header {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    height: unset;
+    -webkit-text-stroke: 1px var(--main-green);
+    writing-mode: unset;
+    transform: unset;
+    font-size: 58px;
+    margin: unset;
+  }
+
+  .impressumsite-text {
+    margin-left: unset;
+    height: unset;
+    width: unset;
+  }
+
+  .impressum-container {
+    margin: 0px 16px;
+    width: unset;
+  }
+
+  .impressumsite-text p {
+    padding-bottom: 8px;
+  }
+}
