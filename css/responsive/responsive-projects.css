@@ -80,12 +80,7 @@
   }
 
   .reference-head {
-    -webkit-text-stroke: 1px var(--main-green);
-    writing-mode: unset;
-    transform: unset;
-    font-size: 32px;
-    margin-right: unset;
-    margin-bottom: 32px;
+    display: none;
   }
 
   .all-references {
@@ -131,6 +126,10 @@
     font-size: 22px;
   }
 
+  .need-teamplayer {
+    display: block;
+  }
+
   .desktop-slider {
     display: flex;
     justify-content: center;
@@ -156,34 +155,48 @@
     background: var(--main-green);
   }
 
-.contact-section {
-        flex-direction: column;
-}
+  .contact-head {
+    justify-content: start;
+    font-size: 32px;
+    margin-right: unset;
+    -webkit-text-stroke: 1px var(--main-green);
+    writing-mode: unset;
+    transform: unset;
+  }
 
+  .moble-contact-head {
+    display: block;
+  }
+  .contact-section {
+    flex-direction: column;
+  }
 
-    .contact-content {
+  .contact-content {
     display: flex;
     flex-direction: column;
-}
+  }
 
-    .contact-form {
-        flex-direction: column;
-    }
+  .contact-form {
+    flex-direction: column;
+    margin: 80px 16px 0px 16px;
+    width: calc(100% - 32px);
+  }
+
+  form {
+    width: unset;
+  }
+
+  .impressum-section {
+    display: none;
+  }
 
   footer {
     min-width: 100vw;
     height: 372px;
     flex-shrink: 0;
     background: linear-gradient(to bottom, var(--main-green) 60%, #547800 100%);
+  }
 }
-}
-
-
-
-
-
-
-
 
 @media (max-width: 500px) {
   .project-presentation {

@@ -80,7 +80,6 @@ form {
   height: 60px;
   border: 1px solid var(--main-green);
   border-radius: 30px;
-  padding-left: 24px;
   background-color: transparent;
   color: var(--white);
   margin-bottom: 16px;
@@ -88,6 +87,7 @@ form {
 
 .input-form::placeholder {
   color: #d3ed9766;
+  padding-left: 24px;
 }
 
 .input-message {
@@ -95,11 +95,14 @@ form {
   height: 255px;
   border: 1px solid var(--main-green);
   border-radius: 30px;
-  padding-left: 24px;
-  padding-top: 32px;
   background-color: transparent;
   color: var(--white);
   margin-bottom: 8px;
+}
+
+.input-message::placeholder {
+  padding-left: 24px;
+  padding-top: 32px;
 }
 
 .checkbox-area {
@@ -319,4 +322,28 @@ zu .custom-checkbox hinzu
 
 .checkbox-text {
   color: var(--main-green);
+}
+
+.need-teamplayer {
+  display: none;
+}
+
+.need-teamplayer span{
+  color: var(--main-green);
+  font-size: 22px;
+  padding-bottom: 16px;
+}
+
+.need-teamplayer p{
+  color: #FFFDFD;
+  font-size: 16px;
+  padding-bottom: 24px;
+}
+
+.moble-contact-head {
+    display: none;
+    -webkit-text-stroke: 1px var(--main-green);
+    background-color: transparent;
+    font-size: 32px;
+    
 }
