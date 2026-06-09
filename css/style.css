@@ -67,38 +67,39 @@ a {
     filter 300ms ease;
   z-index: 2;
 }
+@media (hover: hover) {
+  .arrow-right::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    background: #ccff00;
+    border-radius: 100px;
+    filter: blur(20px);
+    opacity: 0;
+    transition:
+      opacity 300ms ease,
+      transform 300ms ease;
+    transform: scale(0.8);
+    z-index: -1;
+  }
 
-.arrow-right::before {
-  content: "";
-  position: absolute;
-  inset: -8px;
-  background: #ccff00;
-  border-radius: 100px;
-  filter: blur(20px);
-  opacity: 0;
-  transition:
-    opacity 300ms ease,
-    transform 300ms ease;
-  transform: scale(0.8);
-  z-index: -1;
-}
+  .arrow-right:hover {
+    filter: drop-shadow(0 0 4px #b8ff2c)
+      drop-shadow(0 0 12px rgba(184, 255, 44, 0.4));
+  }
 
-.arrow-right:hover {
-  filter: drop-shadow(0 0 4px #b8ff2c)
-    drop-shadow(0 0 12px rgba(184, 255, 44, 0.4));
-}
+  .arrow-right-transform:hover {
+    transform: translateX(10px);
+  }
 
-.arrow-right-transform:hover {
-  transform: translateX(10px);
-}
+  .arrow-left-transform:hover {
+    transform: translateX(-10px);
+  }
 
-.arrow-left-transform:hover {
-  transform: translateX(-10px);
-}
-
-.arrow-right:hover::before {
-  opacity: 0.7;
-  transform: scale(1.2);
+  .arrow-right:hover::before {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
 }
 
 .btn {
@@ -147,8 +148,8 @@ a {
 
 .btn-disable {
   pointer-events: none;
-  background-color: #8C8989;
-  color: #4A4A4A;
+  background-color: #8c8989;
+  color: #4a4a4a;
 }
 
 /*------------------------------------
@@ -286,6 +287,8 @@ footer {
 .developer-location,
 .mobile-burger-menu,
 .impressum-upper-section-mobile,
-.footer-mobile {
+.footer-mobile,
+.back-arrow,
+.mobile-footer {
   display: none;
 }

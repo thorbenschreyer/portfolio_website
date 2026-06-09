@@ -1,6 +1,13 @@
 @media (max-width: 980px) {
+  nav {
+    position: unset;
+  }
+
+  .black-to-transparent {
+    position: unset;
+  }
+
   .impressum-content {
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -21,7 +28,7 @@
     -webkit-text-stroke: 1px var(--main-green);
     writing-mode: unset;
     transform: unset;
-    font-size: 58px;
+    font-size: 32px;
     margin: unset;
   }
 
@@ -38,5 +45,26 @@
 
   .impressumsite-text p {
     padding-bottom: 8px;
+  }
+
+  .impressum-detail {
+    display: none;
+  }
+
+  .back-arrow {
+    width: 100%;
+  }
+
+  .back-arrow img {
+    width: 40px;
+    height: auto;
+  }
+
+  .mobile-footer {
+    display: block;
+  }
+
+  .desktop-footer {
+    display: none;
   }
 }
