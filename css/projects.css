@@ -227,13 +227,20 @@
 }
 
 .content {
-  max-height: 0px;
+  max-height: 0;
   overflow: hidden;
-  transition: max-height 1s ease-in-out;
+  opacity: 0;
+  transform: translateY(-15px);
+  transition:
+    max-height 0.6s ease,
+    opacity 0.4s ease,
+    transform 0.4s ease;
 }
 
 .project.active .content {
-  max-height: unset;
+  max-height: 1000px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project.active {

@@ -172,7 +172,9 @@ function applyTranslations() {
     const key = element.dataset.i18nHtml;
     element.innerHTML = getTranslation(key);
   });
-  const placeholderElements = document.querySelectorAll("[data-i18n-placeholder]",);
+  const placeholderElements = document.querySelectorAll(
+    "[data-i18n-placeholder]",
+  );
   placeholderElements.forEach((element) => {
     const key = element.dataset.i18nPlaceholder;
     element.placeholder = getTranslation(key);
@@ -266,8 +268,7 @@ window.addEventListener("load", scrollToContactSection);
 
 document.addEventListener("DOMContentLoaded", init);
 
-
-const cards = document.querySelectorAll('.project');
+const cards = document.querySelectorAll(".project");
 
 cards.forEach(card => {
     const button = card.querySelector('.toggle');
@@ -276,10 +277,20 @@ cards.forEach(card => {
 
         const isActive = card.classList.contains('active');
 
-        cards.forEach(c => c.classList.remove('active'));
+        if (isActive) {
+            card.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
 
-        if (!isActive) {
-            card.classList.add('active');
+            setTimeout(() => {
+                card.classList.remove('active');
+            }, 400); // ungefähr Dauer deiner CSS-Animation
+
+            return;
         }
+
+        cards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
     });
 });
