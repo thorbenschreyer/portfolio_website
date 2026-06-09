@@ -277,6 +277,7 @@ footer {
 .skill-motivation,
 .developer-location,
 .mobile-burger-menu,
-.impressum-upper-section-mobile {
+.impressum-upper-section-mobile,
+.footer-mobile {
   display: none;
 }

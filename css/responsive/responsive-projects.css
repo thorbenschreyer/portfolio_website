@@ -212,7 +212,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-            margin-top: 40px;
+    margin-top: 40px;
   }
 
   .arrow-mobile {
@@ -230,10 +230,41 @@
 
   footer {
     min-width: 100vw;
-    height: 100px;
+    height: unset;
     flex-shrink: 0;
     margin-top: 32px;
     background: linear-gradient(to bottom, var(--main-green) 60%, #547800 100%);
+  }
+
+  .footer-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-mobile img {
+    margin: 16px;
+    width: 104px;
+    height: auto;
+  }
+
+  .impressum-link-mobile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 8px;
+  }
+
+  .impressum-link-mobile a {
+    color: #4a4a4a;
+  }
+
+  .impressum-link-mobile hr {
+    height: 16px;
+    margin: 0px 8px;
+    border: 1px solid #4a4a4a;
   }
 }
 
