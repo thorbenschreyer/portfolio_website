@@ -32,6 +32,10 @@
     margin: unset;
   }
 
+  .impressum-content-section {
+    flex-direction: column;
+  }
+
   .impressumsite-text {
     margin-left: unset;
     height: unset;
@@ -41,6 +45,7 @@
   .impressum-container {
     margin: 0px 16px;
     width: unset;
+    flex-direction: column;
   }
 
   .impressumsite-text p {
@@ -52,6 +57,7 @@
   }
 
   .back-arrow {
+    display: block;
     width: 100%;
   }
 
@@ -66,5 +72,11 @@
 
   .desktop-footer {
     display: none;
+  }
+}
+
+@media (max-width: 370px) {
+  .impressum-header {
+    font-size: 24px;
   }
 }
