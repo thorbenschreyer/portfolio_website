@@ -1,0 +1,65 @@
+@media (width: 1366px), (height: 768px) {
+  .arrow-position-hero {
+    top: 250px;
+  }
+
+  .arrow-why-me {
+    top: 340px;
+  }
+
+  .arrow-skill-section {
+    top: 290px;
+  }
+
+  .arrow-position-reference-section {
+    top: 230px;
+  }
+
+  .arrow-contact {
+    top: 480px;
+  }
+}
+
+@media (width: 1280px), (height: 800px) {
+  .arrow-position-hero {
+    top: 250px;
+  }
+
+  .arrow-why-me {
+    top: 340px;
+  }
+
+  .arrow-skill-section {
+    top: 290px;
+  }
+
+  .arrow-position-reference-section {
+    top: 230px;
+  }
+
+  .arrow-contact {
+    top: 480px;
+  }
+}
+
+@media (width: 1024px), (height: 600px) {
+  .arrow-position-hero {
+    top: 250px;
+  }
+
+  .arrow-why-me {
+    top: 340px;
+  }
+
+  .arrow-skill-section {
+    top: 290px;
+  }
+
+  .arrow-position-reference-section {
+    top: 230px;
+  }
+
+  .arrow-contact {
+    top: 480px;
+  }
+}
