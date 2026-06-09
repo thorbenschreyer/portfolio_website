@@ -63,3 +63,47 @@
     top: 480px;
   }
 }
+
+@media (width: 1366), (height: 1024px) {
+  .arrow-position-hero {
+    top: 430px;
+  }
+
+  .arrow-why-me {
+    top: 670px;
+  }
+
+  .arrow-skill-section {
+    top: 360px;
+  }
+
+  .arrow-position-reference-section {
+    top: 320px;
+  }
+
+  .arrow-contact {
+    top: 530px;
+  }
+}
+
+@media (width: 1180), (height: 820px) {
+  .arrow-position-hero {
+    top: 250px;
+  }
+
+  .arrow-why-me {
+    top: 340px;
+  }
+
+  .arrow-skill-section {
+    top: 290px;
+  }
+
+  .arrow-position-reference-section {
+    top: 230px;
+  }
+
+  .arrow-contact {
+    top: 500px;
+  }
+}
