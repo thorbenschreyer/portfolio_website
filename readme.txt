@@ -2,9 +2,6 @@ Todos
 - Livetest Verlinken 
 - Implementieren PHP Script // Ist implementiert, test ausstehend da server kein PHP kann! 
 - projekt section beschreibungen <400px anpassen
-- Senden butten disabeln wenn nicht PP angehakt ist
-- Kontaktiere mich texte rechts und ausrichten 
-- Impressum und logo 
 - Impressum und PP stylen für mobile
 
 Fragen: 

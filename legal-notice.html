@@ -42,10 +42,16 @@
         <a data-i18n="my-work" class="navigation-item" href="index.html#portfolio-section"
           >My Work</a
         >
-        <a data-i18n="contact" class="navigation-item" href="index.html#contact-section" index.html#contact-section
+        <a data-i18n="contact" class="navigation-item" href="index.html#contact-section"
           >Contact</a
         >
       </div>
+      <img
+        onclick="openMenuDialog()"
+        class="mobile-burger-menu"
+        src="./assets/img/burger-menu.png"
+        alt=""
+      />
     </nav>
     <div class="black-to-transparent"></div>
     <div class="social-icons">
@@ -175,5 +181,40 @@
         src="./assets/img/arrow_left.png"
         alt="Arrow Right "
     /></a>
+
+        <dialog class="mobile-menu" id="mobile-menu">
+      <div class="dialog-content">
+        <div class="close-dialog-area">
+          <img
+            onclick="closeMenuDialog()"
+            src="./assets/img/close.png"
+            alt=""
+          />
+        </div>
+
+        <div class="navigation-links-mobile">
+          <a data-i18n="why-me" class="navigation-item" href="index.html#why-me-section"
+            >Why me</a
+          >
+          <a data-i18n="skills" class="navigation-item" href="index.html#skill-section"
+            >Skills</a
+          >
+          <a
+            data-i18n="my-work"
+            class="navigation-item"
+            href="index.html#portfolio-section"
+            >My Work</a
+          >
+          <a data-i18n="contact" class="navigation-item" href="index.html#contact-section"
+            >Contact</a
+          >
+          <div class="language-buttons">
+            <span id="de-btn-mobile">DE</span>
+            <hr />
+            <span id="en-btn-mobile">EN</span>
+          </div>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>
