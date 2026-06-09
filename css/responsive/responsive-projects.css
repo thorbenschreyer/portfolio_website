@@ -156,12 +156,7 @@
   }
 
   .contact-head {
-    justify-content: start;
-    font-size: 32px;
-    margin-right: unset;
-    -webkit-text-stroke: 1px var(--main-green);
-    writing-mode: unset;
-    transform: unset;
+    display: none;
   }
 
   .moble-contact-head {
