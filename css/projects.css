@@ -147,10 +147,6 @@
   margin-left: 40px;
 }
 
-.project:hover .project-btn-section {
-  gap: 32px;
-}
-
 .ongoing-project {
   display: flex;
   flex-direction: column;
@@ -226,6 +222,68 @@
   opacity: 0;
 }
 
-.project-hover{
+.project-hover {
   position: relative;
+}
+
+.content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+}
+
+.project.active .content {
+  max-height: unset;
+}
+
+.project.active {
+  margin-bottom: 24px;
+}
+
+.project.active .toggle::after {
+  content: "Show less";
+}
+
+.project.active .show-more-btn img {
+  content: url("../assets/img/show-less.png")
+}
+
+.toggle::after {
+  content: "Show more";
+}
+
+.project.active .show-more-btn {
+  position: absolute;
+  bottom: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.show-more-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+.show-more-btn  button{
+  background: unset;
+  color: #B5E93B;
+  text-decoration: underline;
+  border: none;
+  padding: 0px 8px;
+  font-family: "Quantico-Regular";
+  font-size: 16px;
+}
+
+.show-more-btn img {
+  width: 16px;
+  height: auto;
+}
+
+@media (hover: hover) {
+  .project:hover .project-btn-section {
+    gap: 32px;
+  }
 }

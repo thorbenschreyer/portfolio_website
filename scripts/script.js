@@ -265,3 +265,21 @@ document
 window.addEventListener("load", scrollToContactSection);
 
 document.addEventListener("DOMContentLoaded", init);
+
+
+const cards = document.querySelectorAll('.project');
+
+cards.forEach(card => {
+    const button = card.querySelector('.toggle');
+
+    button.addEventListener('click', () => {
+
+        const isActive = card.classList.contains('active');
+
+        cards.forEach(c => c.classList.remove('active'));
+
+        if (!isActive) {
+            card.classList.add('active');
+        }
+    });
+});
