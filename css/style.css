@@ -289,6 +289,7 @@ footer {
 .impressum-upper-section-mobile,
 .footer-mobile,
 .back-arrow,
-.mobile-footer {
+.mobile-footer,
+.show-more-btn {
   display: none;
 }

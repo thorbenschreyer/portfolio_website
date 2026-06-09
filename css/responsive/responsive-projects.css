@@ -266,6 +266,69 @@
     margin: 0px 8px;
     border: 1px solid #4a4a4a;
   }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-15px);
+    transition:
+      max-height 0.6s ease,
+      opacity 0.4s ease,
+      transform 0.4s ease;
+  }
+
+  .project.active .content {
+    max-height: 1000px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .project.active {
+    margin-bottom: 24px;
+  }
+
+  .project.active .toggle::after {
+    content: "Show less";
+  }
+
+  .project.active .show-more-btn img {
+    content: url("../../assets/img/show-less.png");
+  }
+
+  .toggle::after {
+    content: "Show more";
+  }
+
+  .project.active .show-more-btn {
+    position: absolute;
+    bottom: -48px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .show-more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 16px;
+  }
+
+  .show-more-btn button {
+    background: unset;
+    color: #b5e93b;
+    text-decoration: underline;
+    border: none;
+    padding: 0px 8px;
+    font-family: "Quantico-Regular";
+    font-size: 16px;
+  }
+
+  .show-more-btn img {
+    width: 16px;
+    height: auto;
+  }
 }
 
 @media (max-width: 500px) {
@@ -306,5 +369,5 @@
 
   .project-btn {
     padding: 13px 20px;
-}
+  }
 }
