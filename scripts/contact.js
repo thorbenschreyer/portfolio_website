@@ -164,8 +164,9 @@ function handleFormSubmit(e) {
       nameInput.value = "";
       emailInput.value = "";
       messageInput.value = "";
-
+      
       checkbox.checked = false;
+      document.getElementById("send-button").classList.add("btn-disable")
       checkboxLabel.classList.remove("checked");
     })
     .catch((err) => console.error(err));
@@ -184,6 +185,9 @@ if (checkbox) {
     if (checkbox.checked) {
       checkboxLabel.classList.remove("error");
       errorMessageElement.innerText = "";
+      document.getElementById("send-button").classList.remove("btn-disable")
+    } else {
+      document.getElementById("send-button").classList.add("btn-disable")
     }
   });
 }
