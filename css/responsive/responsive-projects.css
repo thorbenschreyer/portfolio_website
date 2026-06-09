@@ -303,4 +303,8 @@
   .name-and-project {
     padding: 4px;
   }
+
+  .project-btn {
+    padding: 13px 20px;
+}
 }
