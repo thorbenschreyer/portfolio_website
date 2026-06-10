@@ -5,7 +5,7 @@
     "why-me-located": "Sitz in Mannheim",
     "why-me-remote": "Remote arbeiten",
     "why-me-relocate": "bereit, umzuziehen",
-    "contact-me": "Contact",
+    "contact-me": "Kontakt",
     "skill-skills": "Als Frontend Developer entwickle ich moderne und responsive Webanwendungen mit Fokus auf sauberen Code und benutzerfreundliches Design. Durch verschiedene Projekte konnte ich Erfahrungen mit unterschiedlichen Frontend-Technologien sammeln und meine Fähigkeiten stetig erweitern. Ich lerne gerne neue Technologien und passe mich schnell an neue Herausforderungen an.",
     "skill-ask": "Andere Sprachen",
     "reference-1": "„JOIN überzeugt durch die übersichtliche Benutzerverwaltung und das durchdachte Ticketsystem. Die Anwendung wirkt professionell und praxisnah.“",
@@ -50,7 +50,7 @@
     "why-me": "Why me",
     "skills": "Skills",
     "my-work": "My Work",
-    "contact": "Contact",
+    "contact": "Kontakt",
     "impressumTitle": "Impressum",
     "impressumSection1Title": "Angaben gemäß § 5 DDG",
     "impressumSection1Content": "Thorben Schreyer<br>Ersheimer Strasse 9<br>69434 Hirschhorn<br>Deutschland",
@@ -120,5 +120,7 @@
     "Legal-Notice": "Impressum",
     "skill-motivation": "Motiviert, meine Fähigkeiten kontinuierlich auszubauen, innovative Lösungen zu entwickeln und aktuelle Technologien zu nutzen, um effiziente, moderne und nachhaltige Ergebnisse zu erzielen.",
     "need-teamplayer": "<span>Suchen Sie einen Teamplayer?</span><p>Das sagen meine Kollegen über mich</p>",
-    "moble-contact-head" : "Kontaktiere mich:"
+    "moble-contact-head": "Kontaktiere mich:",
+    "show-more": "Mehr anzeigen",
+    "show-less": "Weniger anzeigen"
 }

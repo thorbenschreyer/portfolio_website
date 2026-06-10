@@ -116,9 +116,11 @@
   "privacySection11Title": "11. Changes to this Privacy Policy",
   "privacySection11Content1": "I reserve the right to amend this privacy policy to ensure compliance with current legal requirements or to reflect changes in my services.",
   "privacySection11Content2": "Last updated: June 2026",
-  "Privacy-Policy" : "Privacy Policy",
-  "Legal-Notice" : "Legal Notice",
+  "Privacy-Policy": "Privacy Policy",
+  "Legal-Notice": "Legal Notice",
   "skill-motivation": "Motivated to continuously expand my skills, develop innovative solutions, and leverage modern technologies to deliver efficient, modern, and sustainable results.",
   "need-teamplayer": "<span>Need a teamplayer?</span><p>Here what my colleagues said about me</p>",
-  "moble-contact-head" : "Contact me:"
+  "moble-contact-head": "Contact me:",
+  "show-more": "Show more",
+  "show-less": "Show less"
 }

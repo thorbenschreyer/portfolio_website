@@ -288,17 +288,20 @@
     margin-bottom: 24px;
   }
 
-  .project.active .toggle::after {
-    content: "Show less";
-  }
 
   .project.active .show-more-btn img {
     content: url("../../assets/img/show-less.png");
   }
 
+  
+
   .toggle::after {
-    content: "Show more";
-  }
+    content: attr(data-i18n-show-more);
+}
+
+.toggle[aria-expanded="true"]::after {
+    content: attr(data-i18n-show-less);
+}
 
   .project.active .show-more-btn {
     position: absolute;

@@ -26,14 +26,16 @@ const observer = new IntersectionObserver(
         navLinks.forEach((link) => {
           link.classList.remove("isActive");
         });
-        const activeLink = document.querySelector(`.navigation-item[href="#${entry.target.id}"]`,
+        const activeLink = document.querySelector(
+          `.navigation-item[href="#${entry.target.id}"]`,
         );
         if (activeLink) {
           activeLink.classList.add("isActive");
-        }}
+        }
+      }
     });
   },
-  {threshold: 0.3,},
+  { threshold: 0.3 },
 );
 
 /**
@@ -79,14 +81,14 @@ function openMenuDialog() {
 function closeMenuDialog() {
   setTimeout(() => {
     mobileMenu.close();
-}, 100);
+  }, 100);
 }
 
 function showSucsessDialog() {
-  sucsessDialog.showModal()
+  sucsessDialog.showModal();
   setTimeout(() => {
     sucsessDialog.close();
-}, 3000);
+  }, 3000);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -117,6 +119,7 @@ async function loadLanguage(language) {
   const response = await fetch(`./assets/i18n/${language}.json`);
   translations = await response.json();
   applyTranslations();
+  updateToggleTexts();
   updateErrorMessages();
   localStorage.setItem("language", language);
 }
@@ -155,7 +158,9 @@ function applyTranslations() {
     const key = element.dataset.i18nHtml;
     element.innerHTML = getTranslation(key);
   });
-  const placeholderElements = document.querySelectorAll("[data-i18n-placeholder]",);
+  const placeholderElements = document.querySelectorAll(
+    "[data-i18n-placeholder]",
+  );
   placeholderElements.forEach((element) => {
     const key = element.dataset.i18nPlaceholder;
     element.placeholder = getTranslation(key);
@@ -190,6 +195,21 @@ function handleLanguageChange(language) {
   loadLanguage(language);
 }
 
+/**
+ * Toggle show more and less
+ */
+function updateToggleTexts() {
+  cards.forEach((card) => {
+    const button = card.querySelector(".toggle");
+
+    if (card.classList.contains("active")) {
+      button.textContent = getTranslation("show-less");
+    } else {
+      button.textContent = getTranslation("show-more");
+    }
+  });
+}
+
 /* -------------------------------------------------------------------------- */
 /*                              Initialization                                */
 /* -------------------------------------------------------------------------- */
@@ -218,15 +238,15 @@ function registerDialog(dialogID) {
       dialog.close();
     }
   });
-  handleGerman()
-  handleEnglish()
+  handleGerman();
+  handleEnglish();
   return dialog;
 }
 
 /**
  * Change the Language to german
  */
-function handleGerman () {
+function handleGerman() {
   document
     .getElementById("de-btn-mobile")
     .addEventListener("click", () => handleLanguageChange("de"));
@@ -235,8 +255,8 @@ function handleGerman () {
 /**
  * Change the Language to english
  */
-function handleEnglish () {
-    document
+function handleEnglish() {
+  document
     .getElementById("en-btn-mobile")
     .addEventListener("click", () => handleLanguageChange("en"));
 }
@@ -280,7 +300,8 @@ cards.forEach((card) => {
     if (isActive) {
       card.scrollIntoView({
         behavior: "smooth",
-        block: "center",});
+        block: "center",
+      });
       setTimeout(() => {
         card.classList.remove("active");
       }, 400);
@@ -288,5 +309,6 @@ cards.forEach((card) => {
     }
     cards.forEach((c) => c.classList.remove("active"));
     card.classList.add("active");
+    updateToggleTexts();
   });
 });
