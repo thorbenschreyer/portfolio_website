@@ -86,7 +86,7 @@ function showSucsessDialog() {
   sucsessDialog.showModal()
   setTimeout(() => {
     sucsessDialog.close();
-}, 4000);
+}, 3000);
 }
 
 /* -------------------------------------------------------------------------- */

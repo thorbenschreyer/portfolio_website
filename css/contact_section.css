@@ -353,10 +353,16 @@ input:-webkit-autofill:focus {
 }
 
 .sucsess-dialog {
-  margin: auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  bottom: 30px;
+
   width: 304px;
   height: 90px;
-  background-color: var(--main-green);
+
+  background: linear-gradient(to bottom, var(--main-green) 60%, #547800 100%);
+
   border: 1px solid;
   border-radius: 15px;
 }
@@ -371,6 +377,32 @@ input:-webkit-autofill:focus {
   color: #4a4a4a;
 }
 
-.sucsess-content p{
+.sucsess-content p {
   text-align: center;
+}
+
+.sucsess-dialog[open] {
+  animation: toastAnimation 3s ease forwards;
+}
+
+@keyframes toastAnimation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 100px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 100px);
+  }
 }
