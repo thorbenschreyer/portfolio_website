@@ -1,21 +1,18 @@
 Todos
-- Livetest Verlinken 
 - Implementieren PHP Script // Ist implementiert, test ausstehend da server kein PHP kann! 
 
-Testen
-- Alle Desktopgrößen 
-- Alle Mobilen Größen 
 
 Webhosting
-- Anbieter aussuchen 
-- thorben-schreyer.de / .com sichern 
-- TAS-development.de / .com sichern 
-- Website online Stellen 
 - Projekte Online stellen 
 
+
+
+
 Fragen: 
+
+Überschriften rechts am rand darstellen? Ist nicht durchgängig?!
+maximale Seitenbreite begrenzen oder offen lassen? Wrapper auf 1440px??
+Hover effekt in der mobilen version? Ändern der texte 
+Roboto mono bei Project Join etc. 
 DE / EN Aktive State? 
 Im Mobilen Menü aktiv und nicht aktiv anzeigen
-maximale Seitenbreite begrenzen oder offen lassen? Wrapper auf 1440px??
-Hover effekt in der mobilen version?
-Roboto mono bei Project Join etc. 
