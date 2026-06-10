@@ -28,7 +28,7 @@
     />
     <title>Thorben Schreyer</title>
   </head>
-  <body>
+  <body onload="sucsessDialog.showModal()">
     <!-----------------------------
      Content Container 
      ------------------------------>
@@ -927,6 +927,12 @@
         </section>
       </div>
     </div>
+    <dialog id="sucsess-dialog" class="sucsess-dialog">
+      <div class="sucsess-content">
+        <p>Vielen Dank!</p>
+        <p>Ihre Anfrage wurde versendet, wir melden uns in kürze.</p>
+      </div>
+    </dialog>
 
     <dialog class="mobile-menu" id="mobile-menu">
       <div class="dialog-content">

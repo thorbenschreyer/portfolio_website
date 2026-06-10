@@ -3,6 +3,7 @@ const sections = document.querySelectorAll("section");
 const mobileMenu = registerDialog("mobile-menu");
 const slider = document.querySelector(".all-references");
 const dots = document.querySelectorAll(".dot");
+const cards = document.querySelectorAll(".project");
 
 let isManualScrolling = false;
 let translations = {};
@@ -79,7 +80,13 @@ function closeMenuDialog() {
   setTimeout(() => {
     mobileMenu.close();
 }, 100);
-  
+}
+
+function showSucsessDialog() {
+  sucsessDialog.showModal()
+  setTimeout(() => {
+    sucsessDialog.close();
+}, 4000);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -250,11 +257,7 @@ document
   .getElementById("en-btn")
   .addEventListener("click", () => handleLanguageChange("en"));
 
-window.addEventListener("load", scrollToContactSection);
-
 document.addEventListener("DOMContentLoaded", init);
-
-const cards = document.querySelectorAll(".project");
 
 /**
  * Handles the expand/collapse behavior of project cards.

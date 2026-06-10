@@ -4,6 +4,7 @@ const messageInput = document.getElementById("userMessage");
 const errorMessageElement = document.getElementById("error-text");
 const checkbox = document.getElementById("checkbox");
 const checkboxLabel = document.querySelector(".custom-checkbox");
+const sucsessDialog = registerDialog("sucsess-dialog")
 
 /* -------------------------------------------------------------------------- */
 /*                              Validation                                    */
@@ -77,6 +78,7 @@ function validateInput() {
     return false;}
   checkboxLabel.classList.remove("error");
   errorMessageElement.innerText = "";
+  showSucsessDialog()
   return true;
 }
 
