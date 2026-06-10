@@ -99,7 +99,10 @@ function openMenuDialog() {
 }
 
 function closeMenuDialog() {
-  mobileMenu.close();
+  setTimeout(() => {
+    mobileMenu.close();
+}, 100);
+  
 }
 
 /* -------------------------------------------------------------------------- */

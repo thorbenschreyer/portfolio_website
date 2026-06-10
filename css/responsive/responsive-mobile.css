@@ -83,10 +83,17 @@
 
   .language-buttons span {
     color: #4a4a4a;
+    font-size: 18px;
   }
 
   .language-buttons hr {
     border-color: #4a4a4a;
+  }
+
+  @media (hover: hover) {
+    .language-buttons span:hover {
+      color: var(--main-green);
+    }
   }
 
   .social-icons {
@@ -252,6 +259,22 @@
   .skill-section-content-left {
     margin: unset;
     margin-bottom: 16px;
+  }
+
+  .navigation-item:active {
+    -webkit-text-stroke: 1px #252525;
+    background-color: var(--main-green);
+    font-size: 22px;
+  }
+
+  .navigation-item {
+    font-size: 18px;
+  }
+
+  .btn-mobile:active {
+    -webkit-text-stroke: 1px #252525;
+    background-color: transparent;
+    font-size: 22px;
   }
 }
 

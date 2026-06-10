@@ -1,5 +1,9 @@
 Todos
 - Implementieren PHP Script // Ist implementiert, test ausstehend da server kein PHP kann! 
+- Überschriften anpassen ab der zweiten Seite 
+- bild auf der letzten seite einfügen das für mich spricht (Bechreibung bei der Abgabe )
+- anstelle hover nach ein paar sekunden wechseln 
+- Click effekt
 
 
 Webhosting
