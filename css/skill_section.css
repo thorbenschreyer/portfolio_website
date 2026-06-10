@@ -125,10 +125,10 @@
   width: 100%;
 }
 
-  .skill-motivation {
-    position: absolute;
-    display: block;
-    color: #fffdfd;
-    left: 625px;
-    width: 250px;
-  }
+.skill-motivation {
+  position: absolute;
+  display: block;
+  color: #fffdfd;
+  left: 625px;
+  width: 250px;
+}

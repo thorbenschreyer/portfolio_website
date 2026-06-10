@@ -136,7 +136,7 @@
 }
 
 .why-me-icon:hover .bag-griff {
-  bottom: 31px
+  bottom: 31px;
 }
 
 .why-me-icon p {
@@ -146,18 +146,18 @@
 .arrow-why-me {
   position: absolute;
   right: 32px;
-  top: 673px
+  top: 673px;
 }
 
 .motivation {
-  height: 60px
+  height: 60px;
 }
 
 .bag-img {
-    position: relative;
-    width: 175px;
-    height: 86px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  position: relative;
+  width: 175px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

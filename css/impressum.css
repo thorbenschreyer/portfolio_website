@@ -59,7 +59,6 @@ html {
 
   width: calc(100vw - 172px);
   overflow-y: hidden;
-
 }
 
 .impressum-content {
@@ -74,12 +73,10 @@ html {
   scroll-behavior: smooth;
 
   scrollbar-width: none;
-
-
 }
 
 .impressum-background {
-    background: linear-gradient(
+  background: linear-gradient(
     to right,
     #000000 0%,
     #2c2b2b 35%,
@@ -125,9 +122,9 @@ html {
 }
 
 .impressumsite-text ul {
-    padding: revert;
+  padding: revert;
 }
 
 .margin-impressumsite-text {
-    margin-left: 200px
+  margin-left: 200px;
 }

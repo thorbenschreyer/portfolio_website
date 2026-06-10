@@ -60,41 +60,23 @@ function validateInput() {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const userMessage = document.getElementById("userMessage").value.trim();
-
   const nameRegex = /^[A-Za-zÄÖÜäöüß\s'-]+$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.(de|com|org|net)$/;
-
   if (!nameRegex.test(name) || name === getTranslation("error-invalid-name")) {
     errorMessageElement.innerText = getTranslation("error-invalid-name");
-    return false;
-  }
-
-  if (
-    email === "" ||
-    email === getTranslation("error-invalid-email") ||
-    !emailRegex.test(email)
-  ) {
+    return false;}
+  if (email === "" || email === getTranslation("error-invalid-email") || !emailRegex.test(email)) {
     errorMessageElement.innerText = getTranslation("error-invalid-email");
-    return false;
-  }
-
-  if (
-    userMessage === "" ||
-    userMessage === getTranslation("error-empty-message")
-  ) {
+    return false;}
+  if (userMessage === "" || userMessage === getTranslation("error-empty-message")) {
     errorMessageElement.innerText = getTranslation("error-empty-message");
-    return false;
-  }
-
+    return false;}
   if (!checkbox.checked) {
     errorMessageElement.innerText = getTranslation("error-privacy-policy");
     checkboxLabel.classList.add("error");
-    return false;
-  }
-
+    return false;}
   checkboxLabel.classList.remove("error");
   errorMessageElement.innerText = "";
-
   return true;
 }
 
@@ -141,35 +123,32 @@ function init() {
  */
 function handleFormSubmit(e) {
   e.preventDefault();
-
-  if (!validateInput()) {
-    return;
-  }
-
+  if (!validateInput()) {return;}
   fetch("./assets/php/formular.php", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: {"Content-Type": "application/json",},
     body: JSON.stringify({
       name: nameInput.value,
       email: emailInput.value,
       message: messageInput.value,
-    }),
-  })
+    }),})
     .then(async (response) => {
-      const text = await response.text();
-      console.log(text);
-
-      nameInput.value = "";
-      emailInput.value = "";
-      messageInput.value = "";
-      
-      checkbox.checked = false;
-      document.getElementById("send-button").classList.add("btn-disable")
-      checkboxLabel.classList.remove("checked");
+      clearAllFields();
     })
     .catch((err) => console.error(err));
+}
+
+/**
+ * Clear all inputfilds
+ */
+function clearAllFields() {
+  nameInput.value = "";
+  emailInput.value = "";
+  messageInput.value = "";
+
+  checkbox.checked = false;
+  document.getElementById("send-button").classList.add("btn-disable");
+  checkboxLabel.classList.remove("checked");
 }
 
 /* -------------------------------------------------------------------------- */
@@ -185,9 +164,9 @@ if (checkbox) {
     if (checkbox.checked) {
       checkboxLabel.classList.remove("error");
       errorMessageElement.innerText = "";
-      document.getElementById("send-button").classList.remove("btn-disable")
+      document.getElementById("send-button").classList.remove("btn-disable");
     } else {
-      document.getElementById("send-button").classList.add("btn-disable")
+      document.getElementById("send-button").classList.add("btn-disable");
     }
   });
 }

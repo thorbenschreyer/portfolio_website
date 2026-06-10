@@ -1,5 +1,5 @@
 .reference-section {
-    position: relative;
+  position: relative;
 }
 
 .reference-section-container {
@@ -25,8 +25,8 @@
 }
 
 .reference {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
   width: 540px;
   height: 182px;
   border: 1px solid #d3ed97;
@@ -36,42 +36,42 @@
 }
 
 hr {
-    border: 1px solid #D3ED97;
-    height: 113px;
+  border: 1px solid #d3ed97;
+  height: 113px;
 }
 
 .name-and-project {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 16px;
-    width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px;
+  width: 200px;
 }
 
 .customer-name {
-    color: #B5E93B;
-    font-size: 24px;
-    white-space: nowrap;
+  color: #b5e93b;
+  font-size: 24px;
+  white-space: nowrap;
 }
 
 .project-name {
-    color: #D3ED97;
-    font-size: 16px;
-    white-space: nowrap;
+  color: #d3ed97;
+  font-size: 16px;
+  white-space: nowrap;
 }
 
 .reference-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-    text-align: center;
-    width: 258px
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  text-align: center;
+  width: 258px;
 }
 
 .arrow-position-reference-section {
-    position: absolute;
-    right: 32px;
-    top: 320px
+  position: absolute;
+  right: 32px;
+  top: 320px;
 }

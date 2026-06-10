@@ -210,7 +210,7 @@
     left: 0px;
     top: 96px;
     width: 450px;
-}
+  }
 }
 
 @media (max-height: 600px) {
@@ -236,8 +236,8 @@
   }
 }
 
-@media (max-width: 450px ) {
-      .skill-motivation {
-        width: 320px;
-    }
+@media (max-width: 450px) {
+  .skill-motivation {
+    width: 320px;
+  }
 }

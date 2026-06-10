@@ -48,18 +48,14 @@ const observer = new IntersectionObserver(
         navLinks.forEach((link) => {
           link.classList.remove("isActive");
         });
-        const activeLink = document.querySelector(
-          `.navigation-item[href="#${entry.target.id}"]`,
+        const activeLink = document.querySelector(`.navigation-item[href="#${entry.target.id}"]`,
         );
         if (activeLink) {
           activeLink.classList.add("isActive");
-        }
-      }
+        }}
     });
   },
-  {
-    threshold: 0.3,
-  },
+  {threshold: 0.3,},
 );
 
 /**
@@ -172,9 +168,7 @@ function applyTranslations() {
     const key = element.dataset.i18nHtml;
     element.innerHTML = getTranslation(key);
   });
-  const placeholderElements = document.querySelectorAll(
-    "[data-i18n-placeholder]",
-  );
+  const placeholderElements = document.querySelectorAll("[data-i18n-placeholder]",);
   placeholderElements.forEach((element) => {
     const key = element.dataset.i18nPlaceholder;
     element.placeholder = getTranslation(key);
@@ -237,15 +231,27 @@ function registerDialog(dialogID) {
       dialog.close();
     }
   });
+  handleGerman()
+  handleEnglish()
+  return dialog;
+}
+
+/**
+ * Change the Language to german
+ */
+function handleGerman () {
   document
     .getElementById("de-btn-mobile")
     .addEventListener("click", () => handleLanguageChange("de"));
+}
 
-  document
+/**
+ * Change the Language to english
+ */
+function handleEnglish () {
+    document
     .getElementById("en-btn-mobile")
     .addEventListener("click", () => handleLanguageChange("en"));
-
-  return dialog;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -270,27 +276,34 @@ document.addEventListener("DOMContentLoaded", init);
 
 const cards = document.querySelectorAll(".project");
 
-cards.forEach(card => {
-    const button = card.querySelector('.toggle');
+/**
+ * Handles the expand/collapse behavior of project cards.
+ *
+ * When a card is clicked:
+ * - If the card is already active, the view scrolls smoothly
+ *   to the card and then collapses it after a short delay.
+ * - If the card is inactive, all other cards are collapsed
+ *   and the selected card is expanded.
+ *
+ * This ensures that only one project card can be open at a time.
+ *
+ * @returns {void}
+ */
+cards.forEach((card) => {
+  const button = card.querySelector(".toggle");
 
-    button.addEventListener('click', () => {
-
-        const isActive = card.classList.contains('active');
-
-        if (isActive) {
-            card.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
-
-            setTimeout(() => {
-                card.classList.remove('active');
-            }, 400); // ungefähr Dauer deiner CSS-Animation
-
-            return;
-        }
-
-        cards.forEach(c => c.classList.remove('active'));
-        card.classList.add('active');
-    });
+  button.addEventListener("click", () => {
+    const isActive = card.classList.contains("active");
+    if (isActive) {
+      card.scrollIntoView({
+        behavior: "smooth",
+        block: "center",});
+      setTimeout(() => {
+        card.classList.remove("active");
+      }, 400);
+      return;
+    }
+    cards.forEach((c) => c.classList.remove("active"));
+    card.classList.add("active");
+  });
 });
