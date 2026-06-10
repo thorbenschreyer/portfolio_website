@@ -18,6 +18,14 @@
   .arrow-contact {
     top: 480px;
   }
+
+  .hero-section {
+    min-width: calc(100vw - 148px);
+  }
+
+  section {
+    min-width: calc(100vw - 225px);
+  }
 }
 
 @media (width: 1280px), (height: 800px) {
@@ -39,6 +47,14 @@
 
   .arrow-contact {
     top: 480px;
+  }
+
+  .hero-section {
+    min-width: calc(100vw - 130px);
+  }
+
+  section {
+    min-width: calc(100vw - 226px);
   }
 }
 
@@ -62,6 +78,14 @@
   .arrow-contact {
     top: 480px;
   }
+
+  .hero-section {
+    min-width: calc(100vw - 130px);
+  }
+
+  section {
+    min-width: calc(100vw - 226px);
+  }
 }
 
 @media (width: 1366), (height: 1024px) {
@@ -83,6 +107,14 @@
 
   .arrow-contact {
     top: 530px;
+  }
+
+  .hero-section {
+    min-width: calc(100vw - 130px);
+  }
+
+  section {
+    min-width: calc(100vw - 226px);
   }
 }
 
