@@ -109,12 +109,12 @@
     top: 530px;
   }
 
-  .hero-section {
-    min-width: calc(100vw - 130px);
+   .hero-section {
+    min-width: calc(100vw - 190px);
   }
 
   section {
-    min-width: calc(100vw - 226px);
+    min-width: calc(100vw - 330px);
   }
 }
 
@@ -138,4 +138,6 @@
   .arrow-contact {
     top: 500px;
   }
+
+
 }

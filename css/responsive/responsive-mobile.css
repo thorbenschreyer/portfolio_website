@@ -1,4 +1,9 @@
 @media (max-width: 980px) {
+
+.footer-space img {
+  display: none;
+}
+
   .unset-height-mobile {
     height: unset;
   }
