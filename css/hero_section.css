@@ -65,6 +65,7 @@ nav {
 .hero-section {
   display: flex;
   flex-direction: row;
+  min-width: calc(100vw - 172px);
   position: relative;
 }
 
