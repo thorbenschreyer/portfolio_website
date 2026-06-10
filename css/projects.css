@@ -187,24 +187,30 @@
   height: 45px;
 }
 
-.prject-description-hover {
-  opacity: 0;
-  position: absolute;
-  top: 0px;
-  transition: ease-in-out 250ms;
-}
+@media (hover: hover) {
+  .project:hover .project-btn-section {
+    gap: 32px;
+  }
 
-.project:hover .prject-description-hover {
-  opacity: 1;
-}
+  .prject-description-hover {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: ease-in-out 250ms;
+  }
 
-.prject-description-normal {
-  opacity: 1;
-  transition: ease-in-out 350ms;
-}
+  .project:hover .prject-description-hover {
+    opacity: 1;
+  }
 
-.project:hover .prject-description-normal {
-  opacity: 0;
+  .prject-description-normal {
+    opacity: 1;
+    transition: ease-in-out 350ms;
+  }
+
+  .project:hover .prject-description-normal {
+    opacity: 0;
+  }
 }
 
 .overlay {
@@ -226,8 +232,39 @@
   position: relative;
 }
 
-@media (hover: hover) {
-  .project:hover .project-btn-section {
-    gap: 32px;
+.prject-description-normal {
+  animation: showNormal 10s infinite;
+}
+
+.prject-description-hover {
+  opacity: 0;
+  animation: showHover 10s infinite;
+}
+
+@keyframes showNormal {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showHover {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  50%,
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
