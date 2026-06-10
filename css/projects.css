@@ -232,39 +232,4 @@
   position: relative;
 }
 
-.prject-description-normal {
-  animation: showNormal 10s infinite;
-}
 
-.prject-description-hover {
-  opacity: 0;
-  animation: showHover 10s infinite;
-}
-
-@keyframes showNormal {
-  0%,
-  45% {
-    opacity: 1;
-  }
-  50%,
-  95% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes showHover {
-  0%,
-  45% {
-    opacity: 0;
-  }
-  50%,
-  95% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
