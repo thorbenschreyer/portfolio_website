@@ -31,15 +31,15 @@
   -webkit-text-stroke: 3px var(--main-green);
   writing-mode: vertical-rl;
   transform: rotate(180deg);
+  flex-shrink: 0;
+  width: 80px;
+  flex: 0 0 80px;
 }
 
 .contact-form {
   margin-top: 150px;
-  margin-left: 64px;
   display: flex;
   flex-direction: row;
-  height: 530px;
-  width: 480px;
 }
 
 form {
