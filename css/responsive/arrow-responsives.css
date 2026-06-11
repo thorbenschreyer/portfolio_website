@@ -26,6 +26,10 @@
   section {
     min-width: calc(100vw - 225px);
   }
+
+  .contact-section {
+    width: calc(100vw - 110px);
+  }
 }
 
 @media (width: 1280px), (height: 800px) {
@@ -55,6 +59,10 @@
 
   section {
     min-width: calc(100vw - 226px);
+  }
+
+  .contact-section {
+    width: calc(100vw - 110px);
   }
 }
 
@@ -86,6 +94,10 @@
   section {
     min-width: calc(100vw - 226px);
   }
+
+  .contact-section {
+    width: calc(100vw - 110px);
+  }
 }
 
 @media (width: 1366), (height: 1024px) {
@@ -109,7 +121,7 @@
     top: 530px;
   }
 
-   .hero-section {
+  .hero-section {
     min-width: calc(100vw - 190px);
   }
 
@@ -138,6 +150,4 @@
   .arrow-contact {
     top: 500px;
   }
-
-
 }
