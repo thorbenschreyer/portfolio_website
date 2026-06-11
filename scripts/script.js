@@ -338,6 +338,7 @@ function initHorizontalWheelScroll() {
   );
 }
 
+
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     const targetId = link.getAttribute("href");
@@ -357,5 +358,23 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
       left: target.offsetLeft - 172,
       behavior: "smooth",
     });
+  });
+});
+
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (window.innerWidth > 980) return;
+
+    event.preventDefault();
+
+    const target = document.querySelector(link.getAttribute("href"));
+
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   });
 });

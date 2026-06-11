@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+
 body {
   scroll-snap-type: x mandatory;
   font-family: "Quantico-Regular";
