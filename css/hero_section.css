@@ -102,6 +102,8 @@ nav {
 }
 
 .developer-function {
+  width: 100%;
+  text-align: end;
   font-size: 48px;
   font-family: "Quantico-Bold";
   color: var(--black);
