@@ -4,7 +4,11 @@ const messageInput = document.getElementById("userMessage");
 const errorMessageElement = document.getElementById("error-text");
 const checkbox = document.getElementById("checkbox");
 const checkboxLabel = document.querySelector(".custom-checkbox");
-const sucsessDialog = registerDialog("sucsess-dialog")
+const sucsessDialog = registerDialog("sucsess-dialog");
+document.getElementById("name").addEventListener("input", checkForm);
+document.getElementById("email").addEventListener("input", checkForm);
+document.getElementById("userMessage").addEventListener("input", checkForm);
+document.getElementById("checkbox").addEventListener("change", checkForm);
 
 /* -------------------------------------------------------------------------- */
 /*                              Validation                                    */
@@ -44,6 +48,21 @@ function checkIsFieldEmpty(input, errorKey) {
   });
 }
 
+function checkForm() {
+  const button = document.getElementById("send-button");
+
+  if (
+    document.getElementById("name").value.trim() &&
+    document.getElementById("email").value.trim() &&
+    document.getElementById("userMessage").value.trim() &&
+    document.getElementById("checkbox").checked
+  ) {
+    button.classList.remove("btn-disable");
+  } else {
+    button.classList.add("btn-disable");
+  }
+}
+
 /**
  * Validates all form fields before the form is submitted.
  *
@@ -65,20 +84,31 @@ function validateInput() {
   const emailRegex = /^[^\s@]+@[^\s@]+\.(de|com|org|net)$/;
   if (!nameRegex.test(name) || name === getTranslation("error-invalid-name")) {
     errorMessageElement.innerText = getTranslation("error-invalid-name");
-    return false;}
-  if (email === "" || email === getTranslation("error-invalid-email") || !emailRegex.test(email)) {
+    return false;
+  }
+  if (
+    email === "" ||
+    email === getTranslation("error-invalid-email") ||
+    !emailRegex.test(email)
+  ) {
     errorMessageElement.innerText = getTranslation("error-invalid-email");
-    return false;}
-  if (userMessage === "" || userMessage === getTranslation("error-empty-message")) {
+    return false;
+  }
+  if (
+    userMessage === "" ||
+    userMessage === getTranslation("error-empty-message")
+  ) {
     errorMessageElement.innerText = getTranslation("error-empty-message");
-    return false;}
+    return false;
+  }
   if (!checkbox.checked) {
     errorMessageElement.innerText = getTranslation("error-privacy-policy");
     checkboxLabel.classList.add("error");
-    return false;}
+    return false;
+  }
   checkboxLabel.classList.remove("error");
   errorMessageElement.innerText = "";
-  showSucsessDialog()
+  showSucsessDialog();
   return true;
 }
 
@@ -125,15 +155,18 @@ function init() {
  */
 function handleFormSubmit(e) {
   e.preventDefault();
-  if (!validateInput()) {return;}
+  if (!validateInput()) {
+    return;
+  }
   fetch("./assets/php/formular.php", {
     method: "POST",
-    headers: {"Content-Type": "application/json",},
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       name: nameInput.value,
       email: emailInput.value,
       message: messageInput.value,
-    }),})
+    }),
+  })
     .then(async (response) => {
       clearAllFields();
     })
@@ -166,9 +199,6 @@ if (checkbox) {
     if (checkbox.checked) {
       checkboxLabel.classList.remove("error");
       errorMessageElement.innerText = "";
-      document.getElementById("send-button").classList.remove("btn-disable");
-    } else {
-      document.getElementById("send-button").classList.add("btn-disable");
     }
   });
 }

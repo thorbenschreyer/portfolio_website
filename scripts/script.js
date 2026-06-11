@@ -74,6 +74,99 @@ function handleNavigationClick(event) {
   }, 1000);
 }
 
+
+/**
+ * Enables horizontal scrolling with the mouse wheel on desktop devices.
+ *
+ * The vertical wheel movement (`deltaY`) is converted into horizontal
+ * scrolling inside the main content container. This behavior is disabled
+ * on mobile devices (viewport width <= 980px).
+ *
+ * @returns {void}
+ */
+function initHorizontalWheelScroll() {
+  const container =
+    document.querySelector(".sections") ||
+    document.querySelector(".impressum-container")
+
+  if (!container) return;
+
+  container.addEventListener(
+    "wheel",
+    (event) => {
+      if (window.innerWidth <= 980) return;
+
+      event.preventDefault();
+
+      container.scrollLeft += event.deltaY * 4;
+    },
+    { passive: false }
+  );
+}
+
+/**
+ * Handles anchor navigation on desktop devices.
+ *
+ * Prevents the browser's default anchor behavior and smoothly scrolls
+ * the horizontal content container to the target section.
+ *
+ * This navigation is only intended for layouts that use horizontal
+ * scrolling between sections.
+ *
+ * @param {MouseEvent} event - The click event triggered by the anchor link.
+ * @returns {void}
+ */
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const targetId = link.getAttribute("href");
+    const target = document.querySelector(targetId);
+
+    if (!target) return;
+
+    const container =
+      document.querySelector(".sections") ||
+      document.querySelector(".impressum-content");
+
+    if (!container) return;
+
+    event.preventDefault();
+
+    container.scrollTo({
+      left: target.offsetLeft - 172,
+      behavior: "smooth",
+    });
+  });
+});
+
+/**
+ * Handles anchor navigation on mobile devices.
+ *
+ * Prevents the browser's default anchor behavior and smoothly scrolls
+ * the target section into view using vertical scrolling.
+ *
+ * This behavior is only applied on devices with a viewport width
+ * of 980px or less.
+ *
+ * @param {MouseEvent} event - The click event triggered by the anchor link.
+ * @returns {void}
+ */
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (window.innerWidth > 980) return;
+
+    event.preventDefault();
+
+    const target = document.querySelector(link.getAttribute("href"));
+
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  });
+});
+
 /* -------------------------------------------------------------------------- */
 /*                          Dialog Management                                 */
 /* -------------------------------------------------------------------------- */
@@ -314,67 +407,5 @@ cards.forEach((card) => {
     cards.forEach((c) => c.classList.remove("active"));
     card.classList.add("active");
     updateToggleTexts();
-  });
-});
-
-
-function initHorizontalWheelScroll() {
-  const container =
-    document.querySelector(".sections") ||
-    document.querySelector(".impressum-container")
-
-  if (!container) return;
-
-  container.addEventListener(
-    "wheel",
-    (event) => {
-      if (window.innerWidth <= 980) return;
-
-      event.preventDefault();
-
-      container.scrollLeft += event.deltaY * 4;
-    },
-    { passive: false }
-  );
-}
-
-
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener("click", (event) => {
-    const targetId = link.getAttribute("href");
-    const target = document.querySelector(targetId);
-
-    if (!target) return;
-
-    const container =
-      document.querySelector(".sections") ||
-      document.querySelector(".impressum-content");
-
-    if (!container) return;
-
-    event.preventDefault();
-
-    container.scrollTo({
-      left: target.offsetLeft - 172,
-      behavior: "smooth",
-    });
-  });
-});
-
-
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener("click", (event) => {
-    if (window.innerWidth > 980) return;
-
-    event.preventDefault();
-
-    const target = document.querySelector(link.getAttribute("href"));
-
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
   });
 });

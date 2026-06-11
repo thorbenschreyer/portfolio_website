@@ -1,3 +1,12 @@
+Todos´
+
+- Die komplette größe ausnutzen
+- Validierung Button undisable erst wenn alles passt.
+
+
+
+
+
 # 🚀 Thorben Schreyer – Portfolio Website
 
 A modern, responsive portfolio website showcasing my skills, projects, and experience as a Frontend Developer.
