@@ -8,6 +8,10 @@ const cards = document.querySelectorAll(".project");
 let isManualScrolling = false;
 let translations = {};
 
+document.addEventListener("DOMContentLoaded", () => {
+  initHorizontalWheelScroll();
+});
+
 /* -------------------------------------------------------------------------- */
 /*                              Navigation                                    */
 /* -------------------------------------------------------------------------- */
@@ -310,5 +314,48 @@ cards.forEach((card) => {
     cards.forEach((c) => c.classList.remove("active"));
     card.classList.add("active");
     updateToggleTexts();
+  });
+});
+
+
+function initHorizontalWheelScroll() {
+  const container =
+    document.querySelector(".sections") ||
+    document.querySelector(".impressum-container")
+
+  if (!container) return;
+
+  container.addEventListener(
+    "wheel",
+    (event) => {
+      if (window.innerWidth <= 980) return;
+
+      event.preventDefault();
+
+      container.scrollLeft += event.deltaY * 4;
+    },
+    { passive: false }
+  );
+}
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const targetId = link.getAttribute("href");
+    const target = document.querySelector(targetId);
+
+    if (!target) return;
+
+    const container =
+      document.querySelector(".sections") ||
+      document.querySelector(".impressum-content");
+
+    if (!container) return;
+
+    event.preventDefault();
+
+    container.scrollTo({
+      left: target.offsetLeft,
+      behavior: "smooth",
+    });
   });
 });

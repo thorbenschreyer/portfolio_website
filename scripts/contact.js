@@ -108,7 +108,6 @@ function initValidation() {
 function init() {
   initValidation();
   loadLanguage(getCurrentLanguage());
-  initHorizontalWheelScroll()
 }
 
 /* -------------------------------------------------------------------------- */
@@ -237,40 +236,4 @@ slider.addEventListener("scroll", () => {
     dot.classList.remove("active");
   });
   dots[activeIndex].classList.add("active");
-});
-
-
-function initHorizontalWheelScroll() {
-  const container = document.querySelector(".sections");
-
-  container.addEventListener(
-    "wheel",
-    (event) => {
-      if (window.innerWidth <= 980) return;
-
-      event.preventDefault();
-
-      container.scrollLeft += event.deltaY;
-    },
-    { passive: false }
-  );
-}
-
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener("click", (event) => {
-    const targetId = link.getAttribute("href");
-
-    if (!targetId.startsWith("#")) return;
-
-    const target = document.querySelector(targetId);
-
-    if (!target) return;
-
-    event.preventDefault();
-
-    document.querySelector(".sections").scrollTo({
-      left: target.offsetLeft -172,
-      behavior: "smooth",
-    });
-  });
 });
