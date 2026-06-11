@@ -23,9 +23,13 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
 
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  scroll-behavior: smooth;
+    scroll-behavior: auto;
+  scroll-snap-type: none;
+
+}
+
+.sections.no-snap {
+  scroll-snap-type: none;
 }
 
 .sections-track {
