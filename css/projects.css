@@ -5,7 +5,7 @@
 .all-projects {
   display: flex;
   flex-direction: row;
-  margin-left: 64px;
+  margin-left: 80px;
   margin-top: 160px;
 }
 

@@ -2,12 +2,13 @@
   position: relative;
 }
 
+
 .reference-section-container {
   display: flex;
   flex-direction: row;
   width: 580px;
   height: 580px;
-  margin-left: 64px;
+  margin-left: 80px;
   margin-top: 280px;
 }
 
