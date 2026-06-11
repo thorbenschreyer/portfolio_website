@@ -117,9 +117,11 @@ function initHorizontalWheelScroll() {
  * @returns {void}
  */
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  const nav = document.querySelector("nav");
   link.addEventListener("click", (event) => {
     const targetId = link.getAttribute("href");
     const target = document.querySelector(targetId);
+    const width = nav.getBoundingClientRect().width;
 
     if (!target) return;
 
@@ -131,8 +133,16 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
     event.preventDefault();
 
+    let offset = 0;
+
+    if (width === 172) {
+      offset = 172;
+    } else if (width === 110) {
+      offset = 110;
+    }
+
     container.scrollTo({
-      left: target.offsetLeft - 172,
+      left: target.offsetLeft - offset,
       behavior: "smooth",
     });
   });

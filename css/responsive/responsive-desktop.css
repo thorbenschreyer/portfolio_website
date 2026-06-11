@@ -1,5 +1,4 @@
 @media (max-width: 1280px), (max-height: 800px) {
-
   nav {
     width: 110px;
   }
@@ -45,6 +44,7 @@
   .arrow-right {
     width: 80px;
     height: 24px;
+    top: 500px;
   }
 
   .social-icons {
