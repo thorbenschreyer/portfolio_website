@@ -3,7 +3,6 @@
   padding: 0;
 }
 
-
 body {
   scroll-snap-type: x mandatory;
   font-family: "Quantico-Regular";
@@ -24,9 +23,8 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
 
-    scroll-behavior: auto;
+  scroll-behavior: auto;
   scroll-snap-type: none;
-
 }
 
 .sections.no-snap {
@@ -215,13 +213,20 @@ a {
   content: url(../assets/img/github_hover.png);
 }
 
-
 /*------------------------------------
     Footer Section
 ------------------------------------*/
 .footer-space {
   flex: 1;
+  position: relative;
 }
+
+.reference-img-placeholder,
+.placeholder-skills,
+.footer-space-img,
+.why-me-placeholder {
+    display: none;
+  }
 
 footer {
   min-width: 100px;

@@ -3,6 +3,10 @@
     width: 110px;
   }
 
+  .contact-section {
+    width: unset;
+  }
+
   .navigation-img {
     width: 80px;
     margin-top: 16px;
@@ -240,5 +244,99 @@
 @media (max-width: 450px) {
   .skill-motivation {
     width: 320px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .footer-space-img {
+    position: absolute;
+    display: block;
+    top: 420px;
+    right: 230px;
+    height: 450px;
+    width: auto;
+  }
+
+  .reference-img-placeholder {
+    position: absolute;
+    display: block;
+    top: 320px;
+    right: -200px;
+    height: 600px;
+    width: auto;
+  }
+
+  .all-projects {
+    margin-top: 260px;
+  }
+
+  .placeholder-skills {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 240px;
+    height: 500px;
+    width: auto;
+  }
+
+  .why-me-placeholder {
+    position: absolute;
+    display: block;
+    top: 400px;
+    right: 340px;
+    height: 650px;
+    width: auto;
+  }
+}
+
+@media (min-width: 1920px) {
+  .footer-space-img {
+    position: absolute;
+    display: block;
+    top: 330px;
+    right: 200px;
+    height: 650px;
+    width: auto;
+  }
+
+  .reference-img-placeholder {
+    position: absolute;
+    display: block;
+    top: 320px;
+    right: -170px;
+    height: 750px;
+    width: auto;
+  }
+
+  .placeholder-skills {
+    position: absolute;
+    display: block;
+    top: 200;
+    right: 440px;
+    height: 600px;
+    width: auto;
+  }
+
+  .skill-section-content {
+    margin-top: 570px;
+}
+
+  .why-me-placeholder {
+    position: absolute;
+    display: block;
+    top: 400px;
+    right: 240px;
+    height: 900px;
+    width: auto;
+  }
+
+}
+
+@media (min-width: 3000px) {
+  .footer-space-img,
+  .reference-img-placeholder,
+  .placeholder-skills,
+  .why-me-placeholder {
+    display: none;
   }
 }

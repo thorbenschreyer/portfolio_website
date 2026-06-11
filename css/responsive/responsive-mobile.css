@@ -3,6 +3,10 @@
     animation: showNormal 10s infinite;
   }
 
+  .developer-function {
+    text-align: center;
+  }
+
   nav {
     background: linear-gradient(to top, #8db52e 0%, #b5e93b 8%);
   }
@@ -372,4 +376,8 @@
   .developer-function {
     font-size: 18px;
   }
+
+  .ongoing-project {
+    width: 300px;
+}
 }
