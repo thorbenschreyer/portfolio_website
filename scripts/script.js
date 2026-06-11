@@ -354,7 +354,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     event.preventDefault();
 
     container.scrollTo({
-      left: target.offsetLeft,
+      left: target.offsetLeft - 172,
       behavior: "smooth",
     });
   });

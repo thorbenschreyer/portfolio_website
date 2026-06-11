@@ -39,7 +39,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 132px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   color: var(--light-grey);

@@ -47,9 +47,9 @@
     "error-invalid-email": "Bitte gib eine gültige E-Mail-Adresse ein.",
     "error-empty-message": "Bitte gib eine Nachricht ein.",
     "error-privacy-policy": "Bitte akzeptiere die Datenschutzerklärung.",
-    "why-me": "Why me",
-    "skills": "Skills",
-    "my-work": "My Work",
+    "why-me": "Über mich",
+    "skills": "Profil",
+    "my-work": "Projekte",
     "contact": "Kontakt",
     "impressumTitle": "Impressum",
     "impressumSection1Title": "Angaben gemäß § 5 DDG",
@@ -122,5 +122,8 @@
     "need-teamplayer": "<span>Suchen Sie einen Teamplayer?</span><p>Das sagen meine Kollegen über mich</p>",
     "moble-contact-head": "Kontaktiere mich:",
     "show-more": "Mehr anzeigen",
-    "show-less": "Weniger anzeigen"
+    "show-less": "Weniger anzeigen",
+    "skills-page": "Fähigkeiten",
+    "my-work-Page": "Meine Projekte",
+    "reference": "Referenzen"
 }
