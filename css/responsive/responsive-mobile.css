@@ -3,6 +3,10 @@
     animation: showNormal 10s infinite;
   }
 
+  nav {
+    background: linear-gradient(to top, #8db52e 0%, #b5e93b 8%);
+  }
+
   .prject-description-hover {
     opacity: 0;
     animation: showHover 10s infinite;

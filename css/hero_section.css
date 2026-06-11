@@ -9,7 +9,7 @@ nav {
   width: 172px;
   height: 100%;
   z-index: 2000;
-  background-color: var(--main-green);
+  background: linear-gradient(to left, #8db52e 0%, #b5e93b 8%);
 }
 
 .black-to-transparent {
@@ -18,7 +18,7 @@ nav {
   width: 42px;
   height: 100%;
   z-index: 1000;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.42), transparent);
+  background:linear-gradient(to right, rgba(0, 0, 0, 0.42), transparent);
 }
 
 .navigation-img {
