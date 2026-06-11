@@ -1,7 +1,6 @@
 Todos´
 
 - Die komplette größe ausnutzen
-- Validierung Button undisable erst wenn alles passt.
 
 
 
