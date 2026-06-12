@@ -127,7 +127,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
     const container =
       document.querySelector(".sections") ||
-      document.querySelector(".impressum-content");
+      document.querySelector(".impressum-container");
 
     if (!container) return;
 
