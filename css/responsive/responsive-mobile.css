@@ -127,8 +127,11 @@
   }
 
   .language-buttons span {
-    color: #4a4a4a;
     font-size: 18px;
+  }
+
+  .language-button-color {
+    color: #4a4a4a;
   }
 
   .language-buttons hr {
@@ -314,7 +317,7 @@
 
   .navigation-item {
     font-size: 18px;
-    color: #4A4A4A;
+    color: #4a4a4a;
   }
 
   .btn-mobile:active {
@@ -380,5 +383,5 @@
 
   .ongoing-project {
     width: 300px;
-}
+  }
 }

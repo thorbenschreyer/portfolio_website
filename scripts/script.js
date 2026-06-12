@@ -228,9 +228,39 @@ async function loadLanguage(language) {
   applyTranslations();
   updateToggleTexts();
   updateErrorMessages();
+  setCorrectButtonColor(language)
   localStorage.setItem("language", language);
 }
 
+/**
+ * add and remove the activestat collor
+ * @param {string} language 
+ */
+function setCorrectButtonColor(language) {
+  const enButton = document.getElementById("en-btn");
+  const deButton = document.getElementById("de-btn");
+  const enButtonMobile = document.getElementById("en-btn-mobile");
+  const deButtonMobile = document.getElementById("de-btn-mobile");
+
+  [enButton, deButton, enButtonMobile, deButtonMobile].forEach(button => {
+    button.classList.remove("language-btn-active");
+    button.classList.add("language-button-color");
+  });
+
+  if (language === "de") {
+    deButton.classList.remove("language-button-color");
+    deButtonMobile.classList.remove("language-button-color");
+
+    deButton.classList.add("language-btn-active");
+    deButtonMobile.classList.add("language-btn-active");
+  } else {
+    enButton.classList.remove("language-button-color");
+    enButtonMobile.classList.remove("language-button-color");
+
+    enButton.classList.add("language-btn-active");
+    enButtonMobile.classList.add("language-btn-active");
+  }
+}
 /**
  * Returns the translation for a given key.
  *
