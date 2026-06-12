@@ -50,11 +50,17 @@ function checkIsFieldEmpty(input, errorKey) {
 
 function checkForm() {
   const button = document.getElementById("send-button");
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const userMessage = document.getElementById("userMessage").value;
 
   if (
-    document.getElementById("name").value.trim() &&
-    document.getElementById("email").value.trim() &&
-    document.getElementById("userMessage").value.trim() &&
+    name.trim() !== "" &&
+    email.trim() !== "" &&
+    userMessage.trim() !== "" &&
+    name !== getTranslation("error-name-required") &&
+    email !== getTranslation("error-email-required") &&
+    userMessage !== getTranslation("error-message-required") &&
     document.getElementById("checkbox").checked
   ) {
     button.classList.remove("btn-disable");
