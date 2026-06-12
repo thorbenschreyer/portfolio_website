@@ -319,7 +319,7 @@
 
   .skill-section-content {
     margin-top: 570px;
-}
+  }
 
   .why-me-placeholder {
     position: absolute;
@@ -329,14 +329,33 @@
     height: 900px;
     width: auto;
   }
-
 }
 
-@media (min-width: 3000px) {
+@media (min-width: 2400px) {
   .footer-space-img,
   .reference-img-placeholder,
   .placeholder-skills,
   .why-me-placeholder {
-    display: none;
+    display: ;
+  }
+
+  .navigation-links {
+    height: 50%;
+  }
+
+  .developer-name {
+    font-size: 100px;
+  }
+
+  section {
+    min-width: calc((100vw - 172px) / 2);
+  }
+
+  .hero-section {
+    min-width: calc((100vw - 172px) / 2);
+  }
+
+    .contact-content {
+    min-width: calc((100vw - 172px) / 2);
   }
 }

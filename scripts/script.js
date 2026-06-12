@@ -74,7 +74,6 @@ function handleNavigationClick(event) {
   }, 1000);
 }
 
-
 /**
  * Enables horizontal scrolling with the mouse wheel on desktop devices.
  *
@@ -87,7 +86,7 @@ function handleNavigationClick(event) {
 function initHorizontalWheelScroll() {
   const container =
     document.querySelector(".sections") ||
-    document.querySelector(".impressum-container")
+    document.querySelector(".impressum-container");
 
   if (!container) return;
 
@@ -100,7 +99,7 @@ function initHorizontalWheelScroll() {
 
       container.scrollLeft += event.deltaY * 4;
     },
-    { passive: false }
+    { passive: false },
   );
 }
 
@@ -122,7 +121,6 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     const targetId = link.getAttribute("href");
     const target = document.querySelector(targetId);
     const width = nav.getBoundingClientRect().width;
-
     if (!target) return;
 
     const container =
@@ -133,20 +131,35 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
     event.preventDefault();
 
-    let offset = 0;
-
-    if (width === 172) {
-      offset = 172;
-    } else if (width === 110) {
-      offset = 110;
-    }
-
     container.scrollTo({
-      left: target.offsetLeft - offset,
+      left: getScrollPosition(target),
       behavior: "smooth",
     });
   });
 });
+
+/**
+ * Handle scrolling in widescreen
+ * @returns offset
+ */
+function getScrollPosition(target) {
+  const nav = document.querySelector("nav");
+  const navWidth = nav.getBoundingClientRect().width;
+
+  let offset = navWidth;
+
+  if (window.innerWidth >= 2400) {
+    const hero = document.getElementById("hero-section");
+    const whyMe = document.getElementById("why-me-section");
+
+    // Why-Me soll direkt neben Hero stehen
+    if (target === whyMe) {
+      return hero.offsetLeft + hero.offsetWidth / 2;
+    }
+  }
+
+  return target.offsetLeft - offset;
+}
 
 /**
  * Handles anchor navigation on mobile devices.
@@ -228,13 +241,13 @@ async function loadLanguage(language) {
   applyTranslations();
   updateToggleTexts();
   updateErrorMessages();
-  setCorrectButtonColor(language)
+  setCorrectButtonColor(language);
   localStorage.setItem("language", language);
 }
 
 /**
  * add and remove the activestat collor
- * @param {string} language 
+ * @param {string} language
  */
 function setCorrectButtonColor(language) {
   const enButton = document.getElementById("en-btn");
@@ -242,7 +255,7 @@ function setCorrectButtonColor(language) {
   const enButtonMobile = document.getElementById("en-btn-mobile");
   const deButtonMobile = document.getElementById("de-btn-mobile");
 
-  [enButton, deButton, enButtonMobile, deButtonMobile].forEach(button => {
+  [enButton, deButton, enButtonMobile, deButtonMobile].forEach((button) => {
     button.classList.remove("language-btn-active");
     button.classList.add("language-button-color");
   });
