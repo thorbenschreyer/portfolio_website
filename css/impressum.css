@@ -59,6 +59,7 @@ html {
 
   width: calc(100vw - 172px);
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .impressum-content {
