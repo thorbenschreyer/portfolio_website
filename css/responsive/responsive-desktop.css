@@ -332,11 +332,24 @@
 }
 
 @media (min-width: 2400px) {
-  .footer-space-img,
-  .reference-img-placeholder,
-  .placeholder-skills,
+  .footer-space-img {
+    right: 1000px;
+    height: 1000px;
+  }
+  .reference-img-placeholder {
+    right: -200px;
+    height: 1200px;
+    top: 720px;
+  }
+  .placeholder-skills {
+    top: 850px;
+    height: 1200px;
+    right: 400px;
+  }
+
   .why-me-placeholder {
-    display: ;
+    top: 600px;
+    height: 1300px;
   }
 
   .navigation-links {
@@ -355,7 +368,41 @@
     min-width: calc((100vw - 172px) / 2);
   }
 
-    .contact-content {
+  .contact-content {
     min-width: calc((100vw - 172px) / 2);
+  }
+
+  .arrow-position-hero,
+  .arrow-skill-section {
+    display: none;
+  }
+
+  .why-me-content {
+    margin-top: 360px;
+  }
+
+  .all-projects {
+    margin-top: 560px;
+  }
+
+  .arrow-position-skill-section {
+    top: 930px;
+  }
+
+  .reference-section-container {
+    margin-top: 580px;
+  }
+
+  .contact-form {
+    margin-top: 450px;
+    margin-left: 180px;
+  }
+
+  form {
+    width: 756px;
+  }
+
+  .input-message {
+    height: 455px;
   }
 }
