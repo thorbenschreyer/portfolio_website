@@ -81,3 +81,30 @@
     font-size: 24px;
   }
 }
+
+@media (min-width: 2400px) {
+  .impressum-content-section {
+    flex: 1;
+    width: 24vw;
+  }
+
+  .arrow-impressum-next {
+    display: none;
+  }
+
+  section {
+    min-width: unset;
+  }
+
+  .impressumsite-text {
+    margin-left: unset;
+    height: 740px;
+    width: 450px;
+  }
+}
+
+@media (min-width: 3400px) {
+  .impressumsite-text {
+    width: 650px;
+  }
+}
