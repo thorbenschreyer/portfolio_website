@@ -220,13 +220,6 @@ a {
   position: relative;
 }
 
-.reference-img-placeholder,
-.placeholder-skills,
-.footer-space-img,
-.why-me-placeholder {
-    display: none;
-  }
-
 footer {
   min-width: 100px;
   height: 100vh;
