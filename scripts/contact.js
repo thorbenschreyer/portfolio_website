@@ -52,6 +52,18 @@ function checkIsFieldEmpty(input, errorKey) {
   });
 }
 
+/**
+ * Checks whether the entire form is valid and enables or disables
+ * the submit button accordingly.
+ *
+ * Requirements:
+ * - Valid name
+ * - Valid email address
+ * - Non-empty message
+ * - Privacy policy checkbox is checked
+ *
+ * @returns {void}
+ */
 function checkForm() {
   const button = document.getElementById("send-button");
 
@@ -65,17 +77,15 @@ function checkForm() {
 }
 
 /**
- * Validates all form fields before the form is submitted.
+ * Validates all form inputs and displays the corresponding error message.
  *
- * Validation rules:
- * - Name must contain only valid characters.
- * - Email must match a supported email format.
- * - Message field must not be empty.
- * - Privacy policy checkbox must be accepted.
+ * Validation order:
+ * 1. Name
+ * 2. Email
+ * 3. Message
+ * 4. Privacy policy consent
  *
- * Displays a translated error message when validation fails.
- *
- * @returns {boolean} True if all inputs are valid, otherwise false.
+ * @returns {boolean} Returns `true` if all inputs are valid; otherwise `false`.
  */
 function validateInput() {
   if (!validateName()) {
@@ -106,6 +116,17 @@ function validateInput() {
   return true;
 }
 
+/**
+ * Validates the name input against the allowed character set.
+ *
+ * Allowed characters:
+ * - Letters (including German umlauts and ß)
+ * - Spaces
+ * - Apostrophes (')
+ * - Hyphens (-)
+ *
+ * @returns {boolean} Returns `true` if the name is valid; otherwise `false`.
+ */
 function validateName() {
   const name = nameInput.value.trim();
   const nameRegex = /^[A-Za-zÄÖÜäöüß\s'-]+$/;
@@ -113,6 +134,13 @@ function validateName() {
   return nameRegex.test(name);
 }
 
+/**
+ * Displays an error message if the name input is invalid.
+ *
+ * Clears the error message when the input becomes valid.
+ *
+ * @returns {void}
+ */
 function showNameError() {
   if (!validateName()) {
     errorMessageElement.innerText =
@@ -122,6 +150,18 @@ function showNameError() {
   }
 }
 
+/**
+ * Validates the email address against the expected format.
+ *
+ * Supported top-level domains:
+ * - .de
+ * - .com
+ * - .org
+ * - .net
+ *
+ * @returns {boolean} Returns `true` if the email address is valid;
+ * otherwise `false`.
+ */
 function validateEmail() {
   const email = emailInput.value.trim();
   const emailRegex = /^[^\s@]+@[^\s@]+\.(de|com|org|net)$/;
@@ -129,6 +169,13 @@ function validateEmail() {
   return emailRegex.test(email);
 }
 
+/**
+ * Displays an error message if the email input is invalid.
+ *
+ * Clears the error message when the input becomes valid.
+ *
+ * @returns {void}
+ */
 function showEmailError() {
   if (!validateEmail()) {
     errorMessageElement.innerText =
@@ -138,10 +185,23 @@ function showEmailError() {
   }
 }
 
+/**
+ * Checks whether the message field contains any non-whitespace characters.
+ *
+ * @returns {boolean} Returns `true` if a message has been entered;
+ * otherwise `false`.
+ */
 function validateMassage() {
   return messageInput.value.trim() !== "";
 }
 
+/**
+ * Displays an error message if the message field is empty.
+ *
+ * Clears the error message when a valid message is entered.
+ *
+ * @returns {void}
+ */
 function showMessageError() {
   if (!validateMassage()) {
     errorMessageElement.innerText =
