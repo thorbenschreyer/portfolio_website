@@ -9,6 +9,9 @@ document.getElementById("name").addEventListener("input", checkForm);
 document.getElementById("email").addEventListener("input", checkForm);
 document.getElementById("userMessage").addEventListener("input", checkForm);
 document.getElementById("checkbox").addEventListener("change", checkForm);
+nameInput.addEventListener("blur", showNameError);
+emailInput.addEventListener("blur", showEmailError);
+messageInput.addEventListener("blur", showMessageError);
 
 /* -------------------------------------------------------------------------- */
 /*                              Validation                                    */
@@ -34,6 +37,7 @@ function checkIsFieldEmpty(input, errorKey) {
       this.value = getTranslation(errorKey);
       this.style.color = "#FD2E12";
       this.style.borderColor = "#FD2E12";
+    } else {
     }
   });
 
@@ -50,23 +54,14 @@ function checkIsFieldEmpty(input, errorKey) {
 
 function checkForm() {
   const button = document.getElementById("send-button");
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const userMessage = document.getElementById("userMessage").value;
 
-  if (
-    name.trim() !== "" &&
-    email.trim() !== "" &&
-    userMessage.trim() !== "" &&
-    name !== getTranslation("error-name-required") &&
-    email !== getTranslation("error-email-required") &&
-    userMessage !== getTranslation("error-message-required") &&
-    document.getElementById("checkbox").checked
-  ) {
-    button.classList.remove("btn-disable");
-  } else {
-    button.classList.add("btn-disable");
-  }
+  const isValid =
+    validateName() &&
+    validateEmail() &&
+    validateMassage() &&
+    checkbox.checked;
+
+  button.classList.toggle("btn-disable", !isValid);
 }
 
 /**
@@ -83,39 +78,77 @@ function checkForm() {
  * @returns {boolean} True if all inputs are valid, otherwise false.
  */
 function validateInput() {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const userMessage = document.getElementById("userMessage").value.trim();
-  const nameRegex = /^[A-Za-zÄÖÜäöüß\s'-]+$/;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.(de|com|org|net)$/;
-  if (!nameRegex.test(name) || name === getTranslation("error-invalid-name")) {
-    errorMessageElement.innerText = getTranslation("error-invalid-name");
+  if (!validateName()) {
+    errorMessageElement.innerText =
+      getTranslation("error-invalid-name");
     return false;
   }
-  if (
-    email === "" ||
-    email === getTranslation("error-invalid-email") ||
-    !emailRegex.test(email)
-  ) {
-    errorMessageElement.innerText = getTranslation("error-invalid-email");
+
+  if (!validateEmail()) {
+    errorMessageElement.innerText =
+      getTranslation("error-invalid-email");
     return false;
   }
-  if (
-    userMessage === "" ||
-    userMessage === getTranslation("error-empty-message")
-  ) {
-    errorMessageElement.innerText = getTranslation("error-empty-message");
+
+  if (!validateMassage()) {
+    errorMessageElement.innerText =
+      getTranslation("error-empty-message");
     return false;
   }
+
   if (!checkbox.checked) {
-    errorMessageElement.innerText = getTranslation("error-privacy-policy");
+    errorMessageElement.innerText =
+      getTranslation("error-privacy-policy");
     checkboxLabel.classList.add("error");
     return false;
   }
-  checkboxLabel.classList.remove("error");
-  errorMessageElement.innerText = "";
-  showSucsessDialog();
+
   return true;
+}
+
+function validateName() {
+  const name = nameInput.value.trim();
+  const nameRegex = /^[A-Za-zÄÖÜäöüß\s'-]+$/;
+
+  return nameRegex.test(name);
+}
+
+function showNameError() {
+  if (!validateName()) {
+    errorMessageElement.innerText =
+      getTranslation("error-invalid-name");
+  } else {
+    errorMessageElement.innerText = "";
+  }
+}
+
+function validateEmail() {
+  const email = emailInput.value.trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.(de|com|org|net)$/;
+
+  return emailRegex.test(email);
+}
+
+function showEmailError() {
+  if (!validateEmail()) {
+    errorMessageElement.innerText =
+      getTranslation("error-invalid-email");
+  } else {
+    errorMessageElement.innerText = "";
+  }
+}
+
+function validateMassage() {
+  return messageInput.value.trim() !== "";
+}
+
+function showMessageError() {
+  if (!validateMassage()) {
+    errorMessageElement.innerText =
+      getTranslation("error-empty-message");
+  } else {
+    errorMessageElement.innerText = "";
+  }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -144,6 +177,7 @@ function initValidation() {
 function init() {
   initValidation();
   loadLanguage(getCurrentLanguage());
+  errorMessageElement.innerText = "";
 }
 
 /* -------------------------------------------------------------------------- */
