@@ -248,109 +248,25 @@
 }
 
 @media (min-width: 1680px) {
-  .footer-space-img {
-    position: absolute;
-    display: block;
-    top: 420px;
-    right: 230px;
-    height: 450px;
-    width: auto;
-  }
-
-  .reference-img-placeholder {
-    position: absolute;
-    display: block;
-    top: 320px;
-    right: -140px;
-    height: 600px;
-    width: auto;
-  }
-
   .all-projects {
     margin-top: 260px;
-  }
-
-  .placeholder-skills {
-    position: absolute;
-    display: block;
-    top: 0;
-    right: 240px;
-    height: 500px;
-    width: auto;
-  }
-
-  .why-me-placeholder {
-    position: absolute;
-    display: block;
-    top: 400px;
-    right: 340px;
-    height: 650px;
-    width: auto;
-  }
-}
-
-@media (min-width: 1920px) {
-  .footer-space-img {
-    position: absolute;
-    display: block;
-    top: 330px;
-    right: 200px;
-    height: 650px;
-    width: auto;
-  }
-
-  .reference-img-placeholder {
-    position: absolute;
-    display: block;
-    top: 320px;
-    right: -170px;
-    height: 750px;
-    width: auto;
-  }
-
-  .placeholder-skills {
-    position: absolute;
-    display: block;
-    top: 200;
-    right: 440px;
-    height: 600px;
-    width: auto;
   }
 
   .skill-section-content {
     margin-top: 570px;
   }
-
-  .why-me-placeholder {
-    position: absolute;
-    display: block;
-    top: 400px;
-    right: 240px;
-    height: 900px;
-    width: auto;
-  }
 }
 
 @media (min-width: 2400px) {
-  .footer-space-img {
-    right: 1000px;
-    height: 1000px;
-  }
-  .reference-img-placeholder {
-    right: -200px;
-    height: 1200px;
-    top: 720px;
-  }
-  .placeholder-skills {
-    top: 850px;
-    height: 1200px;
-    right: 400px;
-  }
 
-  .why-me-placeholder {
-    top: 600px;
-    height: 1300px;
-  }
+  .developper-image {
+    margin-left: 100px;
+}
+
+.hero-name-mobile {
+    position: absolute;
+    left: 0px;
+}
 
   .navigation-links {
     height: 50%;
@@ -369,7 +285,12 @@
   }
 
   .contact-content {
-    min-width: calc((100vw - 172px) / 2);
+    min-width: unset;
+  }
+
+  .contact-section {
+    min-width: 900px !important;
+    width: unset;
   }
 
   .arrow-position-hero,
@@ -385,16 +306,12 @@
     margin-top: 560px;
   }
 
-  .arrow-position-skill-section {
-    top: 930px;
-  }
-
   .reference-section-container {
-    margin-top: 580px;
+    margin-top: 560px;
   }
 
   .contact-form {
-    margin-top: 450px;
+    margin-top: 560px;
     margin-left: 180px;
   }
 
@@ -404,5 +321,72 @@
 
   .input-message {
     height: 455px;
+  }
+
+  .reference-section {
+    min-width: 33vw;
+  }
+
+  .arrow-position-reference-section,
+  .arrow-position-skill-section {
+    display: none;
+  }
+}
+
+@media (min-width: 3400px) {
+  .reference-section {
+    min-width: 23vw;
+    margin-left: 130px;
+  }
+
+  .skill-section {
+    position: relative;
+    min-width: 35vw;
+  }
+
+  .why-me-section {
+    position: relative;
+    min-width: 31vw;
+  }
+
+  .arrow-why-me {
+    display: none;
+  }
+
+  .why-me-content {
+    margin-top: 560px;
+  }
+
+  .hero-section {
+    min-width: 40vw;
+  }
+}
+
+@media (min-width: 4400px) {
+  .reference-section {
+    min-width: 20vw;
+    margin-left: 180px;
+  }
+
+  .skill-section {
+    position: relative;
+    min-width: 29vw;
+  }
+
+  .why-me-section {
+    position: relative;
+    min-width: 25vw;
+  }
+
+  .arrow-why-me {
+    display: none;
+  }
+
+  .why-me-content {
+    margin-top: 560px;
+  }
+
+  .hero-section {
+    min-width: 35vw;
   }
 }
