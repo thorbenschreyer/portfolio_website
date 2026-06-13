@@ -115,10 +115,11 @@
   .name-and-project {
     align-items: start;
     width: unset;
+    padding: 8px;
   }
 
   .reference-content {
-    padding: 0px;
+    padding: 0px 8px;
     width: 100%;
   }
 
@@ -288,20 +289,17 @@
     margin-bottom: 24px;
   }
 
-
   .project.active .show-more-btn img {
     content: url("../../assets/img/show-less.png");
   }
 
-  
-
   .toggle::after {
     content: attr(data-i18n-show-more);
-}
+  }
 
-.toggle[aria-expanded="true"]::after {
+  .toggle[aria-expanded="true"]::after {
     content: attr(data-i18n-show-less);
-}
+  }
 
   .project.active .show-more-btn {
     position: absolute;
@@ -366,11 +364,13 @@
     font-size: 14px;
   }
 
-  .name-and-project {
-    padding: 4px;
-  }
-
   .project-btn {
     padding: 13px 20px;
+  }
+
+  .prject-description-hover,
+  .prject-description-normal {
+    width: calc(100% - 30px);
+    height: 178px;
   }
 }
