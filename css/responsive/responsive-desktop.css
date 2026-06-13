@@ -287,13 +287,9 @@
     min-width: calc((100vw - 172px) / 2);
   }
 
-  .contact-content {
-    min-width: unset;
-  }
-
+  .contact-content,
   .contact-section {
-    min-width: 900px !important;
-    width: unset;
+    width: 50vw;
   }
 
   .arrow-position-hero,
@@ -317,11 +313,10 @@
 
   .contact-form {
     margin-top: 560px;
-    margin-left: 180px;
   }
 
   form {
-    width: 756px;
+    width: 520px;
   }
 
   .input-message {
@@ -329,13 +324,14 @@
   }
 
   .reference-section {
-    min-width: 33vw;
+    min-width: calc(50vw - 172px);
+    margin-left: 130px;
   }
 }
 
 @media (min-width: 3400px) {
   .reference-section {
-    min-width: 23vw;
+    min-width: calc(50vw - 172px);
     margin-left: 130px;
   }
 
@@ -350,10 +346,6 @@
 }
 
 @media (min-width: 4400px) {
-  .reference-section {
-    min-width: 20vw;
-    margin-left: 180px;
-  }
 
   .skill-section {
     position: relative;
