@@ -37,7 +37,6 @@ function checkIsFieldEmpty(input, errorKey) {
       this.value = getTranslation(errorKey);
       this.style.color = "#FD2E12";
       this.style.borderColor = "#FD2E12";
-    } else {
     }
   });
 
@@ -145,8 +144,10 @@ function showNameError() {
   if (!validateName()) {
     errorMessageElement.innerText =
       getTranslation("error-invalid-name");
+      nameInput.style.borderColor = "#FD2E12"
   } else {
     errorMessageElement.innerText = "";
+    nameInput.style.borderColor = "#b5e93b"
   }
 }
 
@@ -180,8 +181,10 @@ function showEmailError() {
   if (!validateEmail()) {
     errorMessageElement.innerText =
       getTranslation("error-invalid-email");
+      emailInput.style.borderColor = "#FD2E12"
   } else {
     errorMessageElement.innerText = "";
+    emailInput.style.borderColor = "#b5e93b"
   }
 }
 
@@ -204,10 +207,12 @@ function validateMassage() {
  */
 function showMessageError() {
   if (!validateMassage()) {
+    messageInput.style.borderColor = "#FD2E12"
     errorMessageElement.innerText =
       getTranslation("error-empty-message");
   } else {
     errorMessageElement.innerText = "";
+    messageInput.style.borderColor = "#b5e93b"
   }
 }
 
