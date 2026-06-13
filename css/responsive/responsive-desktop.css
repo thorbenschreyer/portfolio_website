@@ -258,15 +258,18 @@
 }
 
 @media (min-width: 2400px) {
-
   .developper-image {
     margin-left: 100px;
-}
+  }
 
-.hero-name-mobile {
+  .hero-section {
+    min-width: 50vw;
+  }
+
+  .hero-name-mobile {
     position: absolute;
     left: 0px;
-}
+  }
 
   .navigation-links {
     height: 50%;
@@ -294,7 +297,9 @@
   }
 
   .arrow-position-hero,
-  .arrow-skill-section {
+  .arrow-skill-section,
+  .arrow-position-reference-section,
+  .arrow-position-skill-section {
     display: none;
   }
 
@@ -326,11 +331,6 @@
   .reference-section {
     min-width: 33vw;
   }
-
-  .arrow-position-reference-section,
-  .arrow-position-skill-section {
-    display: none;
-  }
 }
 
 @media (min-width: 3400px) {
@@ -344,21 +344,8 @@
     min-width: 35vw;
   }
 
-  .why-me-section {
-    position: relative;
-    min-width: 31vw;
-  }
-
-  .arrow-why-me {
-    display: none;
-  }
-
   .why-me-content {
     margin-top: 560px;
-  }
-
-  .hero-section {
-    min-width: 40vw;
   }
 }
 
@@ -373,20 +360,7 @@
     min-width: 29vw;
   }
 
-  .why-me-section {
-    position: relative;
-    min-width: 25vw;
-  }
-
-  .arrow-why-me {
-    display: none;
-  }
-
   .why-me-content {
     margin-top: 560px;
-  }
-
-  .hero-section {
-    min-width: 35vw;
   }
 }
