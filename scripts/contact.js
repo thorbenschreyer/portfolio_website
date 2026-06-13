@@ -166,7 +166,6 @@ function showNameError() {
 function validateEmail() {
   const email = emailInput.value.trim();
   const emailRegex = /^[^\s@]+@[a-zA-Z0-9-]+\.(de|com|org|net)$/;
-
   return emailRegex.test(email);
 }
 
