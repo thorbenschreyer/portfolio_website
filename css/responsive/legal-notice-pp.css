@@ -43,7 +43,8 @@
   }
 
   .impressum-container {
-    margin: 0px 16px;
+    margin: unset;
+    padding: 0px 16px;
     width: unset;
     flex-direction: column;
   }
